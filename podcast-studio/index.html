@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcast Studio Cape Town | Included in All Memberships | Cape Town Office</title>
+<meta name="description" content="A professional podcast studio at Cape Town Office, included in every membership. RØDECaster Pro, RØDE microphones, bookable online. 62 Roeland Street, Cape Town.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #E8860A;
+  --orange-dark: #C97308;
+  --charcoal: #2d2d2d;
+  --body: #4c4c4c;
+  --mid: #6b6b6b;
+  --bg: #F7F5F0;
+  --white: #FFFFFF;
+  --rule: #E0DDD6;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+  background: var(--white);
+  color: var(--body);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-links .active { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; transition: background 0.15s !important; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+
+/* MOBILE NAV */
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+
+/* SHARED */
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.section-h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.025em; color: var(--charcoal); line-height: 1.1; margin-bottom: 12px; }
+.section-sub { font-size: 0.92rem; color: var(--mid); line-height: 1.65; }
+
+/* IMAGE PLACEHOLDER */
+.img-placeholder {
+  background: var(--bg);
+  border: 2px dashed var(--rule);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--mid);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+/* HERO */
+.hero { min-height: calc(100vh - 60px); display: grid; grid-template-columns: 1fr 1fr; max-height: 820px; }
+.hero-left { background: var(--charcoal); padding: 80px 56px 80px 40px; display: flex; flex-direction: column; justify-content: center; }
+.hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.hero-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--orange); }
+.hero-h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.02; letter-spacing: -0.03em; color: var(--white); margin-bottom: 20px; }
+.hero-h1 em { font-style: normal; color: var(--orange); }
+.hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 380px; margin-bottom: 40px; }
+.hero-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.btn-orange { background: var(--orange); color: var(--white); padding: 13px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.1s; }
+.btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.btn-ghost { color: rgba(255,255,255,0.65); font-size: 0.875rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s, gap 0.15s; }
+.btn-ghost:hover { color: var(--white); gap: 10px; }
+.hero-stats { margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; gap: 32px; flex-wrap: wrap; }
+.stat-num { font-size: 1.6rem; font-weight: 700; color: var(--orange); display: block; line-height: 1; margin-bottom: 3px; }
+.stat-label { font-size: 0.68rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.08em; }
+.hero-right { position: relative; overflow: hidden; }
+.hero-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-right .img-placeholder { width: 100%; height: 100%; border-radius: 0; border: none; font-size: 1rem; }
+.hero-tag { position: absolute; bottom: 28px; left: 28px; background: rgba(28,28,26,0.85); backdrop-filter: blur(4px); color: var(--white); padding: 10px 16px; border-radius: 6px; font-size: 0.8rem; line-height: 1.5; }
+
+/* PROOF */
+.proof { background: var(--charcoal); padding: 24px 40px; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.proof-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 0.82rem; font-weight: 600; }
+.proof-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+
+/* INCLUDED */
+.included { background: var(--bg); padding: 96px 0; }
+.included-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.included-body { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-top: 16px; }
+.included-body p { margin-bottom: 1rem; }
+.included-body p:last-child { margin-bottom: 0; }
+.included-body strong { color: var(--charcoal); font-weight: 600; }
+.included-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
+.included-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.included-photo .img-placeholder { width: 100%; height: 100%; border-radius: 0; border: none; }
+
+/* EQUIPMENT */
+.equipment { background: var(--white); padding: 96px 0; }
+.equipment-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+.eq-card { background: var(--bg); border-radius: 12px; padding: 28px 24px; border: 1px solid var(--rule); }
+.eq-name { font-weight: 700; font-size: 1rem; color: var(--charcoal); margin-bottom: 8px; letter-spacing: -0.01em; }
+.eq-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.6; }
+
+/* HOW TO BOOK */
+.how-to-book { background: var(--bg); padding: 96px 0; }
+.steps { display: flex; flex-direction: column; gap: 0; margin-top: 40px; max-width: 640px; }
+.step { display: flex; gap: 24px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--rule); }
+.step:last-child { border-bottom: none; }
+.step-num { font-size: 1.6rem; font-weight: 700; color: var(--orange); line-height: 1; flex-shrink: 0; width: 40px; }
+.step-title { font-weight: 700; font-size: 0.95rem; color: var(--charcoal); margin-bottom: 4px; }
+.step-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.6; }
+
+/* PODCAST */
+.podcast { background: var(--white); padding: 96px 0; }
+.podcast-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.podcast-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
+.podcast-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.podcast-photo .img-placeholder { width: 100%; height: 100%; border-radius: 0; border: none; }
+.podcast-body { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-top: 16px; margin-bottom: 28px; }
+.podcast-body p { margin-bottom: 1rem; }
+.podcast-body p:last-child { margin-bottom: 0; }
+.podcast-episodes { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+.episode { display: flex; gap: 14px; align-items: flex-start; padding: 14px; background: var(--bg); border-radius: 8px; border: 1px solid var(--rule); text-decoration: none; transition: border-color 0.15s; }
+.episode:hover { border-color: var(--orange); }
+.episode-num { font-size: 0.68rem; font-weight: 700; color: var(--orange); letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0; padding-top: 2px; }
+.episode-title { font-size: 0.875rem; font-weight: 600; color: var(--charcoal); line-height: 1.4; }
+.episode-guest { font-size: 0.78rem; color: var(--mid); margin-top: 2px; }
+.text-link { font-size: 0.875rem; font-weight: 700; color: var(--orange); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; transition: gap 0.15s; margin-top: 16px; display: inline-flex; }
+.text-link:hover { gap: 9px; }
+
+/* WHO */
+.who { background: var(--bg); padding: 96px 0; }
+.who-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 40px; }
+.who-card { background: var(--white); border-radius: 10px; padding: 24px; border: 1px solid var(--rule); }
+.who-title { font-weight: 700; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 8px; }
+.who-desc { font-size: 0.85rem; color: var(--mid); line-height: 1.6; }
+
+/* FINAL CTA */
+.final-cta { background: var(--orange); padding: 96px 40px; text-align: center; }
+.final-cta h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 14px; }
+.final-cta p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 32px; max-width: 420px; margin-left: auto; margin-right: auto; }
+.btn-white { background: var(--white); color: var(--orange); padding: 14px 40px; border-radius: 7px; font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block; transition: transform 0.15s, box-shadow 0.15s; }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-address a:hover { color: var(--white); }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+.footer-bottom a { color: rgba(255,255,255,0.22); text-decoration: none; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .hero { grid-template-columns: 1fr; max-height: none; min-height: auto; }
+  .hero-left { padding: 52px 20px 44px; }
+  .hero-right { height: 300px; }
+  .included-inner { grid-template-columns: 1fr; gap: 36px; }
+  .equipment-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .podcast-inner { grid-template-columns: 1fr; gap: 36px; }
+  .who-grid { grid-template-columns: 1fr; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
+  .proof { padding: 20px; gap: 16px; justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/podcast-studio" class="active">Podcast Studio</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/blog" onclick="closeMenu()">Blog</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Podcast Studio · Cape Town</span>
+    <h1 class="hero-h1">Record here.<br><em>It's included.</em></h1>
+    <p class="hero-sub">A professional podcast studio at CTO, available to every member at no extra cost. RØDECaster Pro, RØDE microphones, bookable online.</p>
+    <div class="hero-btns">
+      <a href="/membership" class="btn-orange">Become a member</a>
+      <a href="/membership" class="btn-ghost">See membership options →</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num">Free</span><span class="stat-label">All memberships</span></div>
+      <div><span class="stat-num">RØDE</span><span class="stat-label">Microphones</span></div>
+      <div><span class="stat-num">24/7</span><span class="stat-label">Bookable anytime</span></div>
+      <div><span class="stat-num">Members</span><span class="stat-label">Only</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nQOumOqsXRCn4a3Vx1MWlwgDE7ozmtr9cup5y" alt="Cape Town Office podcast studio at 62 Roeland Street, Cape Town" loading="eager" style="width:100%;height:100%;object-fit:cover;display:block;">
+  </div>
+</section>
+
+<!-- PROOF -->
+<div class="proof">
+  <div class="proof-item">Included in every membership</div>
+  <div class="proof-item">RØDECaster Pro mixer</div>
+  <div class="proof-item">RØDE microphones</div>
+  <div class="proof-item">Book online, anytime</div>
+  <div class="proof-item">No extra charge</div>
+</div>
+
+<!-- INCLUDED -->
+<section class="included">
+  <div class="wrap">
+    <div class="included-inner">
+      <div>
+        <span class="section-label">Why it's here</span>
+        <h2 class="section-h2">A proper studio. Part of the space.</h2>
+        <div class="included-body">
+          <p>Most coworking spaces treat a podcast studio as an upsell -- a premium room you pay per hour to access. At CTO it's just part of the space. <strong>Every membership includes full use of the studio.</strong> Book it the same way you'd book a meeting room -- online, no approval needed.</p>
+          <p>It was built for members who were already recording -- the podcast, the interviews, the client calls that needed proper audio. The equipment is professional, the room is acoustically treated, and it's available around the clock.</p>
+          <p>If you've never used it before, come in for a viewing and we'll show you around. It takes about five minutes to get comfortable with the setup.</p>
+        </div>
+      </div>
+      <div class="included-photo">
+        <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nAMulPhJPRzCwSMZ6opL0sK5gc2ndByNbQODi" alt="Podcast studio room at Cape Town Office with professional recording equipment" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section class="equipment">
+  <div class="wrap">
+    <span class="section-label">The setup</span>
+    <h2 class="section-h2">Professional equipment. No compromise.</h2>
+    <p class="section-sub">Everything in the studio is production-grade. You bring the content, we provide the tools.</p>
+    <div class="equipment-grid">
+      <div class="eq-card">
+        <div class="eq-name">RØDECaster Pro</div>
+        <div class="eq-desc">The industry-standard podcast production console. Multi-track recording, built-in processing, USB audio interface. Everything you need in one unit.</div>
+      </div>
+      <div class="eq-card">
+        <div class="eq-name">RØDE Microphones</div>
+        <div class="eq-desc">Professional condenser microphones for up to four guests or hosts. Broadcast-quality audio straight out of the box, no setup expertise required.</div>
+      </div>
+      <div class="eq-card">
+        <div class="eq-name">Acoustic treatment</div>
+        <div class="eq-desc">The room is acoustically treated to eliminate echo and background noise. What you record sounds like a studio, not a spare room.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BOOK -->
+<section class="how-to-book">
+  <div class="wrap">
+    <span class="section-label">How to book</span>
+    <h2 class="section-h2">Three steps. Done.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Check you're a member</div>
+          <div class="step-desc">The studio is included in all memberships -- Flexi, Dedicated, and Teams. Day pass guests get 1 hour included. Not a member yet? <a href="/book-a-viewing" style="color:var(--orange);font-weight:600;">Book a viewing first.</a></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Book online</div>
+          <div class="step-desc">Use the booking link to reserve your time. If you've booked and no longer need it, please cancel so someone else can use it.</div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Come in and record</div>
+          <div class="step-desc">First time? Check with Lizelle or Andri before your session to make sure you know your way around the equipment. After that, it's yours.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:32px;">
+      <a href="/membership" class="btn-orange">Become a member</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO'S BEHIND THE DESK -->
+<section class="podcast">
+  <div class="wrap">
+    <div class="podcast-inner">
+      <div>
+        <span class="section-label">Who's Behind the Desk</span>
+        <h2 class="section-h2">The CTO members' podcast</h2>
+        <div class="podcast-body">
+          <p>Recorded in this studio, with CTO members and hosted by founder, Lizelle van Rhyn. Who's Behind the Desk is a podcast about the people who work at CTO -- what they do, how they got here, and what drives them.</p>
+          <p>Real conversations with real people, not a marketing exercise. Available on Spotify, Apple Podcasts and YouTube.</p>
+        </div>
+        <div class="podcast-episodes">
+          <a href="https://capetownoffice.com/behindthedeskstuartfairbairns/" class="episode">
+            <div class="episode-num">Ep.</div>
+            <div>
+              <div class="episode-title">The Paycheck Was Good. The Life Wasn't.</div>
+              <div class="episode-guest">Stuart Fairbairns · Motivate Coaching</div>
+            </div>
+          </a>
+          <a href="https://capetownoffice.com/podcast/" class="episode">
+            <div class="episode-num">Ep.</div>
+            <div>
+              <div class="episode-title">Krysia Narramore</div>
+              <div class="episode-guest">CTO member</div>
+            </div>
+          </a>
+          <a href="https://capetownoffice.com/podcast/" class="episode">
+            <div class="episode-num">Ep.</div>
+            <div>
+              <div class="episode-title">Greg Kempe</div>
+              <div class="episode-guest">CTO member</div>
+            </div>
+          </a>
+        </div>
+        <a href="https://capetownoffice.com/podcast/" class="text-link">See all episodes →</a>
+      </div>
+      <div class="podcast-photo">
+        <!-- PLACEHOLDER: Replace with UploadThing URL of Lizelle in studio (podcast recording shot) -->
+        <img
+          src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nylrsH8PojsDPLuYva2gCdJKcHbr8q9fRiM0m"
+          alt="Lizelle van Rhyn recording in the Cape Town Office podcast studio"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who">
+  <div class="wrap">
+    <span class="section-label">Who uses it</span>
+    <h2 class="section-h2">More than just podcasters</h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-title">Podcasters and content creators</div>
+        <div class="who-desc">The obvious one. Professional equipment, acoustic treatment, no per-hour charge. Record your show, interview your guests, produce your content.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-title">Coaches and consultants</div>
+        <div class="who-desc">Client sessions, online workshops, recorded training content. Professional audio makes a noticeable difference when your voice is your product.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-title">Remote teams on calls</div>
+        <div class="who-desc">When the open floor is too noisy and a phone booth is too small. The studio fits up to four people and the audio quality is noticeably better than a laptop microphone.</div>
+      </div>
+      <div class="who-card">
+        <div class="who-title">Anyone who needs to sound good</div>
+        <div class="who-desc">Job interviews, investor calls, recorded presentations, webinars. The studio is available anytime -- you don't have to be a podcaster to use it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>Want access to the studio?</h2>
+  <p>It's included in every CTO membership. Come in for a viewing and we'll show you around the space and the setup.</p>
+  <a href="/book-a-viewing" class="btn-white">Book a free viewing</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Cape Town Office. All rights reserved.</span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+    <span>Photography by <a href="https://www.mapodile.com" target="_blank" rel="noopener">Mapodile Mkhabela</a> · CTO member since 2019 · Getty Images</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var t = document.querySelector(this.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+
+</body>
+</html>
