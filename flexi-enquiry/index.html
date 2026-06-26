@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Flexi Membership | Cape Town Office</title>
+<meta name="description" content="Sign up for a Flexi hour-based coworking membership at Cape Town Office. From R2,530 incl. VAT. 62 Roeland Street, Gardens, Cape Town.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+
+/* PAGE */
+.page-wrap { max-width: 1040px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: start; }
+.section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.page-h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.025em; color: var(--charcoal); line-height: 1.1; margin-bottom: 16px; }
+.page-sub { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-bottom: 32px; }
+.page-sub p { margin-bottom: 0.8rem; }
+.page-sub p:last-child { margin-bottom: 0; }
+
+.packages { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.package { background: var(--white); border-radius: 10px; padding: 16px 20px; border: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+.package.recommended { border-color: var(--orange); }
+.pkg-name { font-weight: 700; font-size: 0.9rem; color: var(--charcoal); }
+.pkg-detail { font-size: 0.78rem; color: var(--mid); margin-top: 2px; }
+.pkg-price { font-size: 1.1rem; font-weight: 700; color: var(--orange); text-align: right; }
+.pkg-note { font-size: 0.72rem; color: var(--mid); text-align: right; margin-top: 2px; }
+
+.contact-block { background: var(--charcoal); border-radius: 12px; padding: 24px; }
+.contact-title { font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 12px; }
+.contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.8; }
+.contact-detail a { color: var(--orange); text-decoration: none; font-weight: 600; }
+
+/* FORM */
+.form-wrap { background: var(--white); border-radius: 12px; border: 1px solid var(--rule); overflow: hidden; }
+.form-header { background: var(--orange); padding: 20px 24px; }
+.form-title { font-size: 1rem; font-weight: 700; color: var(--white); }
+.form-sub { font-size: 0.8rem; color: rgba(255,255,255,0.75); margin-top: 4px; }
+.form-inner iframe { display: block; width: 100%; border: none; }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+.footer-bottom a { color: rgba(255,255,255,0.22); text-decoration: none; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-wrap { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/podcast">Podcast</a></li>
+    <li><a href="/#location">Location</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/podcast" onclick="closeMenu()">Podcast</a>
+  <a href="/#location" onclick="closeMenu()">Location</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<div class="page-wrap">
+
+  <div>
+    <span class="section-label">Flexi membership</span>
+    <h1 class="page-h1">Get started with a Flexi membership.</h1>
+    <div class="page-sub">
+      <p>Choose your package, fill in the form, and we'll get back to you to confirm your start date and payment details. All packages are valid for 60 days from activation.</p>
+      <p>Not sure which package is right for you? Use the <a href="/hybrid-coworking#calculator" style="color:var(--orange);font-weight:600;">membership calculator</a> on the Hybrid page, or drop Lizelle a line.</p>
+    </div>
+
+    <div class="packages">
+      <div class="package">
+        <div>
+          <div class="pkg-name">Flexi-40</div>
+          <div class="pkg-detail">40 hours · 60-day validity</div>
+        </div>
+        <div>
+          <div class="pkg-price">R2,530</div>
+          <div class="pkg-note">incl. VAT</div>
+        </div>
+      </div>
+      <div class="package recommended">
+        <div>
+          <div class="pkg-name">Flexi-50</div>
+          <div class="pkg-detail">50 hours · 60-day validity</div>
+        </div>
+        <div>
+          <div class="pkg-price">R2,875</div>
+          <div class="pkg-note">incl. VAT</div>
+        </div>
+      </div>
+      <div class="package">
+        <div>
+          <div class="pkg-name">Flexi-75</div>
+          <div class="pkg-detail">75 hours · 60-day validity</div>
+        </div>
+        <div>
+          <div class="pkg-price">R3,795</div>
+          <div class="pkg-note">incl. VAT</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-title">Questions first?</div>
+      <div class="contact-detail">
+        Call or WhatsApp Lizelle on <a href="tel:+27211003608">021 100 3608</a><br>
+        Or email <a href="mailto:lizelle@capetownoffice.com">lizelle@capetownoffice.com</a>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="form-wrap">
+      <div class="form-header">
+        <div class="form-title">Flexi membership enquiry</div>
+        <div class="form-sub">We'll be in touch within one business day</div>
+      </div>
+      <div class="form-inner">
+        <iframe
+          src="https://crm.zoho.com/crm/WebFormServeServlet?rid=9b4f4e9f0af248027093466aeed152da70d4681c09095dd7dcca59bddcb1fed91d8a2a81033b3217cc4cec2644d930d2gid83f330a906a29a378bfb0bc1a83161777b9ed4261f9f31bd008404f32380ac83"
+          height="760"
+          title="Flexi membership enquiry form">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Cape Town Office. All rights reserved.</span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+</script>
+
+</body>
+</html>
