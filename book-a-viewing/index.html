@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Viewing | Cape Town Office</title>
+<meta name="description" content="Book a free viewing at Cape Town Office. Come in, see the space, have a coffee. 62 Roeland Street, Gardens, Cape Town.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+
+/* PAGE */
+.page-wrap { max-width: 1040px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: start; }
+
+.page-intro { }
+.section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.page-h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.025em; color: var(--charcoal); line-height: 1.1; margin-bottom: 16px; }
+.page-sub { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-bottom: 32px; }
+.page-sub p { margin-bottom: 0.8rem; }
+.page-sub p:last-child { margin-bottom: 0; }
+
+.what-to-expect { background: var(--white); border-radius: 12px; padding: 24px; border: 1px solid var(--rule); margin-bottom: 24px; }
+.what-title { font-weight: 700; font-size: 0.9rem; color: var(--charcoal); margin-bottom: 14px; }
+.expect-list { display: flex; flex-direction: column; gap: 10px; }
+.expect-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: var(--mid); line-height: 1.5; }
+.expect-item::before { content: ''; width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; background: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' r='7' fill='%23E8860A'/%3E%3Cpath d='M4 7l2 2 4-4' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center; background-size: contain; }
+
+.contact-block { background: var(--charcoal); border-radius: 12px; padding: 24px; }
+.contact-title { font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 12px; }
+.contact-detail { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.8; }
+.contact-detail a { color: var(--orange); text-decoration: none; font-weight: 600; }
+
+/* FORM */
+.form-wrap { background: var(--white); border-radius: 12px; border: 1px solid var(--rule); overflow: hidden; }
+.form-header { background: var(--charcoal); padding: 20px 24px; }
+.form-title { font-size: 1rem; font-weight: 700; color: var(--white); }
+.form-sub { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+.form-inner { padding: 0; }
+.form-inner iframe { display: block; width: 100%; border: none; }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-address a:hover { color: var(--white); }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+.footer-bottom a { color: rgba(255,255,255,0.22); text-decoration: none; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-wrap { grid-template-columns: 1fr; gap: 32px; padding: 40px 20px; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/podcast">Podcast</a></li>
+    <li><a href="/#location">Location</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/podcast" onclick="closeMenu()">Podcast</a>
+  <a href="/#location" onclick="closeMenu()">Location</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<div class="page-wrap">
+
+  <div class="page-intro">
+    <span class="section-label">Book a viewing</span>
+    <h1 class="page-h1">Come in, have a coffee, see if it feels right.</h1>
+    <div class="page-sub">
+      <p>A viewing takes about 20 minutes. No pitch, no pressure. We'll show you around the space, answer any questions, and help you work out which membership makes sense for how you work.</p>
+      <p>If you're bringing a team, let us know in the form and we'll make sure we show you the team pods and meeting rooms.</p>
+    </div>
+
+    <div class="what-to-expect">
+      <div class="what-title">What to expect</div>
+      <div class="expect-list">
+        <div class="expect-item">A walkthrough of the full space -- desks, meeting rooms, podcast studio, kitchen</div>
+        <div class="expect-item">A coffee while we chat through the membership options</div>
+        <div class="expect-item">Honest answers to whatever you want to know</div>
+        <div class="expect-item">No obligation -- come and see if it works for you</div>
+      </div>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-title">Prefer to reach out directly?</div>
+      <div class="contact-detail">
+        Call or WhatsApp Lizelle on <a href="tel:+27211003608">021 100 3608</a><br>
+        Or email <a href="mailto:lizelle@capetownoffice.com">lizelle@capetownoffice.com</a><br><br>
+        62 Roeland Street, 3rd floor<br>
+        Gardens, Cape Town, 8001
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="form-wrap">
+      <div class="form-header">
+        <div class="form-title">Book your viewing</div>
+        <div class="form-sub">We'll confirm your slot by email</div>
+      </div>
+      <div class="form-inner">
+        <iframe
+          src="https://crm.zoho.com/crm/WebFormServeServlet?rid=9a47dd5b77bb4db6e5db217a6dc35dd5951ce2d0b18c9b2102de7f5f5ba80f44af8bf256349609593e46d456b1ba1e84gide53774780893d5824abb91d99399e4ee773e057cc9e32d979c1648290974a2cc"
+          height="660"
+          title="Book a viewing at Cape Town Office">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Cape Town Office. All rights reserved.</span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+    <span>Photography by <a href="https://www.mapodile.com" target="_blank" rel="noopener">Mapodile Mkhabela</a> · CTO member since 2019 · Getty Images</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+</script>
+
+</body>
+</html>
