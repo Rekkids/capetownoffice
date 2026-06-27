@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you | Cape Town Office</title>
+<meta name="description" content="Thanks for getting in touch with Cape Town Office. We'll be back to you shortly.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; display: flex; flex-direction: column; }
+
+/* NAV */
+nav { background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+
+/* MAIN */
+.main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 64px 24px; }
+
+.thank-you-wrap { max-width: 580px; width: 100%; }
+
+.check-circle {
+  width: 64px; height: 64px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+}
+.check-circle svg { width: 28px; height: 28px; }
+
+.ty-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.ty-h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; letter-spacing: -0.025em; color: var(--charcoal); line-height: 1.1; margin-bottom: 16px; }
+.ty-body { font-size: 0.95rem; color: var(--mid); line-height: 1.8; margin-bottom: 36px; }
+.ty-body p { margin-bottom: 0.8rem; }
+.ty-body p:last-child { margin-bottom: 0; }
+.ty-body strong { color: var(--charcoal); font-weight: 600; }
+
+.ty-divider { border: none; border-top: 1px solid var(--rule); margin: 36px 0; }
+
+.ty-next { margin-bottom: 36px; }
+.ty-next-title { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mid); margin-bottom: 16px; }
+.ty-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ty-link { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s; display: block; }
+.ty-link:hover { border-color: var(--orange); box-shadow: 0 4px 16px rgba(232,134,10,0.1); }
+.ty-link-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 4px; display: block; }
+.ty-link-title { font-size: 0.875rem; font-weight: 700; color: var(--charcoal); }
+
+.ty-contact { background: var(--charcoal); border-radius: 12px; padding: 24px; }
+.ty-contact-title { font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 10px; }
+.ty-contact-body { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.ty-contact-body a { color: var(--orange); text-decoration: none; font-weight: 600; }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
+.footer-links { display: flex; gap: 20px; }
+.footer-links a { font-size: 0.72rem; color: rgba(255,255,255,0.35); text-decoration: none; }
+.footer-links a:hover { color: var(--white); }
+
+@media (max-width: 600px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .ty-links { grid-template-columns: 1fr; }
+  footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/podcast">Podcast</a></li>
+    <li><a href="/#location">Location</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/podcast" onclick="closeMenu()">Podcast</a>
+  <a href="/#location" onclick="closeMenu()">Location</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<div class="main">
+  <div class="thank-you-wrap">
+
+    <div class="check-circle">
+      <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 14l6 6L23 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <span class="ty-eyebrow">We've got it</span>
+    <h1 class="ty-h1">Thanks for getting in touch.</h1>
+    <div class="ty-body">
+      <p>Your booking has landed with the team. Check your inbox for confirmation and next steps -- sometimes it lands in Spam so look there too.</p>
+      <p>If you have anything you want to mention prior to the day, drop a line to <strong><a href="mailto:info@capetownoffice.com" style="color:var(--orange);text-decoration:none;">info@capetownoffice.com</a></strong> or call the office on <strong><a href="tel:+27211003608" style="color:var(--orange);text-decoration:none;">021 100 3608</a></strong>.</p>
+    </div>
+
+    <hr class="ty-divider">
+
+    <div class="ty-next">
+      <div class="ty-next-title">While you wait</div>
+      <div class="ty-links">
+        <a href="/hybrid-coworking" class="ty-link">
+          <span class="ty-link-label">Flexi membership</span>
+          <div class="ty-link-title">How the hour-based billing works</div>
+        </a>
+        <a href="/east-city" class="ty-link">
+          <span class="ty-link-label">The neighbourhood</span>
+          <div class="ty-link-title">What's five minutes from your desk</div>
+        </a>
+        <a href="/podcast" class="ty-link">
+          <span class="ty-link-label">Who's Behind the Desk</span>
+          <div class="ty-link-title">The CTO members' podcast</div>
+        </a>
+        <a href="/podcast-studio" class="ty-link">
+          <span class="ty-link-label">Podcast studio</span>
+          <div class="ty-link-title">Professional recording, included</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="ty-contact">
+      <div class="ty-contact-title">62 Roeland Street, 3rd floor, Gardens, Cape Town</div>
+      <div class="ty-contact-body">
+        Mon to Fri, 9am to 5pm for viewings · Members have 24/7 access<br>
+        <a href="tel:+27211003608">021 100 3608</a> · <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Cape Town Office. Est. 2011.</span>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/membership">Membership</a>
+    <a href="/east-city">East City</a>
+    <a href="/podcast">Podcast</a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+</script>
+
+</body>
+</html>
