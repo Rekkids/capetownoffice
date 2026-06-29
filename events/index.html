@@ -142,6 +142,10 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   .proof { padding: 20px; gap: 16px; justify-content: flex-start; }
   .vinyl { padding: 64px 24px; }
 }
+
+/* CALENDAR */
+.calendar-section { background: var(--white); padding: 96px 0; }
+.calendar-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -202,7 +206,6 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <div class="events-grid">
 
       <div class="event-card">
-        <span class="event-icon">🍽️</span>
         <div class="event-name">Lunch Club</div>
         <span class="event-cadence">Monthly · Usually 1st Tuesday or Wednesday</span>
         <p class="event-desc">We pick a spot in the neighbourhood, someone makes a reservation, and anyone who wants to join comes along. No agenda, no structure. Just lunch and good conversation with people you work alongside.</p>
@@ -210,7 +213,6 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       </div>
 
       <div class="event-card">
-        <span class="event-icon">🤖</span>
         <div class="event-name">AI Show & Tell</div>
         <span class="event-cadence">Monthly · Dates voted on in WhatsApp</span>
         <p class="event-desc">Members share what they're building, testing or breaking with AI. No slides required. Demos, experiments, things that worked, things that didn't. Plans for the next session are discussed and voted on in the group.</p>
@@ -218,7 +220,6 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       </div>
 
       <div class="event-card">
-        <span class="event-icon">🎶</span>
         <div class="event-name">Vinyl & Wine</div>
         <span class="event-cadence">Every two months · RSVP required · BYOB</span>
         <p class="event-desc">A listening session in the space. Records on the turntable, wine in hand, good company. Small and intimate -- 30 to 40 people max. RSVP is required so we know who's coming. BYOB.</p>
@@ -226,13 +227,32 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       </div>
 
       <div class="event-card featured">
-        <span class="event-icon">🌆</span>
         <div class="event-name">The CTO Hang</div>
         <span class="event-cadence">After hours · Format varies</span>
         <p class="event-desc">Could be a record, could be a documentary, could be drinks and a chat. The format changes but the idea stays the same -- stick around after work, wait out the traffic, be somewhere good with people you like.</p>
         <span class="event-tag">Dates via WhatsApp</span>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="calendar-section">
+  <div class="wrap">
+    <span class="section-label">What's coming up</span>
+    <h2 class="section-h2">CTO events calendar</h2>
+    <p class="section-sub" style="margin-bottom:32px;">All member events in one place. Click any event to see details. Dates subject to change -- always confirmed in the CTO WhatsApp group first.</p>
+    <div class="calendar-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Africa%2FJohannesburg&title=CTO%20EVENTS&src=YmVsNHBuNjc5NGs5NjQ2azh1YmtjcWxibWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23E8860A"
+        style="border:0;"
+        width="100%"
+        height="640"
+        frameborder="0"
+        scrolling="no"
+        title="CTO Events Calendar">
+      </iframe>
     </div>
   </div>
 </section>
