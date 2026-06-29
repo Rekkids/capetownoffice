@@ -142,6 +142,29 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 /* CALENDAR */
 .calendar-section { background: var(--white); padding: 56px 0; }
 .calendar-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); margin-top: 8px; }
+
+/* PHOTO REEL */
+.reel { background: var(--charcoal); padding: 0; overflow: hidden; }
+.reel-track {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  width: max-content;
+  animation: scroll-reel 30s linear infinite;
+}
+.reel-track img {
+  height: 200px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+.reel:hover .reel-track { animation-play-state: paused; }
+@keyframes scroll-reel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 </style>
 </head>
 <body>
@@ -176,7 +199,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <span class="hero-eyebrow">Member events · Cape Town</span>
     <h1 class="hero-h1">What's on<br><em>at CTO.</em></h1>
     <p class="hero-sub">Lunch, learning, vinyl and the occasional overstay. All member events, all free, all worth showing up for.</p>
-    <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:12px;">Scroll down to see what's coming up on the calendar.</p>
+    <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:4px;margin-bottom:20px;">Scroll down to see what's coming up on the calendar.</p>
     <a href="#rsvp" class="btn-orange">RSVP for an event</a>
   </div>
   <div class="hero-right">
@@ -190,6 +213,25 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   <div class="proof-item">Always free</div>
   <div class="proof-item">Four recurring events</div>
   <div class="proof-item">Dates announced via WhatsApp</div>
+</div>
+
+<!-- PHOTO REEL -->
+<div class="reel">
+  <div class="reel-track">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nA5IwqRJPRzCwSMZ6opL0sK5gc2ndByNbQODi" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nHGZZpUL7KBNFUiEyruLwMk065YWAla2PVnmf" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nisR4eRfTRzYuJl5r2p0QKA6qtfBV3h4nGjcM" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nkle8haz7bv8tU2JPl0gcWYHSNEMn5ORsZ9ju" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNisvcGvBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nHJrUEkL7KBNFUiEyruLwMk065YWAla2PVnmf" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nA5IwqRJPRzCwSMZ6opL0sK5gc2ndByNbQODi" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nHGZZpUL7KBNFUiEyruLwMk065YWAla2PVnmf" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nisR4eRfTRzYuJl5r2p0QKA6qtfBV3h4nGjcM" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nkle8haz7bv8tU2JPl0gcWYHSNEMn5ORsZ9ju" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNisvcGvBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nHJrUEkL7KBNFUiEyruLwMk065YWAla2PVnmf" alt="CTO community event" loading="lazy">
+      
+  </div>
 </div>
 
 <!-- EVENTS -->
