@@ -200,10 +200,10 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <h1 class="hero-h1">What's on<br><em>at CTO.</em></h1>
     <p class="hero-sub">Lunch, learning, vinyl and the occasional overstay. All member events, all free, all worth showing up for.</p>
     <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:4px;margin-bottom:20px;">Scroll down to see what's coming up on the calendar.</p>
-    <a href="#rsvp" class="btn-orange">RSVP for an event</a>
+    <a href="#calendar" class="btn-orange">See what's on</a>
   </div>
   <div class="hero-right">
-    <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nY955sOAueL0V3kjKDFoyl2mw9TR6sxrBzP4W" alt="Members at a Cape Town Office community event" loading="eager">
+    <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntyk2ZOVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="Members at a Cape Town Office community event" loading="eager">
   </div>
 </section>
 
@@ -240,7 +240,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <div class="events-header">
       <span class="section-label">What's on</span>
       <h2 class="section-h2">Four things worth staying for</h2>
-      <p class="section-sub">Predominantly for members, but open to all. If you can see it on the calendar, you're welcome to RSVP.</p>
+      <p class="section-sub">Predominantly for members, but open to all. If you can see it on the calendar, you're welcome to join.</p>
     </div>
     <div class="events-grid">
 
@@ -260,9 +260,9 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <div class="event-card">
         <div class="event-name">Vinyl & Wine</div>
-        <span class="event-cadence">Every two months · RSVP required · BYOB</span>
-        <p class="event-desc">A listening session in the space. Records on the turntable, wine in hand, good company. Small and intimate -- 30 to 40 people max. RSVP is required so we know who's coming. BYOB.</p>
-        <span class="event-tag">RSVP below · BYOB</span>
+        <span class="event-cadence">Every two months · BYOB</span>
+        <p class="event-desc">A listening session in the space. Records on the turntable, wine in hand, good company. Small and intimate -- 30 to 40 people max. Keep an eye on the calendar above for the next date. BYOB.</p>
+        <span class="event-tag">BYOB</span>
       </div>
 
       <div class="event-card featured">
@@ -277,7 +277,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 </section>
 
 <!-- CALENDAR -->
-<section class="calendar-section">
+<section class="calendar-section" id="calendar">
   <div class="wrap">
     <span class="section-label">What's coming up</span>
     <h2 class="section-h2">CTO events calendar</h2>
@@ -292,62 +292,6 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
         scrolling="no"
         title="CTO Events Calendar">
       </iframe>
-    </div>
-  </div>
-</section>
-
-<!-- RSVP -->
-<section class="rsvp-section" id="rsvp">
-  <div class="wrap">
-    <div class="rsvp-inner">
-      <div>
-        <span class="section-label">RSVP</span>
-        <h2 class="section-h2">Let us know you're coming.</h2>
-        <div class="rsvp-body">
-          <p>For events that require an RSVP -- particularly Vinyl & Wine -- fill in the form and we'll add you to the list. You'll get a WhatsApp confirmation closer to the date.</p>
-          <p>For Lunch Club, AI Show & Tell and The CTO Hang, keep an eye on the calendar above -- dates are added as soon as they're confirmed.</p>
-        </div>
-
-      </div>
-
-      <div class="rsvp-form-wrap">
-        <div class="rsvp-form-header">
-          <div class="rsvp-form-title">RSVP</div>
-          <div class="rsvp-form-sub">Members and guests welcome</div>
-        </div>
-        <div class="rsvp-form-body" id="form-body">
-          <div class="form-group">
-            <label class="form-label" for="rsvp-name">Name <span>*</span></label>
-            <input class="form-input" type="text" id="rsvp-name" placeholder="Your name" maxlength="80">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="rsvp-email">Email <span>*</span></label>
-            <input class="form-input" type="email" id="rsvp-email" placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="rsvp-whatsapp">WhatsApp number <span>*</span></label>
-            <input class="form-input" type="tel" id="rsvp-whatsapp" placeholder="e.g. 071 762 0960">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="rsvp-event">Event <span>*</span></label>
-            <select class="form-select" id="rsvp-event">
-              <option value="">Select an event</option>
-              <option value="Lunch Club">Lunch Club</option>
-              <option value="AI Show & Tell">AI Show & Tell</option>
-              <option value="Vinyl & Wine">Vinyl & Wine</option>
-              <option value="The CTO Hang">The CTO Hang</option>
-            </select>
-          </div>
-          <div class="form-error" id="form-error"></div>
-          <button class="form-submit" id="form-submit" onclick="submitRSVP()">Send RSVP</button>
-        </div>
-        <div class="form-success" id="form-success">
-          <span class="form-success-icon">✓</span>
-          <div class="form-success-title">You're on the list!</div>
-          <div class="form-success-desc">We'll confirm via WhatsApp closer to the date. See you there.</div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -416,54 +360,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   });
 });
 
-function submitRSVP() {
-  var name     = document.getElementById('rsvp-name').value.trim();
-  var email    = document.getElementById('rsvp-email').value.trim();
-  var whatsapp = document.getElementById('rsvp-whatsapp').value.trim();
-  var event    = document.getElementById('rsvp-event').value;
-  var errEl    = document.getElementById('form-error');
-  var btn      = document.getElementById('form-submit');
-
-  errEl.style.display = 'none';
-
-  if (!name || !email || !whatsapp || !event) {
-    errEl.textContent = 'Please fill in all fields.';
-    errEl.style.display = 'block';
-    return;
-  }
-
-  btn.disabled = true;
-  btn.textContent = 'Sending...';
-
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    body: JSON.stringify({
-      action: 'addRSVP',
-      name: name,
-      email: email,
-      whatsapp: whatsapp,
-      event: event
-    })
-  })
-  .then(function(r) { return r.json(); })
-  .then(function(data) {
-    if (data.success) {
-      document.getElementById('form-body').style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    } else {
-      errEl.textContent = data.error || 'Something went wrong. Please try again.';
-      errEl.style.display = 'block';
-      btn.disabled = false;
-      btn.textContent = 'Send RSVP';
-    }
-  })
-  .catch(function() {
-    errEl.textContent = 'Connection error. Please try again.';
-    errEl.style.display = 'block';
-    btn.disabled = false;
-    btn.textContent = 'Send RSVP';
-  });
-}
 </script>
 
 </body>
