@@ -555,5 +555,181 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 });
 </script>
 
+<!-- ============================================ -->
+<!-- CTO NEWSLETTER POPUP -->
+<!-- Scroll-triggered, dismiss-and-remember, Zoho iframe form -->
+<!-- Paste this block before the closing </body> tag on Homepage and Events page -->
+<!-- ============================================ -->
+
+<style>
+.cto-popup-overlay {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 380px;
+  width: calc(100% - 48px);
+  background: #FFFFFF;
+  border: 1px solid #E0DDD6;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  z-index: 9999;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+.cto-popup-overlay.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.cto-popup-header {
+  background: #2d2d2d;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cto-popup-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E8860A;
+  margin-bottom: 6px;
+  display: block;
+}
+.cto-popup-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+.cto-popup-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 2px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+.cto-popup-close:hover { color: #FFFFFF; }
+.cto-popup-body {
+  padding: 18px 20px 0;
+}
+.cto-popup-desc {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.cto-popup-desc strong { color: #2d2d2d; font-weight: 600; }
+.cto-popup-iframe-wrap {
+  margin: 0 -20px -4px;
+}
+.cto-popup-iframe-wrap iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .cto-popup-overlay {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    max-width: none;
+    width: auto;
+  }
+  .cto-popup-iframe-wrap iframe {
+    height: 420px;
+  }
+}
+</style>
+
+<div class="cto-popup-overlay" id="cto-newsletter-popup">
+  <div class="cto-popup-header">
+    <div>
+      <span class="cto-popup-eyebrow">CTO Updates</span>
+      <div class="cto-popup-title">Stay in the loop</div>
+    </div>
+    <button class="cto-popup-close" onclick="ctoClosePopup()" aria-label="Close">&#10005;</button>
+  </div>
+  <div class="cto-popup-body">
+    <p class="cto-popup-desc">The <strong>Monthly CTO Dispatch</strong> -- AI news, local Cape Town happenings, seasonal specials and upcoming events. Once a month, no spam.</p>
+    <div class="cto-popup-iframe-wrap">
+      <iframe
+        src="https://crm.zoho.com/crm/WebFormServeServlet?rid=b164fd595144d24df9208f4317e3d5a581149248a6810e68d08a3c120435678ce72c8aedc79512bea282364865009da2gidfe0a8d8b845a233dc77e40cf3e34e658acdae44a2486d77095d51c1db001b01c"
+        title="CTO Updates newsletter signup">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var STORAGE_KEY = 'cto_newsletter_popup_dismissed';
+  var SCROLL_THRESHOLD = 0.4; // 40% scroll depth before triggering
+  var shown = false;
+
+  function alreadyDismissed() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) === 'true';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markDismissed() {
+    try {
+      localStorage.setItem(STORAGE_KEY, 'true');
+    } catch (e) {}
+  }
+
+  window.ctoClosePopup = function() {
+    document.getElementById('cto-newsletter-popup').classList.remove('visible');
+    markDismissed();
+  };
+
+  if (alreadyDismissed()) return;
+
+  function checkScroll() {
+    if (shown) return;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
+
+    if (scrollPercent >= SCROLL_THRESHOLD) {
+      shown = true;
+      document.getElementById('cto-newsletter-popup').classList.add('visible');
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+
+  // Zoho cross-window messaging support (required by their iframe forms)
+  function wfa_pstMesgFrmFom(evt) {
+    if (evt.origin === 'https://crm.zoho.com' || evt.origin === 'https://crm.zohopublic.com') {
+      var loc_obj = JSON.stringify({
+        origin: window.location.origin,
+        pathname: window.location.pathname,
+        search: window.location.search,
+        hash: window.location.hash
+      });
+      evt.source.postMessage(('prnt_wnd_pg_lc_rc_frm_prwindow_' + loc_obj), evt.origin);
+    }
+  }
+  window.addEventListener('message', wfa_pstMesgFrmFom, false);
+})();
+</script>
+
 </body>
 </html>
