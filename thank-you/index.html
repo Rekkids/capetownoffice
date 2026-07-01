@@ -80,6 +80,14 @@ footer { background: var(--charcoal); padding: 40px; display: flex; justify-cont
   footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
 }
 </style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B96WHWC0BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B96WHWC0BV');
+</script>
 </head>
 <body>
 
@@ -89,7 +97,6 @@ footer { background: var(--charcoal); padding: 40px; display: flex; justify-cont
     <li><a href="/membership">Membership</a></li>
     <li><a href="/teams">Teams & Projects</a></li>
     <li><a href="/podcast-studio">Podcast Studio</a></li>
-    <li><a href="/podcast">Podcast</a></li>
     <li><a href="/#location">Location</a></li>
     <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
   </ul>
@@ -102,7 +109,6 @@ footer { background: var(--charcoal); padding: 40px; display: flex; justify-cont
   <a href="/membership" onclick="closeMenu()">Membership</a>
   <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
   <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
-  <a href="/podcast" onclick="closeMenu()">Podcast</a>
   <a href="/#location" onclick="closeMenu()">Location</a>
   <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
 </div>
