@@ -62,10 +62,11 @@ nav { background: var(--white); border-bottom: 1px solid var(--rule); padding: 0
 
 .ty-contact { background: var(--charcoal); border-radius: 12px; padding: 24px; }
 .ty-contact-title { font-weight: 700; font-size: 0.9rem; color: var(--white); margin-bottom: 10px; }
-.ty-contact-body { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.7; }
+.ty-contact-body { font-size: 0.85rem; color: rgba(255,255,255,0.75); line-height: 1.7; }
 .ty-contact-body a { color: var(--orange); text-decoration: none; font-weight: 600; }
 
 /* FOOTER */
+footer .nav-logo { color: var(--white); }
 footer { background: var(--charcoal); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 .footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
 .footer-links { display: flex; gap: 20px; }
@@ -91,6 +92,7 @@ footer { background: var(--charcoal); padding: 40px; display: flex; justify-cont
 </head>
 <body>
 
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#E8860A;color:#FFFFFF;padding:8px 16px;font-weight:700;font-size:0.875rem;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">Skip to main content</a>
 <nav>
   <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
   <ul class="nav-links">
