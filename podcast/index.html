@@ -99,6 +99,44 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 }
 
 .footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
+
+/* YOUTUBE FACADE */
+.yt-facade {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+.yt-facade img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s;
+}
+.yt-facade:hover img { opacity: 0.85; }
+.yt-play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px; height: 64px;
+  background: #E8860A;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.15s, background 0.15s;
+  z-index: 2;
+}
+.yt-facade:hover .yt-play { transform: translate(-50%, -50%) scale(1.1); background: #C97308; }
+.yt-play svg { width: 24px; height: 24px; fill: white; margin-left: 4px; }
+.yt-facade iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B96WHWC0BV"></script>
@@ -163,8 +201,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 10 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/Xg0zzuZ1Jf0?si=RMgLIdHodWk8mifM" title="Who's Behind the Desk EP10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/Xg0zzuZ1Jf0?si=RMgLIdHodWk8mifM&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP10">
+          <img src="https://i.ytimg.com/vi/Xg0zzuZ1Jf0/hqdefault.jpg" alt="Who's Behind the Desk EP10" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 10</span>
@@ -174,8 +215,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 9 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/1ZLrUjwwJ-Q?si=kXMMZEoum2RGUAvK" title="Who's Behind the Desk EP9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/1ZLrUjwwJ-Q?si=kXMMZEoum2RGUAvK&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP9">
+          <img src="https://i.ytimg.com/vi/1ZLrUjwwJ-Q/hqdefault.jpg" alt="Who's Behind the Desk EP9" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 9</span>
@@ -185,8 +229,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 8 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/N4V4JJ7EByY?si=P_15ZSeBDOHwuGuk" title="Who's Behind the Desk EP8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/N4V4JJ7EByY?si=P_15ZSeBDOHwuGuk&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP8">
+          <img src="https://i.ytimg.com/vi/N4V4JJ7EByY/hqdefault.jpg" alt="Who's Behind the Desk EP8" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 8</span>
@@ -196,8 +243,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 7 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/NHsLd5WfP_U?si=YKGr0Gy7usKjSZ1i" title="Who's Behind the Desk EP7" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/NHsLd5WfP_U?si=YKGr0Gy7usKjSZ1i&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP7">
+          <img src="https://i.ytimg.com/vi/NHsLd5WfP_U/hqdefault.jpg" alt="Who's Behind the Desk EP7" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 7</span>
@@ -207,8 +257,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 6 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/6NB80aFf-OE?si=Tt3ec9GtufKBkVg6" title="Who's Behind the Desk EP6" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/6NB80aFf-OE?si=Tt3ec9GtufKBkVg6&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP6">
+          <img src="https://i.ytimg.com/vi/6NB80aFf-OE/hqdefault.jpg" alt="Who's Behind the Desk EP6" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 6</span>
@@ -218,8 +271,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 5 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/aYuK4gl20VQ?si=JrW4xR3w06LhlNtP" title="Who's Behind the Desk EP5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/aYuK4gl20VQ?si=JrW4xR3w06LhlNtP&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP5">
+          <img src="https://i.ytimg.com/vi/aYuK4gl20VQ/hqdefault.jpg" alt="Who's Behind the Desk EP5" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 5</span>
@@ -229,8 +285,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 4 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/9Ya17fyAAuc?si=GAoxT7BAki07Q4jX" title="Who's Behind the Desk EP4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/9Ya17fyAAuc?si=GAoxT7BAki07Q4jX&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP4">
+          <img src="https://i.ytimg.com/vi/9Ya17fyAAuc/hqdefault.jpg" alt="Who's Behind the Desk EP4" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 4</span>
@@ -240,8 +299,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 3 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/xek_0yd-jsw?si=TxNDNRjONHZ3NLTN" title="Who's Behind the Desk EP3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/xek_0yd-jsw?si=TxNDNRjONHZ3NLTN&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP3">
+          <img src="https://i.ytimg.com/vi/xek_0yd-jsw/hqdefault.jpg" alt="Who's Behind the Desk EP3" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 3</span>
@@ -251,8 +313,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 2 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/Xnt4zBMexps?si=HJr2fbGXBZcVbgm-" title="Who's Behind the Desk EP2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/Xnt4zBMexps?si=HJr2fbGXBZcVbgm-&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP2">
+          <img src="https://i.ytimg.com/vi/Xnt4zBMexps/hqdefault.jpg" alt="Who's Behind the Desk EP2" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 2</span>
@@ -262,8 +327,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
       <!-- EP 1 -->
       <div class="episode-item">
-        <div class="episode-video">
-          <iframe src="https://www.youtube.com/embed/d9gXaH6AocM?si=4rhkE5Nck_8kA5L3" title="Who's Behind the Desk EP1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/d9gXaH6AocM?si=4rhkE5Nck_8kA5L3&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP1">
+          <img src="https://i.ytimg.com/vi/d9gXaH6AocM/hqdefault.jpg" alt="Who's Behind the Desk EP1" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="episode-body">
           <span class="episode-num">Episode 1</span>
@@ -332,7 +400,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     </ul>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Cape Town Office. All rights reserved.</span>
+    <span>© 2026 Cape Town Office. All rights reserved. <a href="/privacy-policy" style="color:rgba(255,255,255,0.22);text-decoration:none;">Privacy policy</a></span>
     <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
     <span>Photography by <a href="https://www.mapodile.com" target="_blank" rel="noopener">Mapodile Mkhabela</a> · CTO member since 2019 · Getty Images</span>
   </div>
@@ -342,6 +410,17 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 </footer>
 
 <script>
+
+function loadYT(el, src) {
+  var iframe = document.createElement('iframe');
+  iframe.src = src;
+  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  iframe.allowFullscreen = true;
+  iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+  el.innerHTML = '';
+  el.appendChild(iframe);
+}
+
 function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
 function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
 </script>
