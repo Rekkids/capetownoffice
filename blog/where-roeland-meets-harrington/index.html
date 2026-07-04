@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Cape Town Office</title>
-<meta name="description" content="Coworking, Cape Town, remote work and community. Writing from Cape Town Office -- Cape Town's original coworking space since 2011.">
+<title>Where Roeland Meets Harrington | Cape Town Office</title>
+<meta name="description" content="62 Roeland is in the heart of East City Cape Town -- a neighbourhood transformed over 20 years. Culture, coffee, food and parking on your doorstep.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B96WHWC0BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B96WHWC0BV');
+</script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--white); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
 .nav-logo span { color: var(--orange); }
@@ -27,28 +34,31 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 .mobile-menu.open { display: flex; }
 .mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
 .mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
-
-.page-header { background: var(--charcoal); padding: 64px 40px; }
-.page-header-inner { max-width: 960px; margin: 0 auto; }
-.page-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
-.page-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--white); letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 12px; }
-.page-header p { font-size: 0.95rem; color: rgba(255,255,255,0.6); max-width: 520px; line-height: 1.7; }
-
-.blog-wrap { max-width: 960px; margin: 0 auto; padding: 64px 24px; }
-.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-
-.post-card { background: var(--white); border-radius: 12px; border: 1px solid var(--rule); overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; text-decoration: none; display: flex; flex-direction: column; }
-.post-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform: translateY(-2px); }
-.post-card-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
-.post-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.post-card-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.post-card-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); }
-.post-card-date { font-size: 0.72rem; color: var(--mid); }
-.post-card-date::before { content: '·'; margin-right: 8px; }
-.post-card-title { font-size: 1rem; font-weight: 700; color: var(--charcoal); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 10px; }
-.post-card-excerpt { font-size: 0.82rem; color: var(--mid); line-height: 1.6; flex: 1; }
-.post-card-link { font-size: 0.8rem; font-weight: 700; color: var(--orange); margin-top: 14px; display: inline-flex; align-items: center; gap: 4px; }
-
+.post-hero { width: 100%; max-height: 480px; object-fit: cover; display: block; }
+.post-wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 80px; }
+.post-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.post-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); background: #FFF4E0; padding: 4px 10px; border-radius: 4px; }
+.post-date { font-size: 0.82rem; color: var(--mid); }
+.post-h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; letter-spacing: -0.025em; color: var(--charcoal); line-height: 1.1; margin-bottom: 20px; }
+.post-intro { font-size: 1.05rem; color: var(--mid); line-height: 1.8; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--rule); }
+.post-body { font-size: 0.95rem; color: var(--body); line-height: 1.85; }
+.post-body h2 { font-size: 1.3rem; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em; margin: 36px 0 14px; }
+.post-body h3 { font-size: 1.05rem; font-weight: 700; color: var(--charcoal); margin: 28px 0 10px; }
+.post-body p { margin-bottom: 1.2rem; }
+.post-body p:last-child { margin-bottom: 0; }
+.post-body strong { color: var(--charcoal); font-weight: 600; }
+.post-body a { color: var(--orange); font-weight: 600; text-decoration: none; }
+.post-body a:hover { text-decoration: underline; }
+.post-body blockquote { border-left: 3px solid var(--orange); padding: 12px 20px; margin: 24px 0; background: var(--bg); border-radius: 0 8px 8px 0; font-style: italic; color: var(--mid); }
+.post-body ul, .post-body ol { margin: 16px 0 16px 24px; }
+.post-body li { margin-bottom: 8px; }
+.post-cta { background: var(--charcoal); border-radius: 12px; padding: 32px; margin-top: 48px; text-align: center; }
+.post-cta h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.post-cta p { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; line-height: 1.6; }
+.btn-orange { background: var(--orange); color: var(--white); padding: 12px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s; }
+.btn-orange:hover { background: var(--orange-dark); }
+.back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--mid); text-decoration: none; margin-bottom: 32px; transition: color 0.15s; }
+.back-link:hover { color: var(--orange); }
 footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
 footer .nav-logo { color: var(--white); }
 .footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
@@ -58,21 +68,19 @@ footer .nav-logo { color: var(--white); }
 .footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
 .footer-col a:hover { color: var(--white); }
 .footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+@media (max-width: 768px) { nav { padding: 0 20px; } .nav-links { display: none; } .hamburger { display: flex; } footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; } }
 
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .page-header { padding: 48px 20px; }
-  .blog-grid { grid-template-columns: 1fr; }
-  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
-}
+.post-page-header { background: var(--charcoal); padding: 64px 40px; }
+.post-page-header-inner { max-width: 720px; margin: 0 auto; }
+.post-page-header .post-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.post-page-header .post-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); background: rgba(232,134,10,0.15); padding: 4px 10px; border-radius: 4px; }
+.post-page-header .post-date { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+.post-page-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; }
+@media (max-width: 768px) { .post-page-header { padding: 48px 20px; } }
 </style>
 </head>
 <body>
-
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#E8860A;color:#FFFFFF;padding:8px 16px;font-weight:700;font-size:0.875rem;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">Skip to main content</a>
-
 <nav>
   <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
   <ul class="nav-links">
@@ -86,7 +94,6 @@ footer .nav-logo { color: var(--white); }
     <span></span><span></span><span></span>
   </button>
 </nav>
-
 <div class="mobile-menu" id="mobile-menu">
   <a href="/membership" onclick="closeMenu()">Membership</a>
   <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
@@ -94,101 +101,43 @@ footer .nav-logo { color: var(--white); }
   <a href="/#location" onclick="closeMenu()">Location</a>
   <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
 </div>
-
-<div class="page-header">
-  <div class="page-header-inner">
-    <span class="page-label">Cape Town Office</span>
-    <h1>The Blog</h1>
-    <p>Coworking, Cape Town, remote work and community. Writing from Cape Town's original coworking space since 2011.</p>
+<main id="main-content">
+<div class="post-page-header">
+  <div class="post-page-header-inner">
+    <div class="post-meta">
+      <span class="post-tag">Cape Town</span>
+      <span class="post-date">27 March 2025</span>
+    </div>
+    <h1>Where Roeland Meets Harrington</h1>
   </div>
 </div>
+<div class="post-wrap">
+  <a href="/blog" class="back-link">← All posts</a>
+  <p class="post-intro">Cape Town is no stranger to dynamic urban shifts, and nowhere is this more evident than in the rise of Harrington Street as the city's must-visit hub. Culture, creativity, and convenience -- this pocket of the city has become the go-to destination.</p>
+  <div class="post-body">
+    <h2>62 Roeland</h2>
+    <p>What to call the area surrounding Harrington Street is often debated -- some say it's part of District Six, some say Gardens, others firmly place it in the East City. Technically, Harrington Street falls within the <strong>East City district</strong>, but not by a lot. You're talking one street away in reality. Whatever you call it though, you can't deny this area has undergone a massive transformation.</p>
+    <p>The East City had sadly fallen into a state of disrepair and decline back in the 90s, and it wasn't until the early 2000s that we started to see the first sparks of energy and rejuvenation. Back then, it wasn't the most desirable area to shop, eat, live or work in. And as we know, change -- however much needed -- is never easy, so re-imagining the area and what it could be was a long and sustained community effort.</p>
+    <p>One person I feel should be largely credited for his relentless passion, drive and energy is the late <strong>Steven Harris</strong>, fondly known as the "Mayor of the East City." His vision and dedication played a crucial role in shaping the East City into the thriving hub it is today.</p>
+    <p>The East City, because of Steven, was at the heart of Cape Town's designation as the <a href="https://wdo.org/programmes/wdc/past-cities/wdccapetown2014/" target="_blank" rel="noopener"><strong>World Design Capital in 2014</strong></a> -- a title that solidified the East City as the centre for innovation and urban regeneration in Cape Town.</p>
 
-<main id="main-content">
-<div class="blog-wrap">
-  <div class="blog-grid">
+    <h2>Roeland to everywhere in Cape Town</h2>
+    <p>One of the biggest advantages of this location? <strong>Accessibility</strong>. Whether North via the N1 or to Cape Town International Airport via the N2, 62 Roeland is ideally positioned. Southern Suburbs via the M3 is easy, but avoid peak times if you can as the traffic can get intense.</p>
 
-    <a href="/blog/video-calls-coworking" class="post-card">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nHEFKuEiL7KBNFUiEyruLwMk065YWAla2PVnm" alt="Can you use a coworking space for video calls?" class="post-card-img" loading="lazy">
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <span class="post-card-tag">Coworking</span>
-          <span class="post-card-date">May 2026</span>
-        </div>
-        <div class="post-card-title">Can You Use a Coworking Space for Video Calls and Meetings?</div>
-        <div class="post-card-excerpt">The answer is yes -- but it depends on the space. Acoustics, internet reliability, private rooms and what to look for before you commit.</div>
-        <span class="post-card-link">Read more →</span>
-      </div>
-    </a>
+    <h2>Parking -- in Cape Town, that old chestnut</h2>
+    <p>Unlike much of the rest of the city, you can still park for free on upper Harrington and Canterbury Street. There are paid options too. <a href="https://en.parkopedia.com/parking/carpark/harrington_square/8001/cape_town/" target="_blank" rel="noopener">Harrington Square</a> provides 150 parking bays at R5 per hour with a daily maximum of R30 -- about a 6-minute walk from the office. Park and grab a coffee on the way up.</p>
 
-    <a href="/blog/is-coworking-worth-the-cost" class="post-card">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNQ842ZBWs2bjLgX4n5mewSkaZJ7fHUGy1d03" alt="Is a coworking space worth the cost?" class="post-card-img" loading="lazy">
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <span class="post-card-tag">Coworking</span>
-          <span class="post-card-date">May 2026</span>
-        </div>
-        <div class="post-card-title">Is a Coworking Space Worth the Cost?</div>
-        <div class="post-card-excerpt">Evaluating ROI and whether membership justifies the expense. Real numbers, Cape Town pricing and a simple way to calculate whether it pays off.</div>
-        <span class="post-card-link">Read more →</span>
-      </div>
-    </a>
-
-    <a href="/blog/where-roeland-meets-harrington" class="post-card">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nywGxnvPojsDPLuYva2gCdJKcHbr8q9fRiM0m" alt="Where Roeland meets Harrington, East City Cape Town" class="post-card-img" loading="lazy">
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <span class="post-card-tag">Cape Town</span>
-          <span class="post-card-date">March 2025</span>
-        </div>
-        <div class="post-card-title">Where Roeland Meets Harrington</div>
-        <div class="post-card-excerpt">The neighbourhood most Cape Town locals haven't fully discovered yet. Culture, creativity and convenience in the East City district.</div>
-        <span class="post-card-link">Read more →</span>
-      </div>
-    </a>
-
-    <a href="/blog/digital-nomad-visa" class="post-card">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nhxzG72H4PRbozV9v60JNOgktrL3B7MC8wUsc" alt="South African Digital Nomad Visa" class="post-card-img" loading="lazy">
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <span class="post-card-tag">Digital Nomad</span>
-          <span class="post-card-date">November 2024</span>
-        </div>
-        <div class="post-card-title">The Digital Nomad Visa is here, finally</div>
-        <div class="post-card-excerpt">The long-awaited South African Digital Nomad Visa opens the door to three years of living and working in Cape Town. Here's why that matters.</div>
-        <span class="post-card-link">Read more →</span>
-      </div>
-    </a>
-
-    <a href="/blog/productivity-hybrid-work" class="post-card">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nRoa4BVd4cjyUiEZk6PSTatO2mz1g9Xd3n8uM" alt="Productivity and hybrid work coworking" class="post-card-img" loading="lazy">
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <span class="post-card-tag">Hybrid Work</span>
-          <span class="post-card-date">February 2024</span>
-        </div>
-        <div class="post-card-title">Productivity and Hybrid Work: The Role of Coworking Spaces</div>
-        <div class="post-card-excerpt">83% of workers prefer a hybrid model. Coworking spaces are uniquely positioned to make it work -- here's what the data says.</div>
-        <span class="post-card-link">Read more →</span>
-      </div>
-    </a>
-
-    <a href="/blog/cape-town-remote-work" class="post-card">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nQytjjjsXRCn4a3Vx1MWlwgDE7ozmtr9cup5y" alt="Cape Town remote work digital nomad hub" class="post-card-img" loading="lazy">
-      <div class="post-card-body">
-        <div class="post-card-meta">
-          <span class="post-card-tag">Cape Town</span>
-          <span class="post-card-date">February 2024</span>
-        </div>
-        <div class="post-card-title">Cape Town: no longer just a trend</div>
-        <div class="post-card-excerpt">Cape Town has become an established destination for remote work -- not a passing trend. Cost of living, time zones, community and why nomads keep coming back.</div>
-        <span class="post-card-link">Read more →</span>
-      </div>
-    </a>
-
+    <h2>Work, play, coffee and eat in the East City</h2>
+    <p>Cape Town Office is in a prime position to take full advantage of what this district has to offer. Some of the city's best bars, restaurants, and music venues -- from Surfarosa to The Electric to Tommy's Chop Shop -- are within minutes of the office. We've listed our favourites, tried and tested, on our <a href="/east-city">East City page</a>.</p>
+    <p>We've seen the East City transform in real-time over the past 14 years, in the best way. <strong>62 Roeland is more than just an address</strong> -- you're in the heart of the East City.</p>
+  </div>
+  <div class="post-cta">
+    <h3>Ready to work from Cape Town Office?</h3>
+    <p>Come in for a day or book a free viewing. See what a proper office feels like.</p>
+    <a href="/book-a-viewing" class="btn-orange">Book a free viewing</a>
   </div>
 </div>
 </main>
-
 <footer>
   <div>
     <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
@@ -231,11 +180,9 @@ footer .nav-logo { color: var(--white); }
     <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
   </div>
 </footer>
-
 <script>
 function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
 function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
 </script>
-
 </body>
 </html>
