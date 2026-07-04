@@ -1,0 +1,479 @@
+{
+  "redirects": [
+    {
+      "source": "/daypass/",
+      "destination": "/day-pass",
+      "permanent": true
+    },
+    {
+      "source": "/podcast-studio/",
+      "destination": "/podcast-studio",
+      "permanent": true
+    },
+    {
+      "source": "/hybrid-coworking/",
+      "destination": "/hybrid-coworking",
+      "permanent": true
+    },
+    {
+      "source": "/dedicatedcoworkingoffice/",
+      "destination": "/dedicated",
+      "permanent": true
+    },
+    {
+      "source": "/viewingandtourbooking/",
+      "destination": "/book-a-viewing",
+      "permanent": true
+    },
+    {
+      "source": "/booking/",
+      "destination": "/book-a-viewing",
+      "permanent": true
+    },
+    {
+      "source": "/faqs/",
+      "destination": "/faqs",
+      "permanent": true
+    },
+    {
+      "source": "/members/",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/sign-up/",
+      "destination": "/flexi-enquiry",
+      "permanent": true
+    },
+    {
+      "source": "/newsletter/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you/",
+      "destination": "/thank-you",
+      "permanent": true
+    },
+    {
+      "source": "/home-cape-town-office/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/poa/",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/internet/",
+      "destination": "/membership",
+      "permanent": true
+    },
+    {
+      "source": "/214-2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/ufaqs/loadshedding/",
+      "destination": "/faqs",
+      "permanent": true
+    },
+    {
+      "source": "/ufaqs/day-pass/",
+      "destination": "/day-pass",
+      "permanent": true
+    },
+    {
+      "source": "/ufaqs/parking/",
+      "destination": "/faqs",
+      "permanent": true
+    },
+    {
+      "source": "/ufaqs/can-colleagues-spend-time-with-me-at-the-office/",
+      "destination": "/faqs",
+      "permanent": true
+    },
+    {
+      "source": "/ufaqs/can-two-of-us-share-a-membership/",
+      "destination": "/faqs",
+      "permanent": true
+    },
+    {
+      "source": "/where-roeland-meets-harrington/",
+      "destination": "/blog/where-roeland-meets-harrington",
+      "permanent": true
+    },
+    {
+      "source": "/is-a-coworking-space-worth-the-cost/",
+      "destination": "/blog/is-coworking-worth-the-cost",
+      "permanent": true
+    },
+    {
+      "source": "/daily-commute-to-the-office/",
+      "destination": "/blog/daily-commute-to-the-office",
+      "permanent": true
+    },
+    {
+      "source": "/the-cto-story/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/can-you-use-a-coworking-space-for-video-calls-and-meetings/",
+      "destination": "/blog/video-calls-coworking",
+      "permanent": true
+    },
+    {
+      "source": "/sharethefailure/",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/south-african-digital-nomad-visa/",
+      "destination": "/blog/digital-nomad-visa",
+      "permanent": true
+    },
+    {
+      "source": "/conservation-coworking/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/5-compelling-reasons-to-revamp-your-work-environment-for-a-fresh-start/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/your-airbnb-is-not-an-office/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/im-45-am-i-too-old-for-coworking/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/stay-focused/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/embracing-professional-growth/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/five-reasons-to-join-a-coworking-space/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/established-businesses-choose-coworking/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/keeping-on-track/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/behindthedeskstuartfairbairns/",
+      "destination": "/podcast",
+      "permanent": true
+    },
+    {
+      "source": "/growth/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/psychology-behind-coworking/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/silicon-cape-valley/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/what-do-you-look-for/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/the-time-to-adapt-and-evolve-is-now-the-future-awaits-those-who-dare-to-embrace-it/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/mandela-lessons-in-leadership/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-isnt-the-future/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/cape-town-is-no-longer-just-a-trend-for-remote-work/",
+      "destination": "/blog/cape-town-remote-work",
+      "permanent": true
+    },
+    {
+      "source": "/phased-return/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/beyond-the-square-meter/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/3-weeks-till-the-uhm-end-of-the-world/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/the-future-of-coworking-and-why-it-will-give-your-business-a-huge-edge/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/digital-nomads-return-to-cto/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/the-hood/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/mixed-results-as-google-enters-microsofts-turf/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/productivity-and-coworking/",
+      "destination": "/blog/productivity-hybrid-work",
+      "permanent": true
+    },
+    {
+      "source": "/covid-coworking-sensible/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/exciting-times-ahead/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/whos-who-in-the-cto-zoo/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-africa-a-growing-community/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/the-growth-of-coworking/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/settled-in-our-new-home/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/time-clocks-made-sense-in-factories-do-they-in-2025/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-will-office-space-change-after-covid/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/not-quite-time/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/employee-loyalty-in-a-post-covid-economy/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/networking/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/cto-2-0/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/you-think-load-shedding-is-over/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/how-coworking-spaces-transform-into-local-experts-and-connectors/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/theres-no-place-like-cto/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/cafe-hotspot-desk/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/community-events-social-activities/",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/start-up-diary-collaborative-workspaces-are-great-for-growing-businesses-co-the-telegraph/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces/camp-308-canggu-bali-coworking-coliving/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces/sundesk-coworking-coliving-morocco/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces/semilla-cafe-coworking-columbia/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces/the-works-at-latitude-15-lusaka/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/coworking-spaces/onecowork-placa-catalunya/",
+      "destination": "/east-city",
+      "permanent": true
+    },
+    {
+      "source": "/category/coworking-space/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/category/south-africa/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/category/misc/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/category/digital-nomad/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/category/entrepreneur/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/2/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/3/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/4/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/6/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/7/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/8/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/cape-town-office/page/9/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/author/mroli3000/",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/login/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/logout/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/password-reset/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
