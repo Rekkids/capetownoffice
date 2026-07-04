@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shared Office Space Cape Town | Flexible & Serviced Offices | Cape Town Office</title>
+<meta name="description" content="Looking for shared office space, hot desks or flexible serviced offices in Cape Town? Cape Town Office has been providing flexible workspace at 62 Roeland Street since 2011.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B96WHWC0BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B96WHWC0BV');
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--white); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+
+.page-header { background: var(--charcoal); padding: 64px 40px; }
+.page-header-inner { max-width: 720px; margin: 0 auto; }
+.page-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.page-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 12px; }
+.page-header p { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+.section { margin-bottom: 48px; }
+.section h2 { font-size: 1.3rem; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em; margin-bottom: 14px; }
+.section p { font-size: 0.92rem; color: var(--mid); line-height: 1.85; margin-bottom: 1rem; }
+.section p:last-child { margin-bottom: 0; }
+.section p strong { color: var(--charcoal); font-weight: 600; }
+.section a { color: var(--orange); font-weight: 600; text-decoration: none; }
+.section a:hover { text-decoration: underline; }
+
+.terms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 20px; }
+.term-card { background: var(--bg); border-radius: 10px; padding: 18px 20px; border: 1px solid var(--rule); }
+.term-name { font-size: 0.875rem; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+.term-desc { font-size: 0.8rem; color: var(--mid); line-height: 1.5; }
+
+.options-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+.option { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; background: var(--bg); border-radius: 10px; border: 1px solid var(--rule); }
+.option-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); flex-shrink: 0; margin-top: 6px; }
+.option-title { font-size: 0.9rem; font-weight: 700; color: var(--charcoal); margin-bottom: 4px; }
+.option-desc { font-size: 0.82rem; color: var(--mid); line-height: 1.6; }
+
+.cta-block { background: var(--orange); border-radius: 12px; padding: 36px; text-align: center; margin-top: 48px; }
+.cta-block h2 { font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.cta-block p { font-size: 0.875rem; color: rgba(255,255,255,0.8); margin-bottom: 20px; line-height: 1.6; }
+.btn-white { background: var(--white); color: var(--orange); padding: 12px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: transform 0.15s; }
+.btn-white:hover { transform: translateY(-1px); }
+
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+footer .nav-logo { color: var(--white); }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+.footer-keywords { grid-column: 1 / -1; padding-top: 20px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-header { padding: 48px 20px; }
+  .terms-grid { grid-template-columns: 1fr; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#E8860A;color:#FFFFFF;padding:8px 16px;font-weight:700;font-size:0.875rem;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">Skip to main content</a>
+
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/#location">Location</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/#location" onclick="closeMenu()">Location</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <span class="page-label">Cape Town · Est. 2011</span>
+    <h1>Shared office space, hot desks and flexible workspace in Cape Town</h1>
+    <p>Whatever you call it -- coworking, shared office, hot desk, serviced office or flexible workspace -- Cape Town Office has been providing it from 62 Roeland Street since 2011.</p>
+  </div>
+</div>
+
+<main id="main-content">
+<div class="wrap">
+
+  <div class="section">
+    <h2>What's the difference between coworking, shared office space and serviced offices?</h2>
+    <p>The short answer: not much. These terms all describe broadly the same thing -- a professionally equipped workspace that individuals, freelancers, remote workers and small teams can use without signing a long-term lease.</p>
+    <p>The term <strong>coworking</strong> (one word) is the globally accepted term for shared workspace used by people from different companies, working alongside each other. It was formally recognised as distinct from "co-working" (hyphenated), which refers to colleagues working together within the same organisation.</p>
+    <p>In practice, most people use whichever term feels natural. If you're looking for any of the following in Cape Town, you're in the right place:</p>
+    <div class="terms-grid">
+      <div class="term-card">
+        <div class="term-name">Coworking space</div>
+        <div class="term-desc">Shared workspace for independent workers and small teams from different companies</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Shared office space</div>
+        <div class="term-desc">A professional office environment shared with other businesses</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Hot desking</div>
+        <div class="term-desc">Flexible desk access on an as-needed basis -- no fixed seat</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Serviced office</div>
+        <div class="term-desc">A fully equipped office with internet, meeting rooms and support included</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Flexible office space</div>
+        <div class="term-desc">Office access without a long-term lease commitment</div>
+      </div>
+      <div class="term-card">
+        <div class="term-name">Short-term office rental</div>
+        <div class="term-desc">Office space available by the day, week, month or project duration</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What Cape Town Office offers</h2>
+    <p>Cape Town Office is Cape Town's original coworking space, open since 2011 at 62 Roeland Street in the East City district. We offer several options depending on how you work:</p>
+    <div class="options-list">
+      <div class="option">
+        <div class="option-dot"></div>
+        <div>
+          <div class="option-title">Flexi / Hybrid membership</div>
+          <div class="option-desc">Hour-based access. Buy a block of hours and use them at your own pace within 60 days. From R2,530 incl. VAT. The flexible office equivalent of pay-as-you-go -- ideal for people who don't need to be in an office every day.</div>
+        </div>
+      </div>
+      <div class="option">
+        <div class="option-dot"></div>
+        <div>
+          <div class="option-title">Dedicated desk</div>
+          <div class="option-desc">Your own permanent desk in the space, available 24/7. No hour-counting. From R4,500 incl. VAT per month. The closest equivalent to a traditional office, without the lease.</div>
+        </div>
+      </div>
+      <div class="option">
+        <div class="option-dot"></div>
+        <div>
+          <div class="option-title">Team space</div>
+          <div class="option-desc">A dedicated pod for small teams and project crews. Month-to-month, no minimum term. Ideal for startups, hybrid teams and short-term project crews including film and TV production.</div>
+        </div>
+      </div>
+      <div class="option">
+        <div class="option-dot"></div>
+        <div>
+          <div class="option-title">Day pass</div>
+          <div class="option-desc">Full access to the space for R495 incl. VAT. Walk-ins welcome, Monday to Friday. The R495 is credited in full against any membership if you decide to join.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What's included in all options</h2>
+    <p>All memberships and day passes include <strong>500Mbps fibre</strong> (WiFi and Ethernet), meeting rooms, podcast studio, phone booths, loadshedding backup, bottomless coffee and tea, showers, and 24/7 access (members). No hidden extras.</p>
+    <p>We're at <strong>62 Roeland Street, 3rd floor, Gardens, Cape Town</strong> -- in the East City district, well positioned for the M3, N1 and N2. Free street parking available nearby.</p>
+  </div>
+
+  <div class="section">
+    <h2>Why Cape Town Office?</h2>
+    <p>We've been doing this since 2011 -- longer than any other coworking space in Cape Town. In 2016, Forbes named us one of the <strong>Top 10 Best Coworking Spaces on Earth</strong>, based on community engagement rather than aesthetics. In 2024, Cape Town Tourism recognised us as the <strong>Best Coworking Space in Cape Town</strong>.</p>
+    <p>We have a 5-star rating on Google with over 140 reviews. We're not the biggest space in Cape Town and we're not trying to be. We're the one with the best community -- and we've been proving it for fifteen years.</p>
+  </div>
+
+  <div class="cta-block">
+    <h2>Come and see it for yourself.</h2>
+    <p>A viewing takes 20 minutes. No pitch, no pressure -- just a coffee and a look around. Or walk in for a day pass and try it before you commit.</p>
+    <a href="/book-a-viewing" class="btn-white">Book a free viewing</a>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  <div>
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Cape Town Office. All rights reserved.</span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+  </div>
+  <div class="footer-keywords">
+    Cape Town Office is Cape Town's original coworking space, open since 2011. Also known as shared office space, hot desking, flexible office space, serviced offices and short-term office rental in Cape Town. Whatever you call it, we've been doing it longer than anyone else in the city. 62 Roeland Street, Gardens, Cape Town.
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+</script>
+
+</body>
+</html>
