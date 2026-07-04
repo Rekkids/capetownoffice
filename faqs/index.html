@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs | Cape Town Office</title>
+<meta name="description" content="Frequently asked questions about coworking at Cape Town Office. Membership, access, internet, parking, events and more. 62 Roeland Street, Gardens, Cape Town.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B96WHWC0BV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B96WHWC0BV');
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+
+/* PAGE HEADER */
+.page-header { background: var(--charcoal); padding: 64px 40px; }
+.page-header-inner { max-width: 720px; margin: 0 auto; }
+.page-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.page-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; color: var(--white); letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 12px; }
+.page-header p { font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+/* MAIN */
+.faq-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+/* CATEGORY */
+.faq-category { margin-bottom: 48px; }
+.faq-category-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--orange); display: block; }
+
+/* ACCORDION */
+.faq-item { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 8px; overflow: hidden; }
+.faq-question { width: 100%; background: none; border: none; padding: 18px 20px; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-family: 'Titillium Web', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--charcoal); line-height: 1.4; transition: background 0.15s; }
+.faq-question:hover { background: var(--bg); }
+.faq-question.open { background: var(--bg); color: var(--orange); }
+.faq-icon { width: 20px; height: 20px; flex-shrink: 0; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--rule); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; color: var(--mid); transition: transform 0.2s, background 0.15s; }
+.faq-question.open .faq-icon { transform: rotate(45deg); background: var(--orange); border-color: var(--orange); color: var(--white); }
+.faq-answer { display: none; padding: 0 20px 18px; font-size: 0.875rem; color: var(--mid); line-height: 1.75; }
+.faq-answer.open { display: block; }
+.faq-answer a { color: var(--orange); font-weight: 600; text-decoration: none; }
+.faq-answer a:hover { text-decoration: underline; }
+.faq-answer ul { margin: 10px 0 10px 20px; }
+.faq-answer li { margin-bottom: 6px; }
+
+/* CTA */
+.faq-cta { background: var(--charcoal); border-radius: 12px; padding: 32px; text-align: center; margin-top: 48px; }
+.faq-cta h2 { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.faq-cta p { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; line-height: 1.6; }
+.btn-orange { background: var(--orange); color: var(--white); padding: 12px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s; }
+.btn-orange:hover { background: var(--orange-dark); }
+
+/* FOOTER */
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+footer .nav-logo { color: var(--white); }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .page-header { padding: 48px 20px; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:#E8860A;color:#FFFFFF;padding:8px 16px;font-weight:700;font-size:0.875rem;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">Skip to main content</a>
+
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/#location">Location</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/#location" onclick="closeMenu()">Location</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <span class="page-label">Cape Town Office</span>
+    <h1>Frequently asked questions</h1>
+    <p>Everything you need to know about working from CTO. If your question isn't here, email us at <a href="mailto:info@capetownoffice.com" style="color:var(--orange);font-weight:600;">info@capetownoffice.com</a></p>
+  </div>
+</div>
+
+<main id="main-content">
+<div class="faq-wrap">
+
+  <!-- MEMBERSHIP -->
+  <div class="faq-category">
+    <span class="faq-category-title">Membership</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do Flexi memberships work?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Flexi memberships are hour-based. You buy a block of hours -- 40, 50 or 75 -- and use them at your own pace. All Flexi packages are valid for 60 days from activation. Hours don't carry over once the 60 days are up, so plan accordingly. See our <a href="/hybrid-coworking">Hybrid / Flexi page</a> for pricing.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Can I join mid-month?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- you don't have to wait until the start of the month. Your first invoice will be pro-rated to reflect the date you started.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is there a deposit?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. A R500 cash deposit is required upfront and refunded in full when you leave. There is a R100 penalty for loss of or non-return of your access disc.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Can two people share a membership?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        No -- memberships are personal and non-transferable. Each member needs their own membership. If you're a team, have a look at our <a href="/teams">Teams & Projects page</a> for options that work for groups.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Can I bring a colleague or guest to work with me?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. Guests are welcome -- a day rate will be applied to their visit unless they're only using the common areas. Get in touch to arrange.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What's the difference between Hybrid / Flexi and a Dedicated Desk?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Flexi memberships are hour-based -- you use the space as much or as little as you need within your 60-day window. A Dedicated Desk gives you your own permanent desk in the space, available to you any time, with no hour-counting. If you're using the space three or more days a week, a Dedicated Desk usually works out more economical. See <a href="/membership">all membership options</a>.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ACCESS -->
+  <div class="faq-category">
+    <span class="faq-category-title">Access & Hours</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What are the opening hours?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        CTO is open to members 24/7 -- including weekends and public holidays. Once you've joined and have your access disc, you can come and go as you need. Support staff work Monday to Friday during business hours only. Members manage themselves outside of those hours.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Does 24/7 access apply to Day Pass guests?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        No. Day Pass access is during reception hours only, Monday to Friday, excluding public holidays. 24/7 access is a members-only benefit.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How does building access work?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        You'll be issued a physical access disc when you join. This gives you entry to the building and the office at any time. Keep it safe -- there's a R100 penalty for loss or non-return of the disc.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INTERNET -->
+  <div class="faq-category">
+    <span class="faq-category-title">Internet & Tech</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How fast is the internet?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        500Mbps fibre, available via WiFi and Ethernet. LAN cables are supplied -- you just need your own adapter if your laptop doesn't have an Ethernet port. Wired connections are recommended for consistently fast speeds, particularly for large file transfers or video production work.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What happens during loadshedding?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        CTO has a silent inverter backup system that keeps the internet and lights running during loadshedding. Switchover is seamless -- you won't notice it happen. We can run for up to 8 hours continuously on backup power.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is there printing available?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- we have an A3 printer available for members.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FACILITIES -->
+  <div class="faq-category">
+    <span class="faq-category-title">Facilities</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Are meeting rooms included?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- meeting room access is included in all memberships at no extra charge. We have two rooms, each seating 6-8 people with a smart TV and glass board. Book online in 30-minute increments. If you've booked and no longer need the slot, please cancel so someone else can use it.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is the podcast studio free to use?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- the podcast studio is included in all memberships. Book it online via the studio booking link. It's worth checking with the team first if you're new to the equipment so we can walk you through the setup.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Are there phone booths for private calls?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- we have phone booths available for members. No booking required, just use them as needed.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Are showers available?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- showers are available for members who cycle in or go for a surf before work. Available to all members, no booking required.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is coffee included?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- bottomless filter coffee and teas are included in all memberships. There's also an honesty bar for cold drinks and snacks, with payment by cash, Zapper or Yoco.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PARKING & LOCATION -->
+  <div class="faq-category">
+    <span class="faq-category-title">Parking & Location</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Where is Cape Town Office?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        We're on the 3rd floor of 62 Roeland Street, Gardens, Cape Town -- in the East City district, at the corner of Roeland and Buitenkant. Well positioned for the M3, N1 and N2. See our <a href="/east-city">East City page</a> for more on the neighbourhood.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is there parking nearby?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Free street parking is available on upper Harrington and Canterbury Street. Harrington Square offers 150 paid bays at R5/hour with a R30 daily maximum -- about a 6-minute walk from the office. There is also paid parking on Roeland Street and surrounding streets.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EVENTS & COMMUNITY -->
+  <div class="faq-category">
+    <span class="faq-category-title">Events & Community</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What events does CTO host?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        We run four recurring events: Lunch Club, AI Show & Tell, Vinyl & Wine, and The CTO Hang. Dates are announced via the member WhatsApp group and on our <a href="/events">Events page</a>. Members are also welcome to host their own events at no additional cost.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I join the member WhatsApp group?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        When you join CTO, Lizelle will add you to the WhatsApp community. It's the main channel for office notices, event announcements and general goings-on. If you're already a member and not in the group, email <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What is Thursday banana bread?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        A CTO ritual since the early days. Every Thursday, without fail, there's banana bread in the kitchen. If you're here on a Thursday, you'll know about it.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DAY PASS -->
+  <div class="faq-category">
+    <span class="faq-category-title">Day Pass</span>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How does the Day Pass work?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        R495 incl. VAT per person gives you full access to the space for one day -- Monday to Friday, excluding public holidays. Walk-ins are welcome. For best value, arrive by 9 or 9:30am. The 8 hours are non-split and used in a single visit. See the <a href="/day-pass">Day Pass page</a> for full details.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is the Day Pass amount credited if I join?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Yes -- if you take out any membership after your day with us, the full R495 is credited against your first month. No conditions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        What do I need to bring?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Your ID or Passport for verification on arrival. Allow 15-20 minutes when you arrive for a quick tour, orientation and setup. Payment by card on the day or EFT in advance.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="faq-cta">
+    <h2>Still have a question?</h2>
+    <p>Drop us a line and we'll get back to you quickly.</p>
+    <a href="mailto:info@capetownoffice.com" class="btn-orange">Email us</a>
+  </div>
+
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Cape Town Office. All rights reserved.</span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
+
+  // Close all open items
+  document.querySelectorAll('.faq-question.open').forEach(function(q) {
+    q.classList.remove('open');
+    q.nextElementSibling.classList.remove('open');
+  });
+
+  // Open clicked item if it was closed
+  if (!isOpen) {
+    btn.classList.add('open');
+    answer.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
