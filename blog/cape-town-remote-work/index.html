@@ -69,6 +69,14 @@ footer .nav-logo { color: var(--white); }
 .footer-col a:hover { color: var(--white); }
 .footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
 @media (max-width: 768px) { nav { padding: 0 20px; } .nav-links { display: none; } .hamburger { display: flex; } footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; } }
+
+.post-page-header { background: var(--charcoal); padding: 64px 40px; }
+.post-page-header-inner { max-width: 720px; margin: 0 auto; }
+.post-page-header .post-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.post-page-header .post-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); background: rgba(232,134,10,0.15); padding: 4px 10px; border-radius: 4px; }
+.post-page-header .post-date { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+.post-page-header h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; }
+@media (max-width: 768px) { .post-page-header { padding: 48px 20px; } }
 </style>
 </head>
 <body>
@@ -94,14 +102,17 @@ footer .nav-logo { color: var(--white); }
   <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
 </div>
 <main id="main-content">
-<img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nQytjjjsXRCn4a3Vx1MWlwgDE7ozmtr9cup5y" alt="Cape Town remote work destination for digital nomads" class="post-hero" loading="eager">
+<div class="post-page-header">
+  <div class="post-page-header-inner">
+    <div class="post-meta">
+      <span class="post-tag">Cape Town</span>
+      <span class="post-date">21 February 2024</span>
+    </div>
+    <h1>Cape Town: no longer just a trend</h1>
+  </div>
+</div>
 <div class="post-wrap">
   <a href="/blog" class="back-link">← All posts</a>
-  <div class="post-meta">
-    <span class="post-tag">Cape Town</span>
-    <span class="post-date">21 February 2024</span>
-  </div>
-  <h1 class="post-h1">Cape Town: no longer just a trend</h1>
   <p class="post-intro">Cape Town has become an established destination for remote work and digital nomads. The lifestyle is something special -- beaches and mountains and amazing food -- but if you're here to work, you also need fast internet, professional space, and a community. Here's why Cape Town delivers on all of it.</p>
   <div class="post-body">
     <h2>Let's look at the cost</h2>
