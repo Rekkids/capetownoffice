@@ -112,7 +112,7 @@
     },
     {
       "source": "/daily-commute-to-the-office/",
-      "destination": "/blog/daily-commute-to-the-office",
+      "destination": "/blog",
       "permanent": true
     },
     {
