@@ -166,6 +166,8 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+.footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
 </style>
 <!-- Google Analytics GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B96WHWC0BV"></script>
@@ -187,7 +189,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <li><a href="/membership">Membership</a></li>
     <li><a href="/teams">Teams & Projects</a></li>
     <li><a href="/podcast-studio">Podcast Studio</a></li>
-    <li><a href="/#location">Location</a></li>
+    <li><a href="/day-pass">Day Pass</a></li>
     <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
   </ul>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
@@ -199,7 +201,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   <a href="/membership" onclick="closeMenu()">Membership</a>
   <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
   <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
-  <a href="/#location" onclick="closeMenu()">Location</a>
+  <a href="/day-pass" onclick="closeMenu()">Day Pass</a>
   <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
 </div>
 
@@ -354,9 +356,12 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     </ul>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Cape Town Office. All rights reserved.</span>
+    <span>© 2026 Cape Town Office. All rights reserved. <a href="/privacy-policy" style="color:rgba(255,255,255,0.22);text-decoration:none;">Privacy policy</a></span>
     <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
     <span>Photography by <a href="https://www.mapodile.com" target="_blank" rel="noopener">Mapodile Mkhabela</a> · CTO member since 2019 · Getty Images</span>
+  </div>
+  <div class="footer-keywords">
+    Cape Town Office is Cape Town's original coworking space, open since 2011. Also known as shared office space, hot desking, flexible office space, serviced offices and short-term office rental in Cape Town. Whatever you call it, we've been doing it longer than anyone else in the city. <a href="/shared-office-space-cape-town" style="color:rgba(255,255,255,0.25);">Learn more</a>.
   </div>
 </footer>
 
