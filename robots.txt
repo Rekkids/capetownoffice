@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /thank-you/
+Disallow: /flexi-enquiry/
+Disallow: /book-a-viewing/
+Disallow: /privacy-policy/
+
+Sitemap: https://capetownoffice.com/sitemap.xml
