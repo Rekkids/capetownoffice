@@ -1,6 +1,21 @@
 {
   "redirects": [
     {
+      "source": "/login",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/logout",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/password-reset",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/daypass/",
       "destination": "/day-pass",
       "permanent": true
@@ -112,7 +127,7 @@
     },
     {
       "source": "/daily-commute-to-the-office/",
-      "destination": "/blog",
+      "destination": "/blog/daily-commute-to-the-office",
       "permanent": true
     },
     {
