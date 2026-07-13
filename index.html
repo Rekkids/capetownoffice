@@ -48,6 +48,7 @@ nav {
 
 .nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
 .nav-logo span { color: var(--orange); }
+.nav-logo-img { height: 34px; width: auto; display: block; }
 
 .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
 .nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
@@ -63,9 +64,11 @@ nav {
 
 .hero-left {
   background: var(--charcoal);
-  padding: 80px 56px 80px 40px;
-  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 56px 80px 40px;
+  display: flex; flex-direction: column; justify-content: flex-start;
 }
+
+.hero-logo { height: 76px; width: auto; margin-bottom: 24px; display: block; align-self: flex-start; }
 
 .hero-eyebrow {
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
@@ -229,7 +232,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .hero { grid-template-columns: 1fr; max-height: none; min-height: auto; }
-  .hero-left { padding: 52px 20px 44px; }
+  .hero-left { padding: 28px 20px 40px; }
   .hero-right { height: 300px; }
   .paths { padding: 64px 20px; }
   .paths-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
@@ -249,38 +252,31 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
 .footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
 </style>
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C"></script>
+<!-- Google Analytics GA4 -- gated behind cookie consent, see cto-cookie-consent script before </body> -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GWQYWP8Z4C');
+  window.ctoLoadAnalytics = function() {
+    if (window.ctoAnalyticsLoaded) return;
+    window.ctoAnalyticsLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-GWQYWP8Z4C');
+  };
 </script>
-<!-- Open Graph / Social Preview -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://capetownoffice.com/">
-<meta property="og:title" content="Cape Town Office | Coworking Space Cape Town | Est. 2011">
-<meta property="og:description" content="Cape Town's original coworking space since 2011. Flexi hour memberships, dedicated desks and team space at 62 Roeland Street, East City. No lock-in. All-inclusive.">
-<meta property="og:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9n63WarGlAPsrib1KMmHC70xUFTRf9od5QVE2N">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Cape Town Office">
-<!-- Twitter/X Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cape Town Office | Coworking Space Cape Town | Est. 2011">
-<meta name="twitter:description" content="Cape Town's original coworking space since 2011. Flexi hour memberships, dedicated desks and team space at 62 Roeland Street, East City. No lock-in. All-inclusive.">
-<meta name="twitter:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9n63WarGlAPsrib1KMmHC70xUFTRf9od5QVE2N">
 </head>
 <body>
 
 <!-- NAV -->
 <a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:var(--orange);color:var(--white);padding:8px 16px;font-weight:700;font-size:0.875rem;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">Skip to main content</a>
 <nav>
-  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <a href="/" class="nav-logo"><img src="/images/cto-logo-nav.png" alt="Cape Town Office" class="nav-logo-img"></a>
   <ul class="nav-links">
     <li><a href="/membership">Membership</a></li>
-    <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/teams">Teams &amp; Projects</a></li>
     <li><a href="/podcast-studio">Podcast Studio</a></li>
     <li><a href="/day-pass">Day Pass</a></li>
     <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
@@ -292,7 +288,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
 <div class="mobile-menu" id="mobile-menu">
   <a href="/membership" onclick="closeMenu()">Membership</a>
-  <a href="/teams" onclick="closeMenu()">Teams & Projects</a>
+  <a href="/teams" onclick="closeMenu()">Teams &amp; Projects</a>
   <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
   <a href="/day-pass" onclick="closeMenu()">Day Pass</a>
   <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
@@ -302,6 +298,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
+    <img src="/images/cto-logo-hero.png" alt="Cape Town Office logo" class="hero-logo">
     <span class="hero-eyebrow">62 Roeland Street, Gardens, Cape Town</span>
     <h1 class="hero-h1">A proper office.<br><em>Where real<br>people work.</em></h1>
     <p class="hero-sub">Cape Town's original coworking space, open since 2011. Flexi hours, dedicated desks, space for teams. All-inclusive. No lock-in.</p>
@@ -762,6 +759,72 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     }
   }
   window.addEventListener('message', wfa_pstMesgFrmFom, false);
+})();
+</script>
+
+<!-- ============================================ -->
+<!-- CTO COOKIE CONSENT -->
+<!-- Bottom bar, true consent gate: GA stays off until Accept is clicked -->
+<!-- ============================================ -->
+
+<style>
+.cto-cookie-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+  background: var(--charcoal);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 24px;
+  display: none;
+  align-items: center; justify-content: space-between; gap: 20px;
+  flex-wrap: wrap;
+}
+.cto-cookie-bar.visible { display: flex; }
+.cto-cookie-text { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; max-width: 640px; }
+.cto-cookie-text a { color: var(--white); text-decoration: underline; }
+.cto-cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cto-cookie-btn { padding: 9px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: none; font-family: 'Titillium Web', sans-serif; }
+.cto-cookie-accept { background: var(--orange); color: var(--white); }
+.cto-cookie-accept:hover { background: var(--orange-dark); }
+.cto-cookie-decline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3); }
+.cto-cookie-decline:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+@media (max-width: 640px) {
+  .cto-cookie-bar { padding: 14px 16px; }
+  .cto-cookie-text { font-size: 0.8rem; }
+}
+</style>
+
+<div class="cto-cookie-bar" id="cto-cookie-bar">
+  <div class="cto-cookie-text">
+    We use cookies to run analytics on this site -- nothing more. Accept if that's fine with you, decline if it's not. <a href="/privacy-policy">Privacy policy</a>.
+  </div>
+  <div class="cto-cookie-actions">
+    <button class="cto-cookie-btn cto-cookie-decline" onclick="ctoCookieChoice('declined')">Decline</button>
+    <button class="cto-cookie-btn cto-cookie-accept" onclick="ctoCookieChoice('accepted')">Accept</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var STORAGE_KEY = 'cto_cookie_consent';
+
+  function getChoice() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  window.ctoCookieChoice = function(choice) {
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
+    document.getElementById('cto-cookie-bar').classList.remove('visible');
+    if (choice === 'accepted' && window.ctoLoadAnalytics) {
+      window.ctoLoadAnalytics();
+    }
+  };
+
+  var existing = getChoice();
+  if (existing === 'accepted' && window.ctoLoadAnalytics) {
+    window.ctoLoadAnalytics();
+  } else if (!existing) {
+    document.getElementById('cto-cookie-bar').classList.add('visible');
+  }
+  // if existing === 'declined', do nothing -- GA stays off, bar stays hidden
 })();
 </script>
 
