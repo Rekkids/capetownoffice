@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>East City Cape Town | The Neighbourhood | Cape Town Office</title>
-<meta name="description" content="Cape Town Office is in the heart of East City. Coffee, lunch, culture and history on your doorstep. 62 Roeland Street, Gardens, Cape Town.">
+<title>Member Events | Cape Town Office</title>
+<meta name="description" content="What's on at Cape Town Office. Member events including Lunch Club, AI Show & Tell, The CTO Hang and Vinyl & Wine. 62 Roeland Street, East City.">
 
 <!-- Social share preview (Facebook, LinkedIn, WhatsApp) -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://capetownoffice.com/east-city">
-<meta property="og:title" content="East City Cape Town | The Neighbourhood | Cape Town Office">
-<meta property="og:description" content="Cape Town Office is in the heart of East City. Coffee, lunch, culture and history on your doorstep. 62 Roeland Street, Gardens, Cape Town.">
-<meta property="og:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nBfmdEBvrez2JMVYosrLKNqm9iTUnc5XuIfp4">
+<meta property="og:url" content="https://capetownoffice.com/events">
+<meta property="og:title" content="Member Events | Cape Town Office">
+<meta property="og:description" content="What's on at Cape Town Office. Member events including Lunch Club, AI Show & Tell, The CTO Hang and Vinyl & Wine. 62 Roeland Street, East City.">
+<meta property="og:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nY955sOAueL0V3kjKDFoyl2mw9TR6sxrBzP4W">
 <meta property="og:site_name" content="Cape Town Office">
 
 <!-- Twitter Card, same content as above -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="East City Cape Town | The Neighbourhood | Cape Town Office">
-<meta name="twitter:description" content="Cape Town Office is in the heart of East City. Coffee, lunch, culture and history on your doorstep. 62 Roeland Street, Gardens, Cape Town.">
-<meta name="twitter:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nBfmdEBvrez2JMVYosrLKNqm9iTUnc5XuIfp4">
+<meta name="twitter:title" content="Member Events | Cape Town Office">
+<meta name="twitter:description" content="What's on at Cape Town Office. Member events including Lunch Club, AI Show & Tell, The CTO Hang and Vinyl & Wine. 62 Roeland Street, East City.">
+<meta name="twitter:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nY955sOAueL0V3kjKDFoyl2mw9TR6sxrBzP4W">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -52,63 +52,84 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 .section-sub { font-size: 0.92rem; color: var(--mid); line-height: 1.7; }
 
 /* HERO */
-.hero { height: 680px; display: grid; grid-template-columns: 1fr 1fr; max-height: 820px; }
-.hero-left { background: var(--charcoal); padding: 48px 56px 80px 40px; display: flex; flex-direction: column; justify-content: flex-start; }
+.hero { height: 520px; display: grid; grid-template-columns: 1fr 1fr; }
+.hero-left { background: var(--charcoal); padding: 40px 56px 72px 40px; display: flex; flex-direction: column; justify-content: flex-start; }
 .hero-logo { height: 76px; width: auto; margin-bottom: 24px; display: block; align-self: flex-start; }
-.hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--orange); }
-.hero-h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; color: var(--white); margin-bottom: 20px; }
+.hero-h1 { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; color: var(--white); margin-bottom: 16px; }
 .hero-h1 em { font-style: normal; color: var(--orange); }
-.hero-sub { font-size: 0.95rem; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 380px; margin-bottom: 40px; }
-.hero-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
-.btn-orange { background: var(--orange); color: var(--white); padding: 13px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.1s; }
+.hero-sub { font-size: 0.92rem; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 360px; margin-bottom: 32px; }
+.btn-orange { background: var(--orange); color: var(--white); padding: 12px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.1s; }
 .btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
-.btn-ghost { color: rgba(255,255,255,0.65); font-size: 0.875rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s, gap 0.15s; }
-.btn-ghost:hover { color: var(--white); gap: 10px; }
 .hero-right { position: relative; overflow: hidden; }
 .hero-right img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-/* STORY */
-.story { background: var(--bg); padding: 96px 0; }
-.story-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
-.story-body { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-top: 16px; }
-.story-body p { margin-bottom: 1rem; }
-.story-body p:last-child { margin-bottom: 0; }
-.story-body strong { color: var(--charcoal); font-weight: 600; }
-.story-photo { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
-.story-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* PROOF */
+.proof { background: var(--orange); padding: 20px 40px; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.proof-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.9); font-size: 0.82rem; font-weight: 600; }
+.proof-item::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--white); flex-shrink: 0; }
 
-/* SPOTS */
-.spots { background: var(--white); padding: 96px 0; }
-.spots-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
-.spot-card { border-radius: 12px; border: 1px solid var(--rule); border-top: 3px solid var(--orange); transition: border-color 0.2s, box-shadow 0.2s; }
-.spot-card:hover { box-shadow: 0 6px 24px rgba(232,134,10,0.1); }
-.spot-body { padding: 20px; }
-.spot-category { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; display: block; }
-.spot-name { font-size: 1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; letter-spacing: -0.01em; }
-.spot-desc { font-size: 0.82rem; color: var(--mid); line-height: 1.6; }
-.spot-distance { font-size: 0.75rem; color: var(--mid); margin-top: 10px; display: flex; align-items: center; gap: 5px; }
-.spot-distance::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+/* EVENTS GRID */
+.events { background: var(--bg); padding: 56px 0; }
+.events-header { margin-bottom: 48px; }
+.events-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
 
-/* MAP */
-.map-section { background: var(--bg); padding: 96px 0; }
-.map-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-.map-body { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-top: 16px; }
-.map-body p { margin-bottom: 1rem; }
-.map-body strong { color: var(--charcoal); font-weight: 600; }
-.map-embed { border-radius: 12px; overflow: hidden; }
-.map-embed iframe { width: 100%; height: 380px; display: block; border: 0; }
+.event-card { background: var(--white); border-radius: 12px; padding: 32px; border: 1px solid var(--rule); border-top: 3px solid var(--orange); transition: box-shadow 0.2s; }
+.event-card:hover { box-shadow: 0 6px 24px rgba(232,134,10,0.1); }
+.event-card.featured { background: var(--charcoal); border-color: var(--charcoal); border-top-color: var(--orange); }
 
-/* CTA */
-.final-cta { background: var(--orange); padding: 96px 40px; text-align: center; }
-.final-cta h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 14px; }
-.final-cta p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 32px; max-width: 420px; margin-left: auto; margin-right: auto; }
-.btn-white { background: var(--white); color: var(--orange); padding: 14px 40px; border-radius: 7px; font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block; transition: transform 0.15s, box-shadow 0.15s; }
-.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+.event-icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+.event-name { font-size: 1.2rem; font-weight: 700; color: var(--charcoal); letter-spacing: -0.02em; margin-bottom: 8px; }
+.event-card.featured .event-name { color: var(--white); }
+.event-cadence { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.event-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.7; margin-bottom: 20px; }
+.event-card.featured .event-desc { color: rgba(255,255,255,0.6); }
+.event-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 600; color: var(--mid); }
+.event-card.featured .event-tag { color: rgba(255,255,255,0.4); }
+.event-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+
+/* RSVP SECTION */
+.rsvp-section { background: var(--white); padding: 56px 0; }
+.rsvp-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.rsvp-body { font-size: 0.92rem; color: var(--mid); line-height: 1.8; margin-top: 16px; }
+.rsvp-body p { margin-bottom: 1rem; }
+.rsvp-body strong { color: var(--charcoal); font-weight: 600; }
+
+
+/* RSVP FORM */
+.rsvp-form-wrap { background: var(--bg); border-radius: 12px; border: 1px solid var(--rule); overflow: hidden; }
+.rsvp-form-header { background: var(--charcoal); padding: 20px 24px; }
+.rsvp-form-title { font-size: 1rem; font-weight: 700; color: var(--white); }
+.rsvp-form-sub { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+.rsvp-form-body { padding: 28px 24px; }
+
+.form-group { margin-bottom: 18px; }
+.form-label { font-size: 0.78rem; font-weight: 700; color: var(--charcoal); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; display: block; }
+.form-label span { color: var(--orange); }
+.form-input, .form-select { width: 100%; padding: 11px 14px; border: 1px solid var(--rule); border-radius: 8px; font-family: 'Titillium Web', sans-serif; font-size: 0.92rem; color: var(--charcoal); background: var(--white); transition: border-color 0.15s; appearance: none; }
+.form-input:focus, .form-select:focus { outline: none; border-color: var(--orange); }
+.form-select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b6b' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+
+.form-submit { width: 100%; background: var(--orange); color: var(--white); border: none; border-radius: 8px; padding: 13px; font-family: 'Titillium Web', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: background 0.15s; margin-top: 8px; }
+.form-submit:hover { background: var(--orange-dark); }
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.form-success { display: none; text-align: center; padding: 32px 20px; }
+.form-success-icon { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+.form-success-title { font-size: 1.1rem; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.form-success-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.6; }
+.form-error { font-size: 0.82rem; color: #c0392b; margin-top: 8px; display: none; }
+
+/* VINYL SECTION */
+.vinyl { background: var(--charcoal); padding: 56px 40px; text-align: center; }
+.vinyl h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 14px; }
+.vinyl h2 em { font-style: normal; color: var(--orange); }
+.vinyl p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 0; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7; }
 
 /* FOOTER */
 footer .nav-logo { color: var(--white); }
-footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; border-top: 1px solid rgba(255,255,255,0.07); }
 .footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
 .footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
 .footer-address a:hover { color: var(--white); }
@@ -124,14 +145,41 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
-  .hero { grid-template-columns: 1fr; max-height: none; min-height: auto; }
+  .hero { grid-template-columns: 1fr; height: auto; }
   .hero-left { padding: 28px 20px 40px; }
-  .hero-right { height: 280px; }
-  .story-inner { grid-template-columns: 1fr; gap: 36px; }
-  .spots-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
-  .map-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-right { height: 260px; }
+  .events-grid { grid-template-columns: 1fr; }
+  .rsvp-inner { grid-template-columns: 1fr; gap: 40px; }
   footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
-  .final-cta { padding: 64px 24px; }
+  .proof { padding: 20px; gap: 16px; justify-content: flex-start; }
+  .vinyl { padding: 64px 24px; }
+}
+
+/* CALENDAR */
+.calendar-section { background: var(--white); padding: 56px 0; }
+.calendar-wrap { border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); margin-top: 8px; }
+
+/* PHOTO REEL */
+.reel { background: var(--charcoal); padding: 0; overflow: hidden; }
+.reel-track {
+  display: flex;
+  gap: 12px;
+  padding: 16px 0;
+  width: max-content;
+  animation: scroll-reel 30s linear infinite;
+}
+.reel-track img {
+  height: 200px;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+.reel:hover .reel-track { animation-play-state: paused; }
+@keyframes scroll-reel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
@@ -160,8 +208,9 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   <ul class="nav-links">
     <li><a href="/membership">Membership</a></li>
     <li><a href="/teams">Teams & Projects</a></li>
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams & Projects</a></li>
     <li><a href="/podcast-studio">Podcast Studio</a></li>
-    <li><a href="/blog">Blog</a></li>
     <li><a href="/day-pass">Day Pass</a></li>
     <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
   </ul>
@@ -183,149 +232,110 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 <section class="hero">
   <div class="hero-left">
     <img src="/images/cto-logo-hero.png" alt="Cape Town Office logo" class="hero-logo">
-    <span class="hero-eyebrow">East City · Cape Town</span>
-    <h1 class="hero-h1">The neighbourhood<br><em>most Cape Town locals<br>haven't discovered yet.</em></h1>
-    <p class="hero-sub">62 Roeland Street sits in the heart of East City -- a pocket of Cape Town that's been quietly transforming for two decades. Coffee, food, culture and history, all within a five-minute walk.</p>
-    <div class="hero-btns">
-      <a href="#spots" class="btn-orange">See what's nearby</a>
-      <a href="/book-a-viewing" class="btn-ghost">Work from here →</a>
-    </div>
+    <span class="hero-eyebrow">Member events · Cape Town</span>
+    <h1 class="hero-h1">What's on<br><em>at CTO.</em></h1>
+    <p class="hero-sub">Lunch, learning, vinyl and the occasional overstay. All member events, all free, all worth showing up for.</p>
+    <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);margin-top:4px;margin-bottom:20px;">Scroll down to see what's coming up on the calendar.</p>
+    <a href="#calendar" class="btn-orange">See what's on</a>
   </div>
   <div class="hero-right">
-    <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nBfmdEBvrez2JMVYosrLKNqm9iTUnc5XuIfp4" alt="East City neighbourhood, Cape Town" loading="eager">
+    <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nY955sOAueL0V3kjKDFoyl2mw9TR6sxrBzP4W" alt="Members at a Cape Town Office community event" loading="eager">
   </div>
 </section>
 
-<!-- STORY -->
-<section class="story">
+<!-- PROOF -->
+<div class="proof">
+  <div class="proof-item">Open to all</div>
+  <div class="proof-item">Always free</div>
+  <div class="proof-item">Four recurring events</div>
+  <div class="proof-item">Dates announced via WhatsApp</div>
+</div>
+
+<!-- PHOTO REEL -->
+<div class="reel">
+  <div class="reel-track">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
+      
+  </div>
+</div>
+
+<!-- EVENTS -->
+<section class="events">
   <div class="wrap">
-    <div class="story-inner">
-      <div>
-        <span class="section-label">The neighbourhood</span>
-        <h2 class="section-h2">A hidden gem in plain sight</h2>
-        <div class="story-body">
-          <p>East City is one of those Cape Town neighbourhoods that people who live here know about and everyone else doesn't. That's changing fast -- but for now, it's still the kind of place where you can get a genuinely good coffee, a proper lunch, and a table without a reservation.</p>
-          <p>The area spent most of the 90s in decline. The regeneration started in the early 2000s and has been building steadily since. <strong>Cape Town Office opened on Roeland Street in 2011</strong> -- early enough that we've watched the neighbourhood transform in real time.</p>
-          <p>One person deserves particular credit for what East City became: the late Steven Harris, widely known as the Mayor of the East City. His passion and relentless advocacy shaped the area's identity and played a central role in Cape Town's designation as the <strong>World Design Capital in 2014</strong> -- with East City at the heart of it.</p>
-          <p>Today, Harrington Street and Roeland Street form the spine of a neighbourhood that's become one of the best places to work, eat and drink in the city. We're biased, obviously. But we've been here long enough to mean it.</p>
-        </div>
-      </div>
-      <div>
-        <div class="story-photo">
-          <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nK9oQL5Cpa0Xd8hJkeLGzZCcolYSrgOxN4BWH" alt="East City neighbourhood street scene, Cape Town" loading="lazy">
-        </div>
-      </div>
+    <div class="events-header">
+      <span class="section-label">What's on</span>
+      <h2 class="section-h2">Four things worth staying for</h2>
+      <p class="section-sub">Predominantly for members, but open to all. If you can see it on the calendar, you're welcome to join.</p>
     </div>
-  </div>
-</section>
+    <div class="events-grid">
 
-<!-- SPOTS -->
-<section class="spots" id="spots">
-  <div class="wrap">
-    <span class="section-label">Within five minutes</span>
-    <h2 class="section-h2">Where we go when we leave the desk</h2>
-    <p class="section-sub">Tried and tested. These are the places CTO members actually use -- for coffee before work, lunch between meetings, and the occasional after-work wind-down.</p>
-    <div class="spots-grid">
-      <div class="spot-card">
-        <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9n18uZKvGXKwLkA0o2I5YFRNHfZGzEnBWQpjP8" alt="Plato Coffee, East City Cape Town" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px 12px 0 0;display:block;">
-        <div class="spot-body">
-          <span class="spot-category">Coffee</span>
-          <div class="spot-name">Plato Coffee</div>
-          <p class="spot-desc">Our closest and most-visited coffee stop. Serious about their beans, relaxed about everything else. The go-to for a quick flat white between calls.</p>
-          <div class="spot-distance">2 min walk</div>
-        </div>
-      </div>
-      <div class="spot-card">
-        <div class="spot-body">
-          <span class="spot-category">Coffee</span>
-          <div class="spot-name">Truth Coffee Roasting</div>
-          <p class="spot-desc">Named by the Daily Telegraph as the world's best coffee shop. Worth the slightly longer walk, especially on a clear morning when you can sit outside.</p>
-          <div class="spot-distance">4 min walk</div>
-        </div>
-      </div>
-      <div class="spot-card">
-        <div class="spot-body">
-          <span class="spot-category">Breakfast / Lunch</span>
-          <div class="spot-name">New York Bagels</div>
-          <p class="spot-desc">Exactly what it sounds like. Proper bagels, good fillings, reliable and fast. A CTO member staple for the pre-work or mid-morning fuel stop.</p>
-          <div class="spot-distance">3 min walk</div>
-        </div>
-      </div>
-      <div class="spot-card">
-        <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9na7YauEjIq9n1UR8D50yHbhC4ep36kXcdSTlA" alt="Mamacita's, East City Cape Town" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px 12px 0 0;display:block;">
-        <div class="spot-body">
-          <span class="spot-category">Lunch</span>
-          <div class="spot-name">Mamacita's</div>
-          <p class="spot-desc">Mexican street food done properly. Tacos, burritos, good hot sauce. The CTO lunch club ends up here more often than anywhere else on Harrington Street.</p>
-          <div class="spot-distance">4 min walk</div>
-        </div>
-      </div>
-      <div class="spot-card">
-        <div class="spot-body">
-          <span class="spot-category">Lunch / Dinner</span>
-          <div class="spot-name">Wild Eatery</div>
-          <p class="spot-desc">Plant-forward, seasonal menu that changes regularly. Good for a proper sit-down lunch when you want something a bit more considered than a quick bite.</p>
-          <div class="spot-distance">5 min walk</div>
-        </div>
-      </div>
-      <div class="spot-card">
-        <div class="spot-body">
-          <span class="spot-category">Lunch</span>
-          <div class="spot-name">Lebanese Bakery</div>
-          <p class="spot-desc">Freshly baked pita from imported Lebanese ovens, handmade mezze and dips. Consistently good, consistently affordable. A neighbourhood institution.</p>
-          <div class="spot-distance">4 min walk</div>
-        </div>
+      <div class="event-card">
+        <div class="event-name">Lunch Club</div>
+        <span class="event-cadence">Monthly · Usually 1st Tuesday or Wednesday</span>
+        <p class="event-desc">We pick a spot in the neighbourhood, someone makes a reservation, and anyone who wants to join comes along. No agenda, no structure. Just lunch and good conversation with people you work alongside.</p>
+        
       </div>
 
-      <div class="spot-card">
-        <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9n0hSd37OvXnNPuHyC3RM4OAEoe12ZbUfgDxpS" alt="Electric, East City Cape Town" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px 12px 0 0;display:block;">
-        <div class="spot-body">
-          <span class="spot-category">Coffee / Lunch</span>
-          <div class="spot-name">Electric</div>
-          <p class="spot-desc">A regular CTO spot for coffee and lunch. Reliable, relaxed, the kind of place you end up at more than you planned to.</p>
-          <div class="spot-distance">4 min walk</div>
-        </div>
+      <div class="event-card">
+        <div class="event-name">AI Show & Tell</div>
+        <span class="event-cadence">Monthly · Dates voted on in WhatsApp</span>
+        <p class="event-desc">Members share what they're building, testing or breaking with AI. No slides required. Demos, experiments, things that worked, things that didn't. Plans for the next session are discussed and voted on in the group.</p>
+        
       </div>
 
-      <div class="spot-card">
-        <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9niVRs6CfTRzYuJl5r2p0QKA6qtfBV3h4nGjcM" alt="Dias Tavern, East City Cape Town" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px 12px 0 0;display:block;">
-        <div class="spot-body">
-          <span class="spot-category">Lunch</span>
-          <div class="spot-name">Dias Tavern</div>
-          <p class="spot-desc">A long-standing CTO Lunch Club favourite. Generous portions, no pretence, exactly the kind of spot that earns repeat visits.</p>
-          <div class="spot-distance">5 min walk</div>
-        </div>
+      <div class="event-card">
+        <div class="event-name">Vinyl & Wine</div>
+        <span class="event-cadence">Every two months · BYOB</span>
+        <p class="event-desc">A listening session in the space. Records on the turntable, wine in hand, good company. Small and intimate -- 30 to 40 people max. Keep an eye on the calendar above for the next date. BYOB.</p>
+        <span class="event-tag">BYOB</span>
+      </div>
+
+      <div class="event-card featured">
+        <div class="event-name">The CTO Hang</div>
+        <span class="event-cadence">After hours · Format varies</span>
+        <p class="event-desc">Could be a record, could be a documentary, could be drinks and a chat. The format changes but the idea stays the same -- stick around after work, wait out the traffic, be somewhere good with people you like.</p>
+        
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- MAP -->
-<section class="map-section">
+<!-- CALENDAR -->
+<section class="calendar-section" id="calendar">
   <div class="wrap">
-    <div class="map-inner">
-      <div>
-        <span class="section-label">Find us</span>
-        <h2 class="section-h2">62 Roeland Street, Gardens</h2>
-        <div class="map-body">
-          <p><strong>Cape Town Office is on the 3rd floor of 62 Roeland Street</strong>, at the corner of Roeland and Buitenkant, in the East City district of Cape Town.</p>
-          <p>Whether you're coming from the Southern Suburbs via the M3, the Northern Suburbs via the N1, or Cape Town International via the N2, Roeland Street is well positioned for all routes.</p>
-          <p>MyCiTi bus stops are nearby and there is paid parking on Roeland Street and in the surrounding streets.</p>
-        </div>
-      </div>
-      <div class="map-embed">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.4305974633253!2d18.41967837571124!3d-33.93005157320334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc677c7184e0d1%3A0xb02c602631be7e87!2sCape%20Town%20Office!5e0!3m2!1sen!2sza!4v1782398997726!5m2!1sen!2sza" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Cape Town Office location map"></iframe>
-      </div>
+    <span class="section-label">What's coming up</span>
+    <h2 class="section-h2">CTO events calendar</h2>
+    <p class="section-sub" style="margin-bottom:32px;">All member events in one place. Click any event to see details. Dates subject to change -- always confirmed in the CTO WhatsApp group first.</p>
+    <div class="calendar-wrap">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Africa%2FJohannesburg&title=CTO%20EVENTS&mode=WEEK&src=YmVsNHBuNjc5NGs5NjQ2azh1YmtjcWxibWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23E8860A"
+        style="border:0;"
+        width="100%"
+        height="640"
+        frameborder="0"
+        scrolling="no"
+        title="CTO Events Calendar">
+      </iframe>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-  <h2>Come and work from here.</h2>
-  <p>Book a viewing and see the space, the neighbourhood, and what's five minutes from your desk.</p>
-  <a href="/book-a-viewing" class="btn-white">Book a free viewing</a>
+<!-- VINYL CALLOUT -->
+<section class="vinyl">
+  <h2>Real people. <em>Real conversation.</em></h2>
+  <p>Every event at CTO is free, members-only and unsponsored. No pitch decks, no networking buzzwords. Just the people who work here, spending time together outside of work hours.</p>
 </section>
 
 </main>
@@ -355,8 +365,8 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <ul>
       <li><a href="/podcast-studio">Podcast studio</a></li>
       <li><a href="/east-city">East City</a></li>
+      <li><a href="/events">Events</a></li>
       <li><a href="/about">About CTO</a></li>
-      <li><a href="/faqs">FAQs</a></li>
     </ul>
   </div>
   <div class="footer-col">
@@ -365,7 +375,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
-      <li><a href="/blog">Blog</a></li>
+      <li><a href="/podcast">Podcast</a></li>
     </ul>
   </div>
   <div class="footer-bottom">
@@ -379,14 +389,194 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 </footer>
 
 <script>
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrq1U4oh4JSiKgnWlqQKGk2n2RhEfZYB-uK2Iy6kv-ynzTVg2bSeR5LYMJvFwfgw/exec';
+
 function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
 function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+
 document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   a.addEventListener('click', function(e) {
     var t = document.querySelector(this.getAttribute('href'));
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
+
+</script>
+
+<!-- ============================================ -->
+<!-- CTO NEWSLETTER POPUP -->
+<!-- Scroll-triggered, dismiss-and-remember, Zoho iframe form -->
+<!-- Paste this block before the closing </body> tag on Homepage and Events page -->
+<!-- ============================================ -->
+
+<style>
+.cto-popup-overlay {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 380px;
+  width: calc(100% - 48px);
+  background: #FFFFFF;
+  border: 1px solid #E0DDD6;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  z-index: 9999;
+  transform: translateY(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+.cto-popup-overlay.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.cto-popup-header {
+  background: #2d2d2d;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.cto-popup-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #E8860A;
+  margin-bottom: 6px;
+  display: block;
+}
+.cto-popup-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+.cto-popup-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255,255,255,0.5);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 2px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+.cto-popup-close:hover { color: #FFFFFF; }
+.cto-popup-body {
+  padding: 18px 20px 0;
+}
+.cto-popup-desc {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+.cto-popup-desc strong { color: #2d2d2d; font-weight: 600; }
+.cto-popup-iframe-wrap {
+  margin: 0 -20px -4px;
+}
+.cto-popup-iframe-wrap iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .cto-popup-overlay {
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    max-width: none;
+    width: auto;
+  }
+  .cto-popup-iframe-wrap iframe {
+    height: 420px;
+  }
+}
+</style>
+
+<div class="cto-popup-overlay" id="cto-newsletter-popup">
+  <div class="cto-popup-header">
+    <div>
+      <span class="cto-popup-eyebrow">CTO Updates</span>
+      <div class="cto-popup-title">Stay in the loop</div>
+    </div>
+    <button class="cto-popup-close" onclick="ctoClosePopup()" aria-label="Close">&#10005;</button>
+  </div>
+  <div class="cto-popup-body">
+    <p class="cto-popup-desc">The <strong>Monthly CTO Dispatch</strong> -- AI news, local Cape Town happenings, seasonal specials and upcoming events. Once a month, no spam.</p>
+    <div class="cto-popup-iframe-wrap">
+      <iframe
+        src="https://crm.zoho.com/crm/WebFormServeServlet?rid=b164fd595144d24df9208f4317e3d5a581149248a6810e68d08a3c120435678ce72c8aedc79512bea282364865009da2gidfe0a8d8b845a233dc77e40cf3e34e658acdae44a2486d77095d51c1db001b01c"
+        title="CTO Updates newsletter signup">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var STORAGE_KEY = 'cto_newsletter_popup_dismissed';
+  var SCROLL_THRESHOLD = 0.4; // 40% scroll depth before triggering
+  var shown = false;
+
+  function alreadyDismissed() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) === 'true';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markDismissed() {
+    try {
+      localStorage.setItem(STORAGE_KEY, 'true');
+    } catch (e) {}
+  }
+
+  window.ctoClosePopup = function() {
+    document.getElementById('cto-newsletter-popup').classList.remove('visible');
+    markDismissed();
+  };
+
+  if (alreadyDismissed()) return;
+
+  function checkScroll() {
+    if (shown) return;
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = docHeight > 0 ? scrollTop / docHeight : 0;
+
+    if (scrollPercent >= SCROLL_THRESHOLD) {
+      shown = true;
+      document.getElementById('cto-newsletter-popup').classList.add('visible');
+      window.removeEventListener('scroll', checkScroll);
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+
+  // Zoho cross-window messaging support (required by their iframe forms)
+  function wfa_pstMesgFrmFom(evt) {
+    if (evt.origin === 'https://crm.zoho.com' || evt.origin === 'https://crm.zohopublic.com') {
+      var loc_obj = JSON.stringify({
+        origin: window.location.origin,
+        pathname: window.location.pathname,
+        search: window.location.search,
+        hash: window.location.hash
+      });
+      evt.source.postMessage(('prnt_wnd_pg_lc_rc_frm_prwindow_' + loc_obj), evt.origin);
+    }
+  }
+  window.addEventListener('message', wfa_pstMesgFrmFom, false);
+})();
 </script>
 
 <!-- ============================================ -->
