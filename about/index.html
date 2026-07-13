@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Cape Town Office | Est. 2011 | Lizelle van Rhyn</title>
 <meta name="description" content="Cape Town Office was founded in 2011 by Lizelle van Rhyn -- Cape Town's first coworking space. Forbes Top 10 coworking spaces on Earth. 62 Roeland Street, Gardens.">
+
+<!-- Social share preview (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://capetownoffice.com/about">
+<meta property="og:title" content="About Cape Town Office | Est. 2011 | Lizelle van Rhyn">
+<meta property="og:description" content="Cape Town Office was founded in 2011 by Lizelle van Rhyn -- Cape Town's first coworking space. Forbes Top 10 coworking spaces on Earth. 62 Roeland Street, Gardens.">
+<meta property="og:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9n12xBa3rGXKwLkA0o2I5YFRNHfZGzEnBWQpjP">
+<meta property="og:site_name" content="Cape Town Office">
+
+<!-- Twitter Card, same content as above -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Cape Town Office | Est. 2011 | Lizelle van Rhyn">
+<meta name="twitter:description" content="Cape Town Office was founded in 2011 by Lizelle van Rhyn -- Cape Town's first coworking space. Forbes Top 10 coworking spaces on Earth. 62 Roeland Street, Gardens.">
+<meta name="twitter:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9n12xBa3rGXKwLkA0o2I5YFRNHfZGzEnBWQpjP">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -44,6 +58,7 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 .hero-photo-wrap { position: relative; }
 .hero-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 12px; display: block; }
 .hero-photo-caption { position: absolute; bottom: -14px; right: -14px; background: var(--orange); color: var(--white); padding: 10px 14px; border-radius: 7px; font-size: 0.75rem; font-weight: 700; line-height: 1.5; }
+.hero-logo { height: 64px; width: auto; margin-bottom: 20px; display: block; }
 .hero-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .hero-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--orange); }
 .hero-h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; color: var(--white); margin-bottom: 20px; }
@@ -154,12 +169,19 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 .footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
 </style>
 <!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GWQYWP8Z4C');
+  window.ctoLoadAnalytics = function() {
+    if (window.ctoAnalyticsLoaded) return;
+    window.ctoAnalyticsLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-GWQYWP8Z4C');
+  };
 </script>
 </head>
 <body>
@@ -200,6 +222,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       <div class="hero-photo-caption">Lizelle van Rhyn<br>Founder · Cape Town Office</div>
     </div>
     <div>
+      <img src="/images/cto-logo-hero.png" alt="Cape Town Office logo" class="hero-logo">
       <span class="hero-eyebrow">About Cape Town Office</span>
       <h1 class="hero-h1">Built from scratch.<br><em>Still here. Still going.</em></h1>
       <div class="hero-body">
@@ -454,6 +477,72 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 <script>
 function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
 function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+</script>
+
+
+<!-- ============================================ -->
+<!-- CTO COOKIE CONSENT -->
+<!-- Bottom bar, true consent gate: GA stays off until Accept is clicked -->
+<!-- ============================================ -->
+
+<style>
+.cto-cookie-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+  background: var(--charcoal);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 24px;
+  display: none;
+  align-items: center; justify-content: space-between; gap: 20px;
+  flex-wrap: wrap;
+}
+.cto-cookie-bar.visible { display: flex; }
+.cto-cookie-text { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; max-width: 640px; }
+.cto-cookie-text a { color: var(--white); text-decoration: underline; }
+.cto-cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cto-cookie-btn { padding: 9px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: none; font-family: 'Titillium Web', sans-serif; }
+.cto-cookie-accept { background: var(--white); color: var(--charcoal); }
+.cto-cookie-accept:hover { background: rgba(255,255,255,0.85); }
+.cto-cookie-decline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3); }
+.cto-cookie-decline:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+@media (max-width: 640px) {
+  .cto-cookie-bar { padding: 14px 16px; }
+  .cto-cookie-text { font-size: 0.8rem; }
+}
+</style>
+
+<div class="cto-cookie-bar" id="cto-cookie-bar">
+  <div class="cto-cookie-text">
+    We use cookies to run analytics on this site -- nothing more. Accept if that's fine with you, decline if it's not. <a href="/privacy-policy">Privacy policy</a>.
+  </div>
+  <div class="cto-cookie-actions">
+    <button class="cto-cookie-btn cto-cookie-decline" onclick="ctoCookieChoice('declined')">Decline</button>
+    <button class="cto-cookie-btn cto-cookie-accept" onclick="ctoCookieChoice('accepted')">Accept</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var STORAGE_KEY = 'cto_cookie_consent';
+
+  function getChoice() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+
+  window.ctoCookieChoice = function(choice) {
+    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
+    document.getElementById('cto-cookie-bar').classList.remove('visible');
+    if (choice === 'accepted' && window.ctoLoadAnalytics) {
+      window.ctoLoadAnalytics();
+    }
+  };
+
+  var existing = getChoice();
+  if (existing === 'accepted' && window.ctoLoadAnalytics) {
+    window.ctoLoadAnalytics();
+  } else if (!existing) {
+    document.getElementById('cto-cookie-bar').classList.add('visible');
+  }
+})();
 </script>
 
 </body>
