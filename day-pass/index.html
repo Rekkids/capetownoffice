@@ -279,10 +279,10 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           Cal.config.forwardQueryParams = true;
             Cal.ns.daypass("inline", {
               elementOrSelector:"#my-cal-inline-daypass",
-              config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-              calLink: "cape-town-office/daypass",
+              config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+              calLink: "cape-town-office/daypass?theme=light",
             });
-            Cal.ns.daypass("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            Cal.ns.daypass("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view"});
             </script>
             <!-- Cal inline embed code ends -->
         </div>
