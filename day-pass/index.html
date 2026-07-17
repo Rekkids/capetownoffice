@@ -204,7 +204,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nqId2DSJnIqBEQ7PJ5Zge6S8vb0NKRViLW1k2"
       alt="Day pass coworking at Cape Town Office, 62 Roeland Street"
       loading="eager">
-    <div class="hero-tag">Monday to Friday · Excl. public holidays<br>Walk-ins welcome</div>
+    <div class="hero-tag">Mon–Fri, 9am–5pm · Excl. public holidays<br>Walk-ins welcome</div>
   </div>
 </section>
 
@@ -252,7 +252,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           <div class="good-to-know-title">Good to know</div>
           <div class="good-to-know-list">
             <div class="gk-item">Monday to Friday only, excluding public holidays</div>
-            <div class="gk-item">Reception hours only -- no after-hours or weekend access on a day pass</div>
+            <div class="gk-item">Day passes run during reception hours only, Mon–Fri 9am–5pm (24/7 access is a members-only benefit)</div>
             <div class="gk-item">Walk-ins welcome -- no advance booking required</div>
             <div class="gk-item">For best value, arrive by 9 or 9:30am to make the most of the full day</div>
             <div class="gk-item">8 hours -- non-split, used in one visit</div>
@@ -270,11 +270,21 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           <div class="form-sub">Confirmation sent by email</div>
         </div>
         <div class="form-inner">
-          <iframe
-            src="https://crm.zoho.com/crm/WebFormServeServlet?rid=42bf4f32e8852305e1f6673fb9faa2e62d3fd86d9db6a54af584d05809adcf91cbcb9e36e402911ccd973d19d314d9f8gida11b9bd310f507902a8d1774773a502148658da024665d4301c7d4c01d95e07a"
-            height="690"
-            title="Day pass booking form">
-          </iframe>
+          <!-- Cal inline embed code begins -->
+          <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-daypass"></div>
+          <script type="text/javascript">
+            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+          Cal("init", "daypass", {origin:"https://app.cal.eu"});
+          Cal.config = Cal.config || {};
+          Cal.config.forwardQueryParams = true;
+            Cal.ns.daypass("inline", {
+              elementOrSelector:"#my-cal-inline-daypass",
+              config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+              calLink: "cape-town-office/daypass",
+            });
+            Cal.ns.daypass("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            </script>
+            <!-- Cal inline embed code ends -->
         </div>
       </div>
 
@@ -408,6 +418,16 @@ function closeMenu() { document.getElementById('mobile-menu').classList.remove('
     document.getElementById('cto-cookie-bar').classList.add('visible');
   }
 })();
+</script>
+
+<script type="text/javascript">
+  // Redirect to /thank-you once the Cal.com booking is confirmed
+  Cal.ns.daypass("on", {
+    action: "bookingSuccessfulV2",
+    callback: function (e) {
+      window.location.href = "/thank-you";
+    }
+  });
 </script>
 
 </body>
