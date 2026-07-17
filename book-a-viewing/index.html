@@ -175,12 +175,25 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
         <div class="form-title">Book your viewing</div>
         <div class="form-sub">We'll confirm your slot by email</div>
       </div>
+      <div style="padding: 14px 24px; background: #FFF4E0; border-bottom: 1px solid var(--rule); font-size: 0.82rem; color: var(--charcoal); line-height: 1.6;">
+        Viewings run during reception hours: <strong>Mon–Fri, 9am–5pm</strong>. Once you're a member, you get 24/7 access on your own access disc.
+      </div>
       <div class="form-inner">
-        <iframe
-          src="https://crm.zoho.com/crm/WebFormServeServlet?rid=9a47dd5b77bb4db6e5db217a6dc35dd5951ce2d0b18c9b2102de7f5f5ba80f44af8bf256349609593e46d456b1ba1e84gide53774780893d5824abb91d99399e4ee773e057cc9e32d979c1648290974a2cc"
-          height="660"
-          title="Book a viewing at Cape Town Office">
-        </iframe>
+        <!-- Cal inline embed code begins -->
+        <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-viewing"></div>
+        <script type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
+        Cal("init", "viewing", {origin:"https://app.cal.eu"});
+        Cal.config = Cal.config || {};
+        Cal.config.forwardQueryParams = true;
+          Cal.ns.viewing("inline", {
+            elementOrSelector:"#my-cal-inline-viewing",
+            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+            calLink: "cape-town-office/viewing",
+          });
+          Cal.ns.viewing("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+          </script>
+          <!-- Cal inline embed code ends -->
       </div>
     </div>
   </div>
@@ -308,6 +321,16 @@ function closeMenu() { document.getElementById('mobile-menu').classList.remove('
     document.getElementById('cto-cookie-bar').classList.add('visible');
   }
 })();
+</script>
+
+<script type="text/javascript">
+  // Redirect to /thank-you once the Cal.com booking is confirmed
+  Cal.ns.viewing("on", {
+    action: "bookingSuccessfulV2",
+    callback: function (e) {
+      window.location.href = "/thank-you";
+    }
+  });
 </script>
 
 </body>
