@@ -66,19 +66,23 @@ nav { background: var(--white); border-bottom: 1px solid var(--rule); padding: 0
 .ty-contact-body a { color: var(--orange); text-decoration: none; font-weight: 600; }
 
 /* FOOTER */
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
 footer .nav-logo { color: var(--white); }
-footer { background: var(--charcoal); padding: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-.footer-copy { font-size: 0.72rem; color: rgba(255,255,255,0.25); }
-.footer-links { display: flex; gap: 20px; }
-.footer-links a { font-size: 0.72rem; color: rgba(255,255,255,0.35); text-decoration: none; }
-.footer-links a:hover { color: var(--white); }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; margin-top: 10px; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+.footer-bottom a { color: rgba(255,255,255,0.22); text-decoration: none; }
 
 @media (max-width: 600px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .ty-links { grid-template-columns: 1fr; }
-  footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
 }
 
 .footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.18); line-height: 1.8; }
@@ -176,12 +180,47 @@ footer { background: var(--charcoal); padding: 40px; display: flex; justify-cont
 </div>
 
 <footer>
-  <span class="footer-copy">© 2026 Cape Town Office. Est. 2011.</span>
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/membership">Membership</a>
-    <a href="/east-city">East City</a>
-    <a href="/podcast">Podcast</a>
+  <div>
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/podcast">Podcast</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Cape Town Office. All rights reserved. <a href="/privacy-policy">Privacy policy</a></span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+    <span>Photography by <a href="https://www.mapodile.com" target="_blank" rel="noopener">Mapodile Mkhabela</a> · CTO member since 2019 · Getty Images</span>
   </div>
   <div class="footer-keywords">
     Cape Town Office is Cape Town's original coworking space, open since 2011. Also known as shared office space, hot desking, flexible office space, serviced offices and short-term office rental in Cape Town. Whatever you call it, we've been doing it longer than anyone else in the city. <a href="/shared-office-space-cape-town" style="color:rgba(255,255,255,0.25);">Learn more</a>.
