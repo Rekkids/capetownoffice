@@ -20,20 +20,7 @@
 <meta name="twitter:description" content="Coworking, Cape Town, remote work and community. Writing from Cape Town Office -- Cape Town's original coworking space since 2011.">
 <meta name="twitter:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nBCQPDurez2JMVYosrLKNqm9iTUnc5XuIfp4E">
 <!-- Google Analytics GA4 -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.ctoLoadAnalytics = function() {
-    if (window.ctoAnalyticsLoaded) return;
-    window.ctoAnalyticsLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C';
-    document.head.appendChild(s);
-    gtag('js', new Date());
-    gtag('config', 'G-GWQYWP8Z4C');
-  };
-</script>
+<script src="/js/site-common.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -321,10 +308,6 @@ footer .nav-logo { color: var(--white); }
   </div>
 </footer>
 
-<script>
-function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
-function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
-</script>
 
 
 <!-- ============================================ -->
@@ -367,30 +350,6 @@ function closeMenu() { document.getElementById('mobile-menu').classList.remove('
   </div>
 </div>
 
-<script>
-(function() {
-  var STORAGE_KEY = 'cto_cookie_consent';
-
-  function getChoice() {
-    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
-  }
-
-  window.ctoCookieChoice = function(choice) {
-    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
-    document.getElementById('cto-cookie-bar').classList.remove('visible');
-    if (choice === 'accepted' && window.ctoLoadAnalytics) {
-      window.ctoLoadAnalytics();
-    }
-  };
-
-  var existing = getChoice();
-  if (existing === 'accepted' && window.ctoLoadAnalytics) {
-    window.ctoLoadAnalytics();
-  } else if (!existing) {
-    document.getElementById('cto-cookie-bar').classList.add('visible');
-  }
-})();
-</script>
 
 </body>
 </html>
