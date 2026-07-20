@@ -8,14 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-<!-- Google Analytics GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GWQYWP8Z4C');
-</script>
+<script src="/js/site-common.js"></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
@@ -180,9 +173,29 @@ footer .nav-logo { color: var(--white); }
     <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
   </div>
 </footer>
-<script>
-function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
-function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
-</script>
+<style>
+.cto-cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 24px; display: none; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cto-cookie-bar.visible { display: flex; }
+.cto-cookie-text { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; max-width: 640px; }
+.cto-cookie-text a { color: var(--white); text-decoration: underline; }
+.cto-cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cto-cookie-btn { padding: 9px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: none; font-family: 'Titillium Web', sans-serif; }
+.cto-cookie-accept { background: var(--white); color: var(--charcoal); }
+.cto-cookie-accept:hover { background: rgba(255,255,255,0.85); }
+.cto-cookie-decline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3); }
+.cto-cookie-decline:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+@media (max-width: 640px) { .cto-cookie-bar { padding: 14px 16px; } .cto-cookie-text { font-size: 0.8rem; } }
+</style>
+
+<div class="cto-cookie-bar" id="cto-cookie-bar">
+  <div class="cto-cookie-text">
+    We use cookies to run analytics on this site -- nothing more. Accept if that's fine with you, decline if it's not. <a href="/privacy-policy">Privacy policy</a>.
+  </div>
+  <div class="cto-cookie-actions">
+    <button class="cto-cookie-btn cto-cookie-decline" onclick="ctoCookieChoice('declined')">Decline</button>
+    <button class="cto-cookie-btn cto-cookie-accept" onclick="ctoCookieChoice('accepted')">Accept</button>
+  </div>
+</div>
+
 </body>
 </html>
