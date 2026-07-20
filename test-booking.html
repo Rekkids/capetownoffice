@@ -1,93 +1,794 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Booking Test | Cape Town Office</title>
-<meta name="robots" content="noindex, nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cape Town Office — Team Membership Assessment</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root { --orange: #E8860A; --charcoal: #2d2d2d; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
-body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--charcoal); padding: 24px; }
-.test-banner { background: var(--charcoal); color: var(--white); padding: 12px 20px; border-radius: 8px; font-size: 0.85rem; margin-bottom: 32px; }
-.test-banner strong { color: var(--orange); }
-h1 { font-size: 1.4rem; margin-bottom: 4px; }
-.section { max-width: 720px; margin: 0 auto 56px; }
-.section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; display: block; }
-.section h2 { font-size: 1.2rem; margin-bottom: 16px; }
-.embed-wrap { background: var(--white); border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; min-height: 500px; }
+  @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  :root{
+    --cream:#F5F1E7;
+    --cream-deep:#ECE5D4;
+    --charcoal:#211F1B;
+    --charcoal-soft:#2C2924;
+    --orange:#D9531E;
+    --orange-deep:#B8431699;
+    --gold:#B98A3A;
+    --ink:#2B2823;
+    --ink-soft:#615A4D;
+    --line:#DBD1BB;
+  }
+  html, body { margin:0; padding:0; background:var(--cream); }
+  .cto-root{ font-family:'Titillium Web',sans-serif; color:var(--ink); background:var(--cream); }
+  .cto-display{ font-family:'Titillium Web',sans-serif; font-weight:900; letter-spacing:-0.01em; }
+  .cto-mono{ font-family:'JetBrains Mono',monospace; }
+  .cto-card{ background:#fff; border:1px solid var(--line); }
+  .cto-btn-option{ background:#fff; border:1px solid var(--line); transition:border-color .15s ease, background .15s ease, transform .1s ease; text-align:left; }
+  .cto-btn-option:hover{ border-color:var(--orange); background:var(--cream-deep); }
+  .cto-btn-option:active{ transform:scale(0.99); }
+  .cto-btn-option[data-selected="true"]{ border-color:var(--orange); background:var(--cream-deep); box-shadow: inset 0 0 0 1px var(--orange); }
+  .cto-btn-primary{ background:var(--charcoal); color:var(--cream); transition:background .15s ease, transform .1s ease; }
+  .cto-btn-primary:hover:not(:disabled){ background:var(--orange); }
+  .cto-btn-primary:disabled{ opacity:0.35; cursor:not-allowed; }
+  .cto-btn-primary:active:not(:disabled){ transform:scale(0.98); }
+  .cto-btn-ghost{ background:transparent; color:var(--ink-soft); }
+  .cto-btn-ghost:hover{ color:var(--ink); }
+  .cto-meter-dot{ animation: cto-pulse 2.2s ease-in-out infinite; }
+  @keyframes cto-pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.35 } }
+  @media (prefers-reduced-motion: reduce){ .cto-meter-dot{ animation:none } }
+  button:focus-visible, input:focus-visible { outline:3px solid var(--orange); outline-offset:2px; }
+  .cto-stepper-btn{ background:var(--cream-deep); border:1px solid var(--line); }
+  .cto-stepper-btn:hover{ border-color:var(--orange); }
 </style>
 </head>
 <body>
+<div id="root"></div>
 
-<div class="test-banner">
-  <strong>Test page</strong> — not linked in navigation. For internal testing only, not indexed by search engines.
-</div>
+<script type="text/babel" data-presets="react">
+const { useState, useMemo } = React;
 
-<div class="section">
-  <span class="section-label">Test 1</span>
-  <h1>Book a Viewing</h1>
-  <div class="embed-wrap">
-    <!-- Cal inline embed code begins -->
-    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-viewing"></div>
-    <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
-    Cal("init", "viewing", {origin:"https://app.cal.eu"});
-    Cal.config = Cal.config || {};
-    Cal.config.forwardQueryParams = true;
-      Cal.ns.viewing("inline", {
-        elementOrSelector:"#my-cal-inline-viewing",
-        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-        calLink: "cape-town-office/viewing",
-      });
-      Cal.ns.viewing("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-      </script>
-      <!-- Cal inline embed code ends -->
-  </div>
-</div>
+// ---------- Small inline icons (no external icon package needed) ----------
+function Icon({ children, size = 16, style }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={style}>
+      {children}
+    </svg>
+  );
+}
+const Clock = (props) => <Icon {...props}><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></Icon>;
+const ArrowRight = (props) => <Icon {...props}><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></Icon>;
+const Check = (props) => <Icon {...props}><polyline points="20 6 9 17 4 12"/></Icon>;
+const ChevronLeft = (props) => <Icon {...props}><polyline points="15 18 9 12 15 6"/></Icon>;
+const Building2 = (props) => (
+  <Icon {...props}>
+    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+    <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+    <path d="M10 6h.01"/><path d="M14 6h.01"/><path d="M10 10h.01"/><path d="M14 10h.01"/>
+    <path d="M10 14h.01"/><path d="M14 14h.01"/><path d="M10 18h.01"/><path d="M14 18h.01"/>
+  </Icon>
+);
 
-<div class="section">
-  <span class="section-label">Test 2</span>
-  <h1>Day Pass</h1>
-  <div class="embed-wrap">
-    <!-- Cal inline embed code begins -->
-    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-daypass"></div>
-    <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.eu/embed/embed.js", "init");
-    Cal("init", "daypass", {origin:"https://app.cal.eu"});
-    Cal.config = Cal.config || {};
-    Cal.config.forwardQueryParams = true;
-      Cal.ns.daypass("inline", {
-        elementOrSelector:"#my-cal-inline-daypass",
-        config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-        calLink: "cape-town-office/daypass",
-      });
-      Cal.ns.daypass("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-      </script>
-      <!-- Cal inline embed code ends -->
-  </div>
-</div>
+const WEEKS_PER_MONTH = 4.33;
+const WEEKS_PER_BLOCK = 60 / 7; // Flexi's 60-day window, in weeks (~8.57)
+const DAY_PASS_PRICE = 495;
+const FLEXI_TIERS = [
+  { name: "Flexi-40", cap60: 40, price: 2530 },
+  { name: "Flexi-50", cap60: 50, price: 2875 },
+  { name: "Flexi-75", cap60: 75, price: 3795 },
+];
+const DEDICATED_LOW = 4750; // 1-3 desks, same company
+const DEDICATED_HIGH = 4500; // 4+ desks, same company
 
-<script type="text/javascript">
-  // Test: confirm redirect fires correctly for both event types
-  Cal.ns.viewing("on", {
-    action: "bookingSuccessfulV2",
-    callback: function (e) {
-      alert("Viewing booking confirmed — would redirect to /thank-you now.");
-      // window.location.href = "/thank-you";
+const FREQUENCIES = [
+  { id: "occasional", label: "Occasional", sub: "a few times a month or less" },
+  { id: "1", label: "About 1 day a week", sub: "light, steady rhythm" },
+  { id: "1.5", label: "About 1.5 days a week", sub: "room to breathe" },
+  { id: "2", label: "About 2 days a week", sub: "regular fixture" },
+  { id: "3plus", label: "3+ days a week", sub: "or in most days" },
+];
+
+const rand = (n) => `R${Math.round(n).toLocaleString("en-ZA")}`;
+
+// For a fixed-length project, monthly rates don't apply cleanly:
+// Dedicated bills by whole calendar month, Flexi sells fixed 60-day blocks,
+// only Day Pass scales smoothly to any timeframe.
+function projectCostForPerson(p, weeks) {
+  const c = p.classification;
+  if (c.type === "daypass") {
+    const total = p.monthly * (weeks / WEEKS_PER_MONTH);
+    return { total, basis: `Day Pass, scaled to ${weeks} wks` };
+  }
+  if (c.type === "flexi") {
+    const tier = FLEXI_TIERS.find((t) => t.name === c.label) || FLEXI_TIERS[0];
+    const blocksNeeded = Math.max(1, Math.ceil(weeks / WEEKS_PER_BLOCK));
+    const total = tier.price * blocksNeeded;
+    return {
+      total,
+      basis: blocksNeeded === 1 ? `1× ${tier.name} block (60 days)` : `${blocksNeeded}× ${tier.name} blocks (${blocksNeeded * 60} days)`,
+    };
+  }
+  // Dedicated bills per calendar month, but for a fixed-length project we scale
+  // linearly: rate ÷ 4 weeks/month × weeks selected (no rounding up to whole months)
+  const weeklyRate = p.monthly / 4;
+  const total = weeklyRate * weeks;
+  return { total, basis: `${weeks} wks, Dedicated (${rand(weeklyRate)}/wk)` };
+}
+
+function classifyDraft(draft) {
+  if (draft.frequency === "occasional") {
+    const visits = draft.visits;
+    if (visits < 3) {
+      return {
+        type: "daypass",
+        label: "Day Pass",
+        detail: `${visits} visit${visits === 1 ? "" : "s"} a month`,
+        monthly: visits * DAY_PASS_PRICE,
+        note: null,
+      };
     }
-  });
-  Cal.ns.daypass("on", {
-    action: "bookingSuccessfulV2",
-    callback: function (e) {
-      alert("Day Pass booking confirmed — would redirect to /thank-you now.");
-      // window.location.href = "/thank-you";
+    const tier = FLEXI_TIERS[0];
+    return {
+      type: "flexi",
+      label: tier.name,
+      detail: `${visits} visits a month`,
+      monthly: tier.price / 2,
+      note: `At ${visits} visits a month, ${tier.name} works out cheaper than paying per visit.`,
+    };
+  }
+
+  if (draft.frequency === "3plus") {
+    return {
+      type: "dedicated",
+      label: "Dedicated Desk",
+      detail: "own permanent desk",
+      monthly: null,
+      note: "Your own spot for a second screen, paperwork, and anything you want to leave safely overnight.",
+    };
+  }
+
+  const days = parseFloat(draft.frequency);
+  const sessionHours = draft.session === "short" ? 4 : 9;
+  const hoursPer60 = days * sessionHours * WEEKS_PER_MONTH * 2;
+  const tier = FLEXI_TIERS.find((t) => hoursPer60 <= t.cap60);
+
+  if (!tier) {
+    return {
+      type: "dedicated",
+      label: "Dedicated Desk",
+      detail: "past our biggest Flexi package",
+      monthly: null,
+      note: "At this volume, a Dedicated Desk works out more cost-effective than Flexi. You'll also get your own spot for a second screen, paperwork, and anything you want to leave safely overnight.",
+    };
+  }
+  return {
+    type: "flexi",
+    label: tier.name,
+    detail: `~${Math.round(hoursPer60)} hrs across a 60-day window`,
+    monthly: tier.price / 2,
+    note: null,
+  };
+}
+
+function withPricing(peopleList) {
+  const dedicatedCount = peopleList.filter((p) => p.classification.type === "dedicated").length;
+  const rate = dedicatedCount >= 4 ? DEDICATED_HIGH : DEDICATED_LOW;
+  return peopleList.map((p) =>
+    p.classification.type === "dedicated"
+      ? { ...p, monthly: rate, deskRate: rate }
+      : { ...p, monthly: p.classification.monthly }
+  );
+}
+
+const emptyDraft = { name: "", frequency: null, visits: 3, session: null };
+
+// Test address — swap for the real enquiries inbox before this goes live
+const ENQUIRY_EMAIL = "info@capetownoffice.com";
+
+function MembershipAssessment() {
+  const [stage, setStage] = useState("welcome");
+  const [people, setPeople] = useState([]);
+  const [draft, setDraft] = useState(emptyDraft);
+  const [podTogether, setPodTogether] = useState(null);
+  const [teamSize, setTeamSize] = useState(4);
+  const [teamType, setTeamType] = useState(null);
+  const [term, setTerm] = useState(null);
+  const [projectWeeks, setProjectWeeks] = useState(4);
+  const [startDate, setStartDate] = useState("");
+  const [history, setHistory] = useState([]);
+
+  const priced = useMemo(() => withPricing(people), [people]);
+  const runningTotal = useMemo(() => priced.reduce((sum, p) => sum + (p.monthly || 0), 0), [priced]);
+  const dedicatedCount = useMemo(() => people.filter((p) => p.classification.type === "dedicated").length, [people]);
+  const isFixedTerm = term === "fixed";
+  const projectPriced = useMemo(
+    () => (isFixedTerm ? priced.map((p) => ({ ...p, project: projectCostForPerson(p, projectWeeks) })) : null),
+    [priced, isFixedTerm, projectWeeks]
+  );
+  const displayTotal = isFixedTerm ? projectPriced.reduce((sum, p) => sum + p.project.total, 0) : runningTotal;
+
+  function goToStage(next) {
+    setHistory((h) => [...h, { stage, draft, people, podTogether, teamSize, teamType, term, projectWeeks, startDate }]);
+    setStage(next);
+  }
+
+  function goBack() {
+    setHistory((h) => {
+      if (h.length === 0) return h;
+      const prev = h[h.length - 1];
+      setStage(prev.stage);
+      setDraft(prev.draft);
+      setPeople(prev.people);
+      setPodTogether(prev.podTogether);
+      setTeamSize(prev.teamSize);
+      setTeamType(prev.teamType);
+      setTerm(prev.term);
+      setProjectWeeks(prev.projectWeeks);
+      setStartDate(prev.startDate);
+      return h.slice(0, -1);
+    });
+  }
+
+  function buildEnquiryMailto() {
+    const teamTypeLabel =
+      teamType === "fulltime" ? "Everyone full time" : teamType === "hybrid" ? "Everyone hybrid" : "Mix of full time and hybrid";
+    const isFixed = term === "fixed";
+    const termLabel = isFixed
+      ? `Fixed project length — ${projectWeeks} week${projectWeeks === 1 ? "" : "s"}, billed once upfront`
+      : "Month to month";
+    const rows = isFixed ? priced.map((p) => ({ ...p, project: projectCostForPerson(p, projectWeeks) })) : priced;
+    const lines = rows.map((p) =>
+      isFixed
+        ? `- ${p.name}: ${p.classification.label} (${p.project.basis}) — ${rand(p.project.total)}`
+        : `- ${p.name}: ${p.classification.label} (${p.classification.detail}) — ${rand(p.monthly)}/mo`
+    );
+    const total = isFixed ? rows.reduce((sum, p) => sum + p.project.total, 0) : runningTotal;
+    const totalLabel = isFixed
+      ? `Estimated project total (incl. VAT, billed upfront): ${rand(total)}`
+      : `Estimated total (incl. VAT): ${rand(total)}/mo`;
+    const body = [
+      `Team size: ${teamSize}`,
+      `Team type: ${teamTypeLabel}`,
+      `Term: ${termLabel}`,
+      `Preferred start: ${startDate || "Not specified"}`,
+      dedicatedCount >= 2 ? `Pod preference: ${podTogether ? "Together in one pod" : "Doesn't matter"}` : null,
+      "",
+      "Breakdown:",
+      ...lines,
+      "",
+      totalLabel,
+    ]
+      .filter((l) => l !== null)
+      .join("\n");
+    const subject = `Team membership enquiry — ${teamSize} people, ${rand(total)}${isFixed ? "" : "/mo"}`;
+    return `mailto:${ENQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+
+  function startAssessment() {
+    setDraft(emptyDraft);
+    goToStage("q-teamsize");
+  }
+
+  function chooseTeamType(id) {
+    setTeamType(id);
+    goToStage("q-term");
+  }
+
+  function finalizeFullTimeTeam() {
+    const generated = Array.from({ length: teamSize }).map((_, i) => ({
+      name: `Team member ${i + 1}`,
+      classification: {
+        type: "dedicated",
+        label: "Dedicated Desk",
+        detail: "own permanent desk",
+        monthly: null,
+        note: "Your own spot for a second screen, paperwork, and anything you want to leave safely overnight.",
+      },
+    }));
+    setPeople(generated);
+    if (teamSize >= 2) {
+      goToStage("q-pod");
+    } else {
+      goToStage("q-startdate");
     }
-  });
+  }
+
+  function beginPersonFlow() {
+    setDraft(emptyDraft);
+    goToStage("q-frequency");
+  }
+
+  function selectFrequency(id) {
+    setDraft((d) => ({ ...d, frequency: id }));
+  }
+
+  function goNextFromFrequency() {
+    if (draft.frequency === "occasional") goToStage("q-visits");
+    else if (draft.frequency === "3plus") finalizePerson();
+    else goToStage("q-session");
+  }
+
+  function finalizePerson() {
+    const classification = classifyDraft(draft);
+    const name = draft.name.trim() || `Team member ${people.length + 1}`;
+    const nextPeople = [...people, { name, classification }];
+    setPeople(nextPeople);
+
+    const newDedicatedCount = nextPeople.filter((p) => p.classification.type === "dedicated").length;
+
+    if (nextPeople.length < teamSize) {
+      beginPersonFlow();
+    } else if (newDedicatedCount >= 2) {
+      goToStage("q-pod");
+    } else {
+      goToStage("q-startdate");
+    }
+  }
+
+  function restart() {
+    setStage("welcome");
+    setPeople([]);
+    setDraft(emptyDraft);
+    setPodTogether(null);
+    setTeamSize(4);
+    setTeamType(null);
+    setTerm(null);
+    setProjectWeeks(4);
+    setStartDate("");
+    setHistory([]);
+  }
+
+  return (
+    <div className="cto-root min-h-screen w-full flex flex-col items-center px-4 py-10 sm:py-16">
+      {stage !== "welcome" && (
+        <div className="w-full max-w-xl flex items-center justify-between mb-6 px-1">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={goBack}
+              disabled={history.length === 0}
+              className="cto-btn-ghost flex items-center gap-1 text-sm font-semibold disabled:opacity-30"
+            >
+              <ChevronLeft size={16} /> Back
+            </button>
+            <button onClick={restart} className="cto-btn-ghost text-sm font-semibold">
+              Start over
+            </button>
+          </div>
+          <div className="cto-card rounded-full px-4 py-2 flex items-center gap-2" style={{ borderColor: "var(--line)" }}>
+            <Clock size={14} className="cto-meter-dot" style={{ color: "var(--orange)" }} />
+            <span className="cto-mono text-xs" style={{ color: "var(--ink-soft)" }}>
+              {people.length === 0
+                ? "estimate running"
+                : `${people.length} of ${teamSize} · ${rand(displayTotal)}${isFixedTerm ? "" : "/mo"} incl. VAT`}
+            </span>
+          </div>
+        </div>
+      )}
+
+      <div className="w-full max-w-xl">
+        {stage === "welcome" && (
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 mb-6" style={{ background: "var(--charcoal)" }}>
+              <Clock size={13} style={{ color: "var(--orange)" }} />
+              <span className="cto-mono text-xs" style={{ color: "var(--cream)" }}>the clock only runs when you're online</span>
+            </div>
+            <h1 className="cto-display text-4xl sm:text-5xl leading-[1.05] mb-4">
+              What will your team cost?
+            </h1>
+            <p className="text-base sm:text-lg mb-3" style={{ color: "var(--ink-soft)" }}>
+              For whoever's planning the move, add your headcount and how everyone works,
+              and we'll estimate the membership mix and the monthly total.
+            </p>
+            <p className="text-xs mb-1" style={{ color: "var(--ink-soft)" }}>
+              All prices incl. VAT, and every membership includes meeting rooms, fibre wifi, and 24/7 access.
+            </p>
+            <p className="text-xs mb-10" style={{ color: "var(--ink-soft)" }}>
+              Working out your own fit as an individual? Use the calculator on our Hybrid &amp; Flexi page instead.
+            </p>
+            <button onClick={startAssessment} className="cto-btn-primary rounded-full px-8 py-4 font-semibold text-base inline-flex items-center gap-2">
+              Start the assessment <ArrowRight size={18} />
+            </button>
+            <p className="mt-4 text-xs" style={{ color: "var(--ink-soft)" }}>Takes about a minute per person.</p>
+          </div>
+        )}
+
+        {stage === "q-teamsize" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>STEP 1</p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-2">How many people in the team?</h2>
+            <p className="text-sm mb-8" style={{ color: "var(--ink-soft)" }}>Include everyone who'll need a spot, even the occasional ones.</p>
+            <div className="flex items-center justify-center gap-6">
+              <button
+                onClick={() => setTeamSize((n) => Math.max(2, n - 1))}
+                className="cto-stepper-btn rounded-full w-12 h-12 text-2xl font-semibold"
+              >
+                −
+              </button>
+              <span className="cto-mono text-5xl w-20 text-center">{teamSize}</span>
+              <button
+                onClick={() => setTeamSize((n) => Math.min(20, n + 1))}
+                className="cto-stepper-btn rounded-full w-12 h-12 text-2xl font-semibold"
+              >
+                +
+              </button>
+            </div>
+            <button
+              onClick={() => goToStage("q-teamtype")}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold mt-10 inline-flex items-center gap-2"
+            >
+              Continue <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "q-teamtype" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>STEP 2</p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-6">Is the team full-time in office, hybrid, or a mix?</h2>
+            <div className="flex flex-col gap-3">
+              <button onClick={() => chooseTeamType("fulltime")} className="cto-btn-option rounded-xl px-5 py-4">
+                <span className="font-semibold block">Everyone is Full time</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>The whole team is in most days</span>
+              </button>
+              <button onClick={() => chooseTeamType("hybrid")} className="cto-btn-option rounded-xl px-5 py-4">
+                <span className="font-semibold block">Everyone is Hybrid</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>The whole team splits time between office and elsewhere</span>
+              </button>
+              <button onClick={() => chooseTeamType("mixed")} className="cto-btn-option rounded-xl px-5 py-4">
+                <span className="font-semibold block">A Mix between Full time and Hybrid</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>Some are in every day, others split their time</span>
+              </button>
+            </div>
+          </div>
+        )}
+
+        {stage === "q-term" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>STEP 3</p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-6">How long do you need the space for?</h2>
+            <div className="flex flex-col gap-3 mb-6">
+              <button
+                data-selected={term === "monthly"}
+                onClick={() => setTerm("monthly")}
+                className="cto-btn-option rounded-xl px-5 py-4"
+              >
+                <span className="font-semibold block">Month to month</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>Ongoing, no fixed end date</span>
+              </button>
+              <button
+                data-selected={term === "fixed"}
+                onClick={() => setTerm("fixed")}
+                className="cto-btn-option rounded-xl px-5 py-4"
+              >
+                <span className="font-semibold block">A fixed project length</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>1–10 weeks, then you're done</span>
+              </button>
+            </div>
+            {term === "fixed" && (
+              <div className="cto-card rounded-2xl p-6 mb-6 text-center">
+                <p className="text-sm mb-4" style={{ color: "var(--ink-soft)" }}>How many weeks?</p>
+                <div className="flex items-center justify-center gap-6">
+                  <button
+                    onClick={() => setProjectWeeks((n) => Math.max(1, n - 1))}
+                    className="cto-stepper-btn rounded-full w-12 h-12 text-2xl font-semibold"
+                  >
+                    −
+                  </button>
+                  <span className="cto-mono text-5xl w-16 text-center">{projectWeeks}</span>
+                  <button
+                    onClick={() => setProjectWeeks((n) => Math.min(10, n + 1))}
+                    className="cto-stepper-btn rounded-full w-12 h-12 text-2xl font-semibold"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            )}
+            <button
+              onClick={() => (teamType === "fulltime" ? finalizeFullTimeTeam() : goToStage("team-intro"))}
+              disabled={!term}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold inline-flex items-center gap-2"
+            >
+              Continue <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "team-intro" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>STEP 4</p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-6">Now tell us about each team member.</h2>
+            <div className="cto-card rounded-2xl overflow-hidden mb-8">
+              {Array.from({ length: teamSize }).map((_, i) => (
+                <div
+                  key={i}
+                  className="px-5 py-3 flex items-center justify-between"
+                  style={{ borderTop: i > 0 ? "1px solid var(--line)" : "none" }}
+                >
+                  <span className={i === 0 ? "font-semibold" : ""} style={{ color: i === 0 ? "var(--ink)" : "var(--ink-soft)" }}>
+                    Member {i + 1}
+                  </span>
+                  {i === 0 && (
+                    <span className="cto-mono text-xs rounded-full px-2 py-0.5" style={{ background: "var(--cream-deep)", color: "var(--gold)" }}>
+                      up next
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+            <button
+              onClick={beginPersonFlow}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold inline-flex items-center gap-2"
+            >
+              Start with Member 1 <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "q-frequency" && (
+          <div>
+            <p className="cto-mono text-xs font-semibold mb-2" style={{ color: "var(--ink)" }}>
+              MEMBER {people.length + 1} OF {teamSize}
+            </p>
+            <input
+              value={draft.name}
+              onChange={(e) => setDraft((d) => ({ ...d, name: e.target.value }))}
+              placeholder="Name or role (optional)"
+              className="w-full rounded-xl px-4 py-3 mb-5 text-sm cto-card"
+              style={{ borderColor: "var(--line)" }}
+            />
+            <h2 className="cto-display text-2xl sm:text-3xl mb-6">How often do they need to come in?</h2>
+            <div className="flex flex-col gap-3">
+              {FREQUENCIES.map((f) => (
+                <button
+                  key={f.id}
+                  data-selected={draft.frequency === f.id}
+                  onClick={() => selectFrequency(f.id)}
+                  className="cto-btn-option rounded-xl px-5 py-4 flex items-center justify-between"
+                >
+                  <span>
+                    <span className="font-semibold block">{f.label}</span>
+                    <span className="text-sm" style={{ color: "var(--ink-soft)" }}>{f.sub}</span>
+                  </span>
+                  {draft.frequency === f.id && <Check size={18} style={{ color: "var(--orange)" }} />}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={goNextFromFrequency}
+              disabled={!draft.frequency}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold mt-8 inline-flex items-center gap-2"
+            >
+              Continue <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "q-visits" && (
+          <div>
+            <p className="cto-mono text-xs font-semibold mb-2" style={{ color: "var(--ink)" }}>
+              MEMBER {people.length + 1} OF {teamSize}
+            </p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-2">How many visits, in a typical month?</h2>
+            <p className="text-sm mb-8" style={{ color: "var(--ink-soft)" }}>Rough is fine, this is a starting estimate.</p>
+            <div className="flex items-center justify-center gap-6">
+              <button
+                onClick={() => setDraft((d) => ({ ...d, visits: Math.max(1, d.visits - 1) }))}
+                className="cto-stepper-btn rounded-full w-12 h-12 text-2xl font-semibold"
+              >
+                −
+              </button>
+              <span className="cto-mono text-5xl w-20 text-center">{draft.visits}</span>
+              <button
+                onClick={() => setDraft((d) => ({ ...d, visits: Math.min(15, d.visits + 1) }))}
+                className="cto-stepper-btn rounded-full w-12 h-12 text-2xl font-semibold"
+              >
+                +
+              </button>
+            </div>
+            <button
+              onClick={finalizePerson}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold mt-10 inline-flex items-center gap-2"
+            >
+              See what fits <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "q-session" && (
+          <div>
+            <p className="cto-mono text-xs font-semibold mb-2" style={{ color: "var(--ink)" }}>
+              MEMBER {people.length + 1} OF {teamSize}
+            </p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-6">What does a work session usually look like?</h2>
+            <div className="flex flex-col gap-3">
+              <button
+                data-selected={draft.session === "short"}
+                onClick={() => setDraft((d) => ({ ...d, session: "short" }))}
+                className="cto-btn-option rounded-xl px-5 py-4"
+              >
+                <span className="font-semibold block">Under 6 hours</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>A focused half-day, in and out</span>
+              </button>
+              <button
+                data-selected={draft.session === "long"}
+                onClick={() => setDraft((d) => ({ ...d, session: "long" }))}
+                className="cto-btn-option rounded-xl px-5 py-4"
+              >
+                <span className="font-semibold block">Over 8 hours</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>A full working day</span>
+              </button>
+            </div>
+            <button
+              onClick={finalizePerson}
+              disabled={!draft.session}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold mt-8 inline-flex items-center gap-2"
+            >
+              See what fits <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "q-pod" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>ALMOST THERE</p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-2">
+              {dedicatedCount} of you are landing on Dedicated Desks.
+            </h2>
+            <p className="text-sm mb-8" style={{ color: "var(--ink-soft)" }}>Want them together in one pod?</p>
+            <div className="flex flex-col gap-3">
+              <button
+                data-selected={podTogether === true}
+                onClick={() => setPodTogether(true)}
+                className="cto-btn-option rounded-xl px-5 py-4"
+              >
+                <span className="font-semibold block">Yes, keep us together</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>Sit as one pod, side by side</span>
+              </button>
+              <button
+                data-selected={podTogether === false}
+                onClick={() => setPodTogether(false)}
+                className="cto-btn-option rounded-xl px-5 py-4"
+              >
+                <span className="font-semibold block">Doesn't matter</span>
+                <span className="text-sm" style={{ color: "var(--ink-soft)" }}>Spread across the space is fine</span>
+              </button>
+            </div>
+            <button
+              onClick={() => goToStage("q-startdate")}
+              disabled={podTogether === null}
+              className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold mt-8 inline-flex items-center gap-2"
+            >
+              Continue <ArrowRight size={17} />
+            </button>
+          </div>
+        )}
+
+        {stage === "q-startdate" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>ALMOST THERE</p>
+            <h2 className="cto-display text-2xl sm:text-3xl mb-2">When would you like to move in?</h2>
+            <p className="text-sm mb-6" style={{ color: "var(--ink-soft)" }}>Rough date is fine, we know plans shift.</p>
+            <input
+              type="date"
+              value={startDate}
+              onChange={(e) => setStartDate(e.target.value)}
+              className="w-full rounded-xl px-4 py-3 mb-6 text-sm cto-card"
+              style={{ borderColor: "var(--line)" }}
+            />
+            <div className="flex flex-col sm:flex-row gap-3">
+              <button
+                onClick={() => goToStage("results")}
+                className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold inline-flex items-center justify-center gap-2 flex-1"
+              >
+                See the total <ArrowRight size={17} />
+              </button>
+              <button
+                onClick={() => {
+                  setStartDate("");
+                  goToStage("results");
+                }}
+                className="cto-btn-option rounded-full px-7 py-3.5 font-semibold"
+              >
+                Not sure yet
+              </button>
+            </div>
+          </div>
+        )}
+
+        {stage === "results" && (
+          <div>
+            <p className="cto-mono text-xs mb-2" style={{ color: "var(--gold)" }}>YOUR ESTIMATE</p>
+            <div className="rounded-3xl p-8 mb-6" style={{ background: "var(--charcoal)" }}>
+              <div className="flex items-center gap-2 mb-3">
+                <Building2 size={16} style={{ color: "var(--orange)" }} />
+                <span className="cto-mono text-xs" style={{ color: "var(--cream-deep)" }}>
+                  {isFixedTerm ? `Estimated total for your ${projectWeeks}-week project` : "Estimated total for your team"}
+                </span>
+              </div>
+              <p className="cto-mono text-5xl sm:text-6xl" style={{ color: "var(--cream)" }}>
+                {rand(displayTotal)}
+                {!isFixedTerm && <span className="text-lg" style={{ color: "var(--gold)" }}>/mo</span>}
+              </p>
+              <p className="cto-mono text-xs mt-2" style={{ color: "var(--cream-deep)" }}>
+                incl. VAT · includes meeting rooms, fibre wifi &amp; 24/7 access
+              </p>
+              {isFixedTerm && (
+                <p className="text-xs mt-3" style={{ color: "var(--gold)" }}>
+                  Fixed-length projects are billed once upfront for the full term, not on our monthly cycle. Dedicated and Flexi
+                  are scaled to your {projectWeeks} weeks, so this may round up slightly.
+                </p>
+              )}
+            </div>
+
+            <div className="cto-card rounded-2xl overflow-hidden mb-6">
+              {(isFixedTerm ? projectPriced : priced).map((p, i) => (
+                <div key={i} className="px-6 py-4" style={{ borderTop: i > 0 ? "1px solid var(--line)" : "none" }}>
+                  <div className="flex items-center justify-between">
+                    <span className="font-semibold">{p.name}</span>
+                    <span className="cto-mono font-semibold">
+                      {isFixedTerm ? rand(p.project.total) : `${rand(p.monthly)}/mo`}
+                    </span>
+                  </div>
+                  <p className="text-sm mt-0.5" style={{ color: "var(--ink-soft)" }}>
+                    {p.classification.label} · {isFixedTerm ? p.project.basis : p.classification.detail}
+                  </p>
+                  {p.classification.note && (
+                    <p className="text-xs mt-1.5" style={{ color: "var(--gold)" }}>{p.classification.note}</p>
+                  )}
+                </div>
+              ))}
+              {dedicatedCount >= 2 && (
+                <div className="px-6 py-3" style={{ borderTop: "1px solid var(--line)", background: "var(--cream-deep)" }}>
+                  <p className="text-xs" style={{ color: "var(--ink-soft)" }}>
+                    {dedicatedCount} dedicated desks, priced at {rand(dedicatedCount >= 4 ? DEDICATED_HIGH : DEDICATED_LOW)}/desk
+                    {podTogether ? ", requested together in one pod." : "."}
+                  </p>
+                </div>
+              )}
+              <div className="px-6 py-3" style={{ borderTop: "1px solid var(--line)", background: "var(--cream-deep)" }}>
+                <p className="text-xs" style={{ color: "var(--ink-soft)" }}>
+                  {term === "fixed" ? `Fixed project length, ${projectWeeks} week${projectWeeks === 1 ? "" : "s"} · billed once upfront` : "Month to month"}
+                  {startDate ? ` · moving in from ${startDate}` : ""}
+                </p>
+              </div>
+            </div>
+
+            <div className="cto-card rounded-2xl p-5 mb-8" style={{ background: "var(--cream-deep)", borderStyle: "dashed" }}>
+              <p className="text-sm" style={{ color: "var(--ink-soft)" }}>
+                This is an estimate based on the information you've provided.
+                Team size or office hours may change as the project gets underway. We will work with you to make those adjustments.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href={buildEnquiryMailto()}
+                className="cto-btn-primary rounded-full px-7 py-3.5 font-semibold inline-flex items-center justify-center gap-2 flex-1"
+              >
+                Send enquiry &amp; book a viewing <ArrowRight size={17} />
+              </a>
+              <button onClick={restart} className="cto-btn-option rounded-full px-7 py-3.5 font-semibold">
+                Start over
+              </button>
+            </div>
+            <p className="text-xs mt-3 text-center" style={{ color: "var(--ink-soft)" }}>
+              Opens your email with this full breakdown ready to send to us.
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<MembershipAssessment />);
 </script>
-
 </body>
 </html>
