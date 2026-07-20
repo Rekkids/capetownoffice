@@ -107,9 +107,23 @@ function projectCostForPerson(p, weeks) {
   if (c.type === "flexi") {
     const tier = FLEXI_TIERS.find((t) => t.name === c.label) || FLEXI_TIERS[0];
     const blocksNeeded = Math.max(1, Math.ceil(weeks / WEEKS_PER_BLOCK));
-    const total = tier.price * blocksNeeded;
+    const flexiTotal = tier.price * blocksNeeded;
+
+    // Flexi is always sold in full 60-day blocks, even for a short project.
+    // For a short enough project, paying per visit can beat a forced block --
+    // check Day Pass against the actual project length before locking one in.
+    const estVisits = Math.round((c.visitsPerWeek || 0) * weeks);
+    const dayPassTotal = estVisits * DAY_PASS_PRICE;
+
+    if (dayPassTotal > 0 && dayPassTotal < flexiTotal) {
+      return {
+        total: dayPassTotal,
+        basis: `~${estVisits} Day Pass${estVisits === 1 ? "" : "es"} over ${weeks} wks, cheaper than a ${tier.name} block here`,
+      };
+    }
+
     return {
-      total,
+      total: flexiTotal,
       basis: blocksNeeded === 1 ? `1× ${tier.name} block (60 days)` : `${blocksNeeded}× ${tier.name} blocks (${blocksNeeded * 60} days)`,
     };
   }
@@ -138,6 +152,7 @@ function classifyDraft(draft) {
       label: tier.name,
       detail: `${visits} visits a month`,
       monthly: tier.price / 2,
+      visitsPerWeek: visits / WEEKS_PER_MONTH,
       note: `At ${visits} visits a month, ${tier.name} works out cheaper than paying per visit.`,
     };
   }
@@ -154,7 +169,7 @@ function classifyDraft(draft) {
 
   const days = parseFloat(draft.frequency);
   const sessionHours = draft.session === "short" ? 4 : 9;
-  const hoursPer60 = days * sessionHours * WEEKS_PER_MONTH * 2;
+  const hoursPer60 = days * sessionHours * WEEKS_PER_BLOCK;
   const tier = FLEXI_TIERS.find((t) => hoursPer60 <= t.cap60);
 
   if (!tier) {
@@ -171,6 +186,7 @@ function classifyDraft(draft) {
     label: tier.name,
     detail: `~${Math.round(hoursPer60)} hrs across a 60-day window`,
     monthly: tier.price / 2,
+    visitsPerWeek: days,
     note: null,
   };
 }
