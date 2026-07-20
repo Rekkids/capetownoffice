@@ -23,20 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 <!-- Google Analytics GA4: loads only after cookie consent, see consent script before </body> -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.ctoLoadAnalytics = function() {
-    if (window.ctoAnalyticsLoaded) return;
-    window.ctoAnalyticsLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C';
-    document.head.appendChild(s);
-    gtag('js', new Date());
-    gtag('config', 'G-GWQYWP8Z4C');
-  };
-</script>
+<script src="/js/site-common.js"></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
@@ -208,10 +195,6 @@ footer .nav-logo { color: var(--white); }
     Cape Town Office is Cape Town's original coworking space, open since 2011. Also known as shared office space, hot desking, flexible office space, serviced offices and short-term office rental in Cape Town. Whatever you call it, we've been doing it longer than anyone else in the city. <a href="/shared-office-space-cape-town" style="color:rgba(255,255,255,0.75);">Learn more</a>.
   </div>
 </footer>
-<script>
-function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
-function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
-</script>
 
 <!-- ============================================ -->
 <!-- CTO COOKIE CONSENT -->
@@ -253,30 +236,6 @@ function closeMenu() { document.getElementById('mobile-menu').classList.remove('
   </div>
 </div>
 
-<script>
-(function() {
-  var STORAGE_KEY = 'cto_cookie_consent';
-
-  function getChoice() {
-    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
-  }
-
-  window.ctoCookieChoice = function(choice) {
-    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
-    document.getElementById('cto-cookie-bar').classList.remove('visible');
-    if (choice === 'accepted' && window.ctoLoadAnalytics) {
-      window.ctoLoadAnalytics();
-    }
-  };
-
-  var existing = getChoice();
-  if (existing === 'accepted' && window.ctoLoadAnalytics) {
-    window.ctoLoadAnalytics();
-  } else if (!existing) {
-    document.getElementById('cto-cookie-bar').classList.add('visible');
-  }
-})();
-</script>
 
 </body>
 </html>
