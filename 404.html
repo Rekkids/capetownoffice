@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found | Cape Town Office</title>
+<meta name="description" content="This page doesn't exist. Head back to the Cape Town Office homepage.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--white); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; display: flex; flex-direction: column; min-height: 100vh; }
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; transition: background 0.15s !important; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+.error-main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 80px 40px; background: var(--bg); }
+.error-inner { text-align: center; max-width: 480px; }
+.error-code { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; }
+.error-h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.03em; color: var(--charcoal); line-height: 1.1; margin-bottom: 16px; }
+.error-sub { font-size: 0.95rem; color: var(--mid); line-height: 1.7; margin-bottom: 36px; }
+.error-btns { display: flex; gap: 14px; align-items: center; justify-content: center; flex-wrap: wrap; }
+.btn-orange { background: var(--orange); color: var(--white); padding: 13px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.1s; }
+.btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.btn-ghost { color: var(--mid); font-size: 0.875rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: color 0.15s; }
+.btn-ghost:hover { color: var(--charcoal); }
+footer .nav-logo { color: var(--white); }
+footer { background: var(--charcoal); padding: 40px 40px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.footer-address { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-address a:hover { color: var(--white); }
+.cto-cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 24px; display: none; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cto-cookie-bar.visible { display: flex; }
+.cto-cookie-text { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; max-width: 640px; }
+.cto-cookie-text a { color: var(--white); text-decoration: underline; }
+.cto-cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cto-cookie-btn { padding: 9px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: none; font-family: 'Titillium Web', sans-serif; }
+.cto-cookie-accept { background: var(--white); color: var(--charcoal); }
+.cto-cookie-accept:hover { background: rgba(255,255,255,0.85); }
+.cto-cookie-decline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3); }
+.cto-cookie-decline:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+@media (max-width: 640px) { .cto-cookie-bar { padding: 14px 16px; } .cto-cookie-text { font-size: 0.8rem; } }
+@media (max-width: 768px) {
+  nav { padding: 0 20px; } .nav-links { display: none; } .hamburger { display: flex; }
+  .error-main { padding: 56px 20px; }
+  footer { padding: 32px 20px; flex-direction: column; text-align: center; }
+}
+</style>
+<script src="/js/site-common.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams &amp; Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/day-pass">Day Pass</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams &amp; Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/day-pass" onclick="closeMenu()">Day Pass</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<main class="error-main">
+  <div class="error-inner">
+    <div class="error-code">404 error</div>
+    <h1 class="error-h1">This page went to grab a coffee and never came back.</h1>
+    <p class="error-sub">Probably for a slice of banana bread too. Don't worry, follow the crumbs to get back home.</p>
+    <div class="error-btns">
+      <a href="/" class="btn-orange">Back to homepage</a>
+      <a href="/book-a-viewing" class="btn-ghost">Book a viewing →</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <div class="footer-address">
+    62 Roeland Street, Gardens, Cape Town · <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+  </div>
+</footer>
+
+<div class="cto-cookie-bar" id="cto-cookie-bar">
+  <div class="cto-cookie-text">
+    We use cookies to run analytics on this site -- nothing more. Accept if that's fine with you, decline if it's not. <a href="/privacy-policy">Privacy policy</a>.
+  </div>
+  <div class="cto-cookie-actions">
+    <button class="cto-cookie-btn cto-cookie-decline" onclick="ctoCookieChoice('declined')">Decline</button>
+    <button class="cto-cookie-btn cto-cookie-accept" onclick="ctoCookieChoice('accepted')">Accept</button>
+  </div>
+</div>
+
+</body>
+</html>
