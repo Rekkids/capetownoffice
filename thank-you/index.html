@@ -88,20 +88,7 @@ footer .nav-logo { color: var(--white); }
 .footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.5); line-height: 1.8; }
 </style>
 <!-- Google Analytics GA4 -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  window.ctoLoadAnalytics = function() {
-    if (window.ctoAnalyticsLoaded) return;
-    window.ctoAnalyticsLoaded = true;
-    var s = document.createElement('script');
-    s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GWQYWP8Z4C';
-    document.head.appendChild(s);
-    gtag('js', new Date());
-    gtag('config', 'G-GWQYWP8Z4C');
-  };
-</script>
+<script src="/js/site-common.js"></script>
 </head>
 <body>
 
@@ -227,10 +214,6 @@ footer .nav-logo { color: var(--white); }
   </div>
 </footer>
 
-<script>
-function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
-function closeMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
-</script>
 
 
 <!-- ============================================ -->
@@ -273,30 +256,6 @@ function closeMenu() { document.getElementById('mobile-menu').classList.remove('
   </div>
 </div>
 
-<script>
-(function() {
-  var STORAGE_KEY = 'cto_cookie_consent';
-
-  function getChoice() {
-    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
-  }
-
-  window.ctoCookieChoice = function(choice) {
-    try { localStorage.setItem(STORAGE_KEY, choice); } catch (e) {}
-    document.getElementById('cto-cookie-bar').classList.remove('visible');
-    if (choice === 'accepted' && window.ctoLoadAnalytics) {
-      window.ctoLoadAnalytics();
-    }
-  };
-
-  var existing = getChoice();
-  if (existing === 'accepted' && window.ctoLoadAnalytics) {
-    window.ctoLoadAnalytics();
-  } else if (!existing) {
-    document.getElementById('cto-cookie-bar').classList.add('visible');
-  }
-})();
-</script>
 
 </body>
 </html>
