@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Cape Town Office</title>
+<meta name="description" content="Take a look inside Cape Town Office, coworking in Cape Town since 2011. 62 Roeland Street, Gardens.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://capetownoffice.com/gallery">
+<meta property="og:title" content="Gallery | Cape Town Office">
+<meta property="og:description" content="Take a look inside Cape Town Office, coworking in Cape Town since 2011. 62 Roeland Street, Gardens.">
+<meta property="og:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nBCQPDurez2JMVYosrLKNqm9iTUnc5XuIfp4E">
+<meta property="og:site_name" content="Cape Town Office">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gallery | Cape Town Office">
+<meta name="twitter:description" content="Take a look inside Cape Town Office, coworking in Cape Town since 2011. 62 Roeland Street, Gardens.">
+<meta name="twitter:image" content="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nBCQPDurez2JMVYosrLKNqm9iTUnc5XuIfp4E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--white); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav-logo { font-weight: 700; font-size: 1rem; color: var(--charcoal); text-decoration: none; letter-spacing: -0.01em; }
+.nav-logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--mid); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--charcoal); }
+.nav-cta { background: var(--orange) !important; color: var(--white) !important; padding: 8px 20px; border-radius: 6px; transition: background 0.15s !important; }
+.nav-cta:hover { background: var(--orange-dark) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); }
+.section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; display: block; }
+.section-h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.025em; color: var(--charcoal); line-height: 1.1; margin-bottom: 12px; }
+.section-sub { font-size: 0.92rem; color: var(--mid); line-height: 1.65; }
+.gallery-hero { padding: 64px 40px 8px; text-align: center; }
+.gallery-hero .section-sub { max-width: 480px; margin: 0 auto; }
+.gallery-section { padding: 48px 40px 96px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; max-width: 1060px; margin: 0 auto; }
+.gallery-item { position: relative; display: block; width: 100%; aspect-ratio: 3/2; padding: 0; border: 1px solid var(--rule); border-radius: 12px; overflow: hidden; cursor: pointer; background: var(--bg); transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
+.gallery-item:hover, .gallery-item:focus-visible { border-color: var(--orange); box-shadow: 0 8px 32px rgba(232,134,10,0.12); transform: translateY(-3px); outline: none; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.25s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px; font-size: 0.78rem; font-weight: 600; color: var(--white); background: linear-gradient(to top, rgba(45,45,45,0.85), rgba(45,45,45,0)); opacity: 0; transition: opacity 0.2s; }
+.gallery-item:hover .gallery-item-caption, .gallery-item:focus-visible .gallery-item-caption { opacity: 1; }
+.gallery-cta { text-align: center; margin-top: 48px; }
+.btn-orange { background: var(--orange); color: var(--white); padding: 13px 28px; border-radius: 7px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: inline-block; transition: background 0.15s, transform 0.1s; }
+.btn-orange:hover { background: var(--orange-dark); transform: translateY(-1px); }
+footer .nav-logo { color: var(--white); }
+footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; }
+.footer-brand .nav-logo { display: block; margin-bottom: 12px; }
+.footer-address { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.8; }
+.footer-address a { color: rgba(255,255,255,0.4); text-decoration: none; }
+.footer-address a:hover { color: var(--white); }
+.footer-col h4 { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { font-size: 0.82rem; color: rgba(255,255,255,0.75); text-decoration: none; transition: color 0.15s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { grid-column: 1 / -1; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.07); display: flex; justify-content: space-between; font-size: 0.72rem; color: rgba(255,255,255,0.22); flex-wrap: wrap; gap: 6px; }
+.footer-keywords { grid-column: 1 / -1; padding-top: 16px; font-size: 0.72rem; color: rgba(255,255,255,0.5); line-height: 1.8; }
+.mobile-menu { display: none; position: fixed; top: 60px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--rule); padding: 20px 24px; z-index: 99; flex-direction: column; gap: 4px; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); text-decoration: none; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.mobile-menu a:last-child { border-bottom: none; background: var(--orange); color: var(--white); padding: 12px 16px; border-radius: 6px; text-align: center; margin-top: 8px; }
+@media (max-width: 960px) { footer { grid-template-columns: 1fr 1fr; } .footer-bottom { grid-column: 1 / -1; } }
+@media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) {
+  nav { padding: 0 20px; } .nav-links { display: none; } .hamburger { display: flex; }
+  .gallery-hero { padding: 40px 20px 4px; } .gallery-section { padding: 32px 20px 64px; }
+  footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 560px) { .gallery-grid { grid-template-columns: 1fr; } }
+
+/* Lightbox */
+.lightbox { position: fixed; inset: 0; background: rgba(45,45,45,0.94); display: none; align-items: center; justify-content: center; flex-direction: column; z-index: 1000; }
+.lightbox.is-open { display: flex; }
+.lightbox-img { max-width: 90vw; max-height: 80vh; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+.lightbox-caption { color: var(--white); margin-top: 14px; font-size: 0.9rem; opacity: 0.85; }
+.lightbox-close, .lightbox-prev, .lightbox-next { position: absolute; background: transparent; border: none; color: var(--white); font-size: 2rem; cursor: pointer; padding: 10px 16px; line-height: 1; }
+.lightbox-close { top: 16px; right: 16px; font-size: 2.4rem; }
+.lightbox-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 8px; top: 50%; transform: translateY(-50%); }
+.lightbox-prev:hover, .lightbox-next:hover, .lightbox-close:hover { color: var(--orange); }
+@media (max-width: 560px) { .lightbox-prev, .lightbox-next { font-size: 1.4rem; padding: 8px 10px; } }
+
+/* Cookie bar (verbatim from homepage) */
+.cto-cookie-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 200; background: var(--charcoal); border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 24px; display: none; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cto-cookie-bar.visible { display: flex; }
+.cto-cookie-text { font-size: 0.85rem; color: rgba(255,255,255,0.8); line-height: 1.6; max-width: 640px; }
+.cto-cookie-text a { color: var(--white); text-decoration: underline; }
+.cto-cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cto-cookie-btn { padding: 9px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; cursor: pointer; border: none; font-family: 'Titillium Web', sans-serif; }
+.cto-cookie-accept { background: var(--white); color: var(--charcoal); }
+.cto-cookie-accept:hover { background: rgba(255,255,255,0.85); }
+.cto-cookie-decline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.3); }
+.cto-cookie-decline:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
+@media (max-width: 640px) { .cto-cookie-bar { padding: 14px 16px; } .cto-cookie-text { font-size: 0.8rem; } }
+</style>
+<script src="/js/site-common.js"></script>
+</head>
+<body>
+
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:999;background:var(--orange);color:var(--white);padding:8px 16px;font-weight:700;font-size:0.875rem;border-radius:0 0 8px 0;" onfocus="this.style.left='0'">Skip to main content</a>
+<nav>
+  <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+  <ul class="nav-links">
+    <li><a href="/membership">Membership</a></li>
+    <li><a href="/teams">Teams &amp; Projects</a></li>
+    <li><a href="/podcast-studio">Podcast Studio</a></li>
+    <li><a href="/day-pass">Day Pass</a></li>
+    <li><a href="/book-a-viewing" class="nav-cta">Book a viewing</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="/membership" onclick="closeMenu()">Membership</a>
+  <a href="/teams" onclick="closeMenu()">Teams &amp; Projects</a>
+  <a href="/podcast-studio" onclick="closeMenu()">Podcast Studio</a>
+  <a href="/day-pass" onclick="closeMenu()">Day Pass</a>
+  <a href="/book-a-viewing" onclick="closeMenu()">Book a viewing</a>
+</div>
+
+<main id="main-content">
+
+<section class="gallery-hero">
+  <span class="section-label">Gallery</span>
+  <h1 class="section-h2">Take a look inside</h1>
+  <p class="section-sub">A glimpse of the space, the community, and the little details that make it feel like home. 62 Roeland Street, Gardens, Cape Town.</p>
+</section>
+
+<section class="gallery-section">
+  <div class="gallery-grid">
+
+    <button class="gallery-item" data-full="/full/lounge-library.jpg" data-caption="Lounge and book exchange">
+      <img src="/images/lounge-library.jpg" alt="Lounge seating next to the book exchange shelves at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Lounge and book exchange</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/kitchen-lounge-vinyl.jpg" data-caption="Vinyl Lounge">
+      <img src="/images/kitchen-lounge-vinyl.jpg" alt="Kitchen and lounge area with vinyl record shelves at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Vinyl Lounge</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/kitchen-counter.jpg" data-caption="Library">
+      <img src="/images/kitchen-counter.jpg" alt="Shared kitchen counter with coffee station at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Library</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/lounge-bikes-worktable.jpg" data-caption="Lounge and kitchen">
+      <img src="/images/lounge-bikes-worktable.jpg" alt="Lounge and shared work table with bike storage at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Lounge and kitchen</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/worktable-aerial-art.jpg" data-caption="Kitchen">
+      <img src="/images/worktable-aerial-art.jpg" alt="Communal work table beneath framed aerial artwork at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Kitchen</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/reception-chalkboard.jpg" data-caption="Group pod (6)">
+      <img src="/images/reception-chalkboard.jpg" alt="Reception area at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Group pod (6)</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/dining-arcade.jpg" data-caption="Entrance">
+      <img src="/images/dining-arcade.jpg" alt="Communal dining table near the arcade machine at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Entrance</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/corridor-library.jpg" data-caption="Pacman games and kitchen">
+      <img src="/images/corridor-library.jpg" alt="Corridor lined with the book and magazine exchange at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Pacman games and kitchen</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/meeting-room.jpg" data-caption="Meeting room">
+      <img src="/images/meeting-room.jpg" alt="Meeting room with TV screen and whiteboard at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Meeting room</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/kitchen-wide-lounge.jpg" data-caption="Book library">
+      <img src="/images/kitchen-wide-lounge.jpg" alt="Wide view of the kitchen and lounge seating at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Book library</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/sunroom-lounge-vinyl.jpg" data-caption="Meeting room">
+      <img src="/images/sunroom-lounge-vinyl.jpg" alt="Sunlit lounge area with vinyl record collection at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Meeting room</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/desk-pods-brick.jpg" data-caption="Coworking desks">
+      <img src="/images/desk-pods-brick.jpg" alt="Coworking desk pods with exposed brick at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Coworking desks</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/meeting-room-train-art.jpg" data-caption="Coworking desks">
+      <img src="/images/meeting-room-train-art.jpg" alt="Meeting room with artwork and city views at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Coworking desks</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/podcast-studio.jpg" data-caption="Podcast studio">
+      <img src="/images/podcast-studio.jpg" alt="Soundproofed podcast studio with microphones at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Podcast studio</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/rooftop-patio-view.jpg" data-caption="Break area">
+      <img src="/images/rooftop-patio-view.jpg" alt="Rooftop patio lounge with a view of Table Mountain at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Break area</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/reception-brick-sunset.jpg" data-caption="Group table">
+      <img src="/images/reception-brick-sunset.jpg" alt="Reception desk with Cape Town artwork at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Group table</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/dining-nook-cow-art.jpg" data-caption="Dining nook">
+      <img src="/images/dining-nook-cow-art.jpg" alt="Sunny dining nook seating at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Dining nook</span>
+    </button>
+
+    <button class="gallery-item" data-full="/full/desk-detail-orange-thread.jpg" data-caption="Desk detail">
+      <img src="/images/desk-detail-orange-thread.jpg" alt="Desk detail with plants and design accents at Cape Town Office" loading="lazy" width="700" height="467">
+      <span class="gallery-item-caption">Desk detail</span>
+    </button>
+
+  </div>
+
+  <div class="gallery-cta">
+    <a href="/book-a-viewing" class="btn-orange">Book a viewing →</a>
+  </div>
+</section>
+
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <p class="lightbox-caption" id="lightboxCaption"></p>
+  <button class="lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+</div>
+
+<footer>
+  <div class="footer-brand">
+    <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
+    <div class="footer-address">
+      62 Roeland Street, 3rd floor<br>
+      Gardens, Cape Town, 8001<br>
+      <a href="tel:+27211003608">021 100 3608</a><br>
+      <a href="mailto:info@capetownoffice.com">info@capetownoffice.com</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Membership</h4>
+    <ul>
+      <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/dedicated">Dedicated desk</a></li>
+      <li><a href="/teams">Teams & Projects</a></li>
+      <li><a href="/day-pass">Day pass</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>The space</h4>
+    <ul>
+      <li><a href="/podcast-studio">Podcast studio</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/east-city">East City</a></li>
+      <li><a href="/about">About CTO</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/faqs">FAQs</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Follow</h4>
+    <ul>
+      <li><a href="https://www.instagram.com/capetownoffice/" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/cape-town-office" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/capetownoffice" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="/blog">Blog</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Cape Town Office. All rights reserved. <a href="/privacy-policy" style="color:rgba(255,255,255,0.22);text-decoration:none;">Privacy policy</a></span>
+    <span>Est. 2011 · 62 Roeland Street, Cape Town</span>
+    <span>Photography by <a href="https://www.mapodile.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:none;">Mapodile Mkhabela</a> · CTO member since 2019 · <a href="https://www.mapodile.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:none;">mapodile.com</a> · Getty Images</span>
+  </div>
+  <div class="footer-keywords">
+    Cape Town Office is Cape Town's original coworking space, open since 2011. Also known as shared office space, hot desking, flexible office space, serviced offices and short-term office rental in Cape Town. Whatever you call it, we've been doing it longer than anyone else in the city. <a href="/shared-office-space-cape-town" style="color:rgba(255,255,255,0.75);">More on shared office space in Cape Town</a>.
+  </div>
+</footer>
+
+<div class="cto-cookie-bar" id="cto-cookie-bar">
+  <div class="cto-cookie-text">
+    We use cookies to run analytics on this site, nothing more. Accept if that's fine with you, decline if it's not. <a href="/privacy-policy">Privacy policy</a>.
+  </div>
+  <div class="cto-cookie-actions">
+    <button class="cto-cookie-btn cto-cookie-decline" onclick="ctoCookieChoice('declined')">Decline</button>
+    <button class="cto-cookie-btn cto-cookie-accept" onclick="ctoCookieChoice('accepted')">Accept</button>
+  </div>
+</div>
+
+<script src="/js/gallery.js" defer></script>
+
+</body>
+</html>
