@@ -121,6 +121,19 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 .form-success-desc { font-size: 0.875rem; color: var(--mid); line-height: 1.6; }
 .form-error { font-size: 0.82rem; color: #c0392b; margin-top: 8px; display: none; }
 
+/* DEEP RED SESSIONS -- one-off featured event */
+.deepred { background: var(--charcoal); padding: 56px 0; }
+.deepred-inner { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: center; }
+.deepred-image { border-radius: 12px; overflow: hidden; }
+.deepred-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.deepred-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.deepred-eyebrow::before { content: ''; display: block; width: 24px; height: 2px; background: var(--orange); }
+.deepred-content h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.025em; color: var(--white); line-height: 1.1; margin-bottom: 18px; }
+.deepred-content p { font-size: 0.92rem; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 16px; }
+.deepred-content p strong { color: var(--white); font-weight: 600; }
+.deepred-tag { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.4); margin-bottom: 24px; }
+.deepred-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+
 /* VINYL SECTION */
 .vinyl { background: var(--charcoal); padding: 56px 40px; text-align: center; }
 .vinyl h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 700; color: var(--white); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 14px; }
@@ -153,6 +166,8 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   footer { padding: 48px 20px 32px; grid-template-columns: 1fr; gap: 32px; }
   .proof { padding: 20px; gap: 16px; justify-content: flex-start; }
   .vinyl { padding: 64px 24px; }
+  .deepred-inner { grid-template-columns: 1fr; gap: 28px; }
+  .deepred-image img { max-height: 280px; }
 }
 
 /* CALENDAR */
@@ -193,8 +208,6 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 <nav>
   <a href="/" class="nav-logo">Cape Town <span>Office</span></a>
   <ul class="nav-links">
-    <li><a href="/membership">Membership</a></li>
-    <li><a href="/teams">Teams & Projects</a></li>
     <li><a href="/membership">Membership</a></li>
     <li><a href="/teams">Teams & Projects</a></li>
     <li><a href="/podcast-studio">Podcast Studio</a></li>
@@ -295,6 +308,25 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
         
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- DEEP RED SESSIONS -- one-off, 27 August -->
+<section class="deepred" id="deep-red-sessions">
+  <div class="wrap deepred-inner">
+    <div class="deepred-image">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nry9FoSiXVyEWHLQ8e4qj0B2ltYdb5cIMRf3N" alt="Deep Red Sessions at Cape Town Office" loading="lazy">
+    </div>
+    <div class="deepred-content">
+      <span class="deepred-eyebrow">27 August · Special event</span>
+      <h2>Deep Red Sessions</h2>
+      <p>Deep cuts, deep reds, after hours. First glass is on us, BYOB after that.</p>
+      <p>This is a special one, team. After nearly 10 years at CTO, Pete is heading off to the East Coast for good. If you've been around a while, you know Pete. If you haven't met him yet, this is your chance. We're using the evening as a proper "ciao Pete" too, so come raise a glass and send him off right.</p>
+      <span class="deepred-tag">First glass on us</span>
+      <div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScu99DQMgK3oOzn5KNx5v2hqwM_oy6A-NwRzQcdvugpOMDEEg/viewform?usp=header" class="btn-orange" target="_blank" rel="noopener">RSVP for Deep Red Sessions</a>
+      </div>
     </div>
   </div>
 </section>
