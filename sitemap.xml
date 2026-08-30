@@ -8,109 +8,139 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/membership/</loc>
+    <loc>https://capetownoffice.com/membership</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/hybrid-coworking/</loc>
+    <loc>https://capetownoffice.com/hybrid-coworking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/dedicated/</loc>
+    <loc>https://capetownoffice.com/dedicated</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/teams/</loc>
+    <loc>https://capetownoffice.com/teams</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/day-pass/</loc>
+    <loc>https://capetownoffice.com/day-pass</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/podcast-studio/</loc>
+    <loc>https://capetownoffice.com/podcast-studio</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/podcast/</loc>
+    <loc>https://capetownoffice.com/podcast</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/events/</loc>
+    <loc>https://capetownoffice.com/events</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/east-city/</loc>
+    <loc>https://capetownoffice.com/east-city</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/about/</loc>
+    <loc>https://capetownoffice.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/faqs/</loc>
+    <loc>https://capetownoffice.com/faqs</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/shared-office-space-cape-town/</loc>
+    <loc>https://capetownoffice.com/gallery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://capetownoffice.com/shared-office-space-cape-town</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/book-a-viewing/</loc>
+    <loc>https://capetownoffice.com/book-a-viewing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/flexi-enquiry/</loc>
+    <loc>https://capetownoffice.com/flexi-enquiry</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- BLOG -->
   <url>
-    <loc>https://capetownoffice.com/blog/</loc>
+    <loc>https://capetownoffice.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/blog/where-roeland-meets-harrington/</loc>
+    <loc>https://capetownoffice.com/blog/where-roeland-meets-harrington</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/blog/digital-nomad-visa/</loc>
+    <loc>https://capetownoffice.com/blog/digital-nomad-visa</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/blog/video-calls-coworking/</loc>
+    <loc>https://capetownoffice.com/blog/video-calls-coworking</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/blog/productivity-hybrid-work/</loc>
+    <loc>https://capetownoffice.com/blog/productivity-hybrid-work</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/blog/is-coworking-worth-the-cost/</loc>
+    <loc>https://capetownoffice.com/blog/is-coworking-worth-the-cost</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://capetownoffice.com/blog/cape-town-remote-work/</loc>
+    <loc>https://capetownoffice.com/blog/cape-town-remote-work</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capetownoffice.com/blog/coworking-vs-working-from-home</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capetownoffice.com/blog/24-hour-coworking-cape-town</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capetownoffice.com/blog/career-pivot-stuart-fairbairns</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capetownoffice.com/blog/compare-coworking-day-rates-cape-town</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://capetownoffice.com/blog/how-to-choose-the-right-coworking-space</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
