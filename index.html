@@ -29,6 +29,14 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
+.spring-banner { display: flex; align-items: center; justify-content: center; gap: 12px; text-decoration: none; background: linear-gradient(100deg, #630101 0%, #B33E00 50%, #30005A 100%); color: var(--white); padding: 12px 20px; text-align: center; font-weight: 700; letter-spacing: 0.02em; }
+.spring-banner:hover { filter: brightness(1.05); }
+.spring-banner .sb-tag { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.22); padding: 3px 10px; border-radius: 20px; }
+.spring-banner .sb-copy { font-size: 0.9rem; }
+.spring-banner .sb-copy strong { font-weight: 800; }
+.spring-banner .sb-arrow { font-size: 0.9rem; transition: transform 0.15s; }
+.spring-banner:hover .sb-arrow { transform: translateX(3px); }
+@media (max-width: 640px) { .spring-banner { flex-wrap: wrap; padding: 10px 16px; } .spring-banner .sb-copy { font-size: 0.8rem; } }
 html { scroll-behavior: smooth; }
 body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--white); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
@@ -188,6 +196,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 </div>
 
 <main id="main-content">
+<a href="/spring2026" class="spring-banner">
+  <span class="sb-tag">Spring 2026</span>
+  <span class="sb-copy">Two new ways to join CTO this Spring: <strong>The 9/5</strong> and <strong>The Common Room</strong></span>
+  <span class="sb-arrow">→</span>
+</a>
 <section class="hero">
   <div class="hero-left">
     <img src="/images/cto-logo-hero.png" alt="Cape Town Office logo" class="hero-logo">
@@ -460,6 +473,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <h4>Membership</h4>
     <ul>
       <li><a href="/hybrid-coworking">Hybrid / Flexi</a></li>
+      <li><a href="/spring2026">Spring 2026</a></li>
       <li><a href="/dedicated">Dedicated desk</a></li>
       <li><a href="/teams">Teams & Projects</a></li>
       <li><a href="/day-pass">Day pass</a></li>
