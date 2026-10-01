@@ -92,6 +92,8 @@ nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-b
 .final-cta p { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 32px; max-width: 420px; margin-left: auto; margin-right: auto; }
 .btn-white { background: var(--white); color: var(--orange); padding: 14px 40px; border-radius: 7px; font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block; transition: transform 0.15s, box-shadow 0.15s; }
 .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.18); }
+.final-cta .final-cta-alt { margin: 20px auto 0; font-size: 0.85rem; color: rgba(255,255,255,0.85); }
+.final-cta-alt a { color: var(--white); font-weight: 700; text-decoration: underline; }
 
 /* FOOTER */
 footer .nav-logo { color: var(--white); }
@@ -210,9 +212,23 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 <section class="episodes">
   <div class="wrap">
     <span class="section-label">All episodes</span>
-    <h2 class="section-h2">11 episodes and counting</h2>
+    <h2 class="section-h2">12 episodes and counting</h2>
 
     <div class="episode-list">
+
+      <!-- EP 12 -->
+      <div class="episode-item">
+        <div class="yt-facade" onclick="loadYT(this, 'https://www.youtube.com/embed/WWkiyVPDkR0?si=_Dsm-abE13ob8ScP&autoplay=1')" role="button" aria-label="Play Who's Behind the Desk EP12">
+          <img src="https://i.ytimg.com/vi/WWkiyVPDkR0/hqdefault.jpg" alt="Who's Behind the Desk EP12 with Andrew Wolhuter" loading="lazy">
+          <div class="yt-play">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="episode-body">
+          <span class="episode-num">Episode 12</span>
+          <div class="episode-title">From Cabin Crew to Leadership Speaker: Andrew Wolhuter on Never Following a Plan (Part 1)</div>
+        </div>
+      </div>
 
       <!-- EP 11 -->
       <div class="episode-item">
@@ -372,21 +388,24 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   </div>
 </section>
 
-<!-- STUDIO CTA -->
+<!-- SUBSCRIBE CTA -->
 <div class="studio-cta">
-  <h2>Want to record at CTO?</h2>
-  <p>The podcast studio is included in every membership. Professional equipment, acoustic treatment, bookable anytime.</p>
-  <a href="/podcast-studio" class="btn-orange">See the podcast studio</a>
+  <h2>Part two is on its way.</h2>
+  <p>Andrew is back to talk about his book and his own show. Subscribe wherever you listen so you catch it, and every conversation after it.</p>
+  <div class="listen-links">
+    <a href="https://www.youtube.com/watch?v=-pRn18pUXAw&list=PLw_xt8MlppYLWimYcwPmuQEZIUnYjGtKr" target="_blank" rel="noopener" class="listen-btn youtube">&#9654; YouTube</a>
+    <a href="https://open.spotify.com/show/1kztZuQjG3DqCclUT4LRcm?si=812642953e4c476d" target="_blank" rel="noopener" class="listen-btn spotify">&#9654; Spotify</a>
+    <a href="https://podcasts.apple.com/us/podcast/whos-behind-the-desk/id1753952613" target="_blank" rel="noopener" class="listen-btn apple">&#9654; Apple Podcasts</a>
+  </div>
 </div>
 
-<!-- FINAL CTA -->
+<!-- COMMUNITY CTA -->
 <section class="final-cta">
-  <h2>Work where the podcast is made.</h2>
-  <p>Every guest on Who's Behind the Desk is a CTO member. Come and join them.</p>
-  <a href="/book-a-viewing" class="btn-white">Book a free viewing</a>
+  <h2>The desk is just where it starts.</h2>
+  <p>Every guest on Who's Behind the Desk is part of the CTO community. The WhatsApp group, Lunch Club and the conversations keep going. Come and be part of it.</p>
+  <a href="https://wa.me/27717620960?text=Hi%20Lizelle%2C%20I%27d%20like%20to%20join%20the%20CTO%20community." target="_blank" rel="noopener" class="btn-white">Join the CTO community</a>
+  <p class="final-cta-alt">Prefer email? <a href="mailto:info@capetownoffice.com?subject=Joining%20the%20CTO%20community">info@capetownoffice.com</a></p>
 </section>
-
-</main>
 
 </main>
 
