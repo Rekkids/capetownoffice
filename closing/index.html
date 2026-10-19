@@ -199,7 +199,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
 /* PHOTO REEL (copied from /events) */
 .reel { background: var(--charcoal); padding: 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08); }
-.reel-track { display: flex; gap: 12px; padding: 16px 0; width: max-content; animation: scroll-reel 30s linear infinite; }
+.reel-track { display: flex; gap: 12px; padding: 16px 0; width: max-content; animation: scroll-reel 160s linear infinite; }
 .reel-track img { height: 200px; width: auto; border-radius: 8px; object-fit: cover; flex-shrink: 0; display: block; }
 .reel:hover .reel-track { animation-play-state: paused; }
 @keyframes scroll-reel { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
@@ -252,22 +252,75 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   </div>
 </section>
 
-<!-- PHOTO REEL (same photos as /events) -->
-<div class="reel">
+<!-- PHOTO REEL: through the years, then the event photos from /events. The set appears twice so the loop is seamless. -->
+<div class="reel" aria-label="Fifteen years at Cape Town Office in photos">
   <div class="reel-track">
+      <img src="/images/years/cto-2011-empty-floor.jpg" alt="The empty floor at 62 Roeland Street before Cape Town Office opened, January 2011" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2011-first-desks.jpg" alt="Early Cape Town Office with yellow walls and desk pods, 2011" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2011-studentology.jpg" alt="Members at work at Cape Town Office, 2011" width="564" height="400" loading="lazy">
+      <img src="/images/years/cto-early-lounge-pose.jpg" alt="A member striking a pose in the early Cape Town Office lounge" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-early-floor.jpg" alt="Looking down the early Cape Town Office floor" width="638" height="400" loading="lazy">
+      <img src="/images/years/cto-2013-kitchen-door.jpg" alt="The Cape Town Office kitchen and entrance, 2013" width="407" height="400" loading="lazy">
+      <img src="/images/years/cto-orange-wall-kitchen.jpg" alt="The Cape Town Office kitchen and orange brand wall" width="1234" height="400" loading="lazy">
+      <img src="/images/years/cto-2016-members-at-work.jpg" alt="Members at work at Cape Town Office, 2016" width="599" height="400" loading="lazy">
+      <img src="/images/years/cto-2016-member-at-desk.jpg" alt="A member at her desk at Cape Town Office, 2016" width="599" height="400" loading="lazy">
+      <img src="/images/years/cto-2016-desk-laughs.jpg" alt="Members sharing a laugh at their desks, 2016" width="599" height="400" loading="lazy">
+      <img src="/images/years/cto-2017-shared-lunch.jpg" alt="Members sharing a lunch at Cape Town Office, 2017" width="300" height="400" loading="lazy">
+      <img src="/images/years/cto-2017-halloween.jpg" alt="Halloween at Cape Town Office, 2017" width="300" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-mural-desks.jpg" alt="Members at work in front of the Table Mountain mural, 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-kitchen-bar.jpg" alt="The kitchen and bar counter at Cape Town Office, 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-floor-tiles.jpg" alt="Laying floor tiles at Cape Town Office, 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-dining-arcade.jpg" alt="The dining area and arcade machine at Cape Town Office, 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-table-mountain.jpg" alt="Table Mountain framed through an opening in the wall during the 2018 build" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-roeland-view.jpg" alt="The view over Roeland Street during the 2018 build" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-site.jpg" alt="Building work under way, September 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-brick-walls.jpg" alt="Brick walls going up during the 2018 build" width="1122" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-timber-windows.jpg" alt="Timber and windows during the 2018 build" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-celebrating.jpg" alt="Two members celebrating at Cape Town Office, 2018" width="400" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-timber-frame.jpg" alt="Timber framing during the 2018 build" width="300" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-window-frames.jpg" alt="Builders fitting steel window frames, November 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-pacman-wall.jpg" alt="The Pac-Man wall next to the arcade machine, 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-2018-build-brickwork.jpg" alt="Finishing the brickwork, November 2018" width="533" height="400" loading="lazy">
+      <img src="/images/years/cto-digital-nomad-masterclass.jpg" alt="A digital nomad masterclass at Cape Town Office" width="598" height="400" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
-      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
-      
+      <img aria-hidden="true" src="/images/years/cto-2011-empty-floor.jpg" alt="The empty floor at 62 Roeland Street before Cape Town Office opened, January 2011" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2011-first-desks.jpg" alt="Early Cape Town Office with yellow walls and desk pods, 2011" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2011-studentology.jpg" alt="Members at work at Cape Town Office, 2011" width="564" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-early-lounge-pose.jpg" alt="A member striking a pose in the early Cape Town Office lounge" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-early-floor.jpg" alt="Looking down the early Cape Town Office floor" width="638" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2013-kitchen-door.jpg" alt="The Cape Town Office kitchen and entrance, 2013" width="407" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-orange-wall-kitchen.jpg" alt="The Cape Town Office kitchen and orange brand wall" width="1234" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2016-members-at-work.jpg" alt="Members at work at Cape Town Office, 2016" width="599" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2016-member-at-desk.jpg" alt="A member at her desk at Cape Town Office, 2016" width="599" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2016-desk-laughs.jpg" alt="Members sharing a laugh at their desks, 2016" width="599" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2017-shared-lunch.jpg" alt="Members sharing a lunch at Cape Town Office, 2017" width="300" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2017-halloween.jpg" alt="Halloween at Cape Town Office, 2017" width="300" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-mural-desks.jpg" alt="Members at work in front of the Table Mountain mural, 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-kitchen-bar.jpg" alt="The kitchen and bar counter at Cape Town Office, 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-floor-tiles.jpg" alt="Laying floor tiles at Cape Town Office, 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-dining-arcade.jpg" alt="The dining area and arcade machine at Cape Town Office, 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-table-mountain.jpg" alt="Table Mountain framed through an opening in the wall during the 2018 build" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-roeland-view.jpg" alt="The view over Roeland Street during the 2018 build" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-site.jpg" alt="Building work under way, September 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-brick-walls.jpg" alt="Brick walls going up during the 2018 build" width="1122" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-timber-windows.jpg" alt="Timber and windows during the 2018 build" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-celebrating.jpg" alt="Two members celebrating at Cape Town Office, 2018" width="400" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-timber-frame.jpg" alt="Timber framing during the 2018 build" width="300" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-window-frames.jpg" alt="Builders fitting steel window frames, November 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-pacman-wall.jpg" alt="The Pac-Man wall next to the arcade machine, 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-2018-build-brickwork.jpg" alt="Finishing the brickwork, November 2018" width="533" height="400" loading="lazy">
+      <img aria-hidden="true" src="/images/years/cto-digital-nomad-masterclass.jpg" alt="A digital nomad masterclass at Cape Town Office" width="598" height="400" loading="lazy">
+      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
+      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
+      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
+      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
+      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
   </div>
 </div>
 
