@@ -29,14 +29,17 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root { --orange: #E8860A; --orange-dark: #C97308; --charcoal: #2d2d2d; --body: #4c4c4c; --mid: #6b6b6b; --bg: #F7F5F0; --white: #FFFFFF; --rule: #E0DDD6; }
-.spring-banner { display: flex; align-items: center; justify-content: center; gap: 12px; text-decoration: none; background: linear-gradient(100deg, #630101 0%, #B33E00 50%, #30005A 100%); color: var(--white); padding: 12px 20px; text-align: center; font-weight: 700; letter-spacing: 0.02em; }
-.spring-banner:hover { filter: brightness(1.05); }
-.spring-banner .sb-tag { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; background: rgba(255,255,255,0.22); padding: 3px 10px; border-radius: 20px; }
-.spring-banner .sb-copy { font-size: 0.9rem; }
-.spring-banner .sb-copy strong { font-weight: 800; }
-.spring-banner .sb-arrow { font-size: 0.9rem; transition: transform 0.15s; }
-.spring-banner:hover .sb-arrow { transform: translateX(3px); }
-@media (max-width: 640px) { .spring-banner { flex-wrap: wrap; padding: 10px 16px; } .spring-banner .sb-copy { font-size: 0.8rem; } }
+.closing-banner { display: flex; align-items: center; justify-content: center; gap: 16px; text-decoration: none; background: var(--orange); color: var(--charcoal); padding: 18px 24px; text-align: center; }
+.closing-banner:hover { background: #F0951F; }
+.closing-banner .cb-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; background: var(--charcoal); color: var(--white); padding: 6px 14px; border-radius: 20px; flex-shrink: 0; }
+.closing-banner .cb-tag::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); animation: cbPulse 1.6s ease-in-out infinite; }
+@keyframes cbPulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) { .closing-banner .cb-tag::before { animation: none; } }
+.closing-banner .cb-copy { font-size: 1.05rem; font-weight: 600; color: var(--charcoal); }
+.closing-banner .cb-copy strong { font-weight: 800; }
+.closing-banner .cb-link { font-size: 1rem; font-weight: 700; color: var(--charcoal); white-space: nowrap; border-bottom: 2px solid var(--charcoal); transition: transform 0.15s; display: inline-block; }
+.closing-banner:hover .cb-link { transform: translateX(3px); }
+@media (max-width: 640px) { .closing-banner { flex-wrap: wrap; padding: 14px 16px; gap: 10px; } .closing-banner .cb-copy { font-size: 0.92rem; } }
 html { scroll-behavior: smooth; }
 body { font-family: 'Titillium Web', Helvetica, Arial, sans-serif; background: var(--white); color: var(--body); font-size: 15px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 nav { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--rule); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
@@ -196,15 +199,15 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 </div>
 
 <main id="main-content">
-<a href="/spring2026" class="spring-banner">
-  <span class="sb-tag">Spring 2026</span>
-  <span class="sb-copy">Two new ways to join CTO this Spring: <strong>The 9/5</strong> and <strong>The Common Room</strong></span>
-  <span class="sb-arrow">→</span>
+<a href="/closing" class="closing-banner">
+  <span class="cb-tag">Closing</span>
+  <span class="cb-copy">Cape Town Office closes on <strong>Friday, 27 November</strong>. Open as usual until then.</span>
+  <span class="cb-link">What this means →</span>
 </a>
 <section class="hero">
   <div class="hero-left">
     <img src="/images/cto-logo-hero.png" alt="Cape Town Office logo" class="hero-logo">
-    <span class="hero-eyebrow">62 Roeland Street, Gardens, Cape Town</span>
+    <span class="hero-eyebrow">Open until Friday, 27 November 2026</span>
     <h1 class="hero-h1">A proper office.<br><em>Where real<br>people work.</em></h1>
     <p class="hero-sub">Cape Town's original coworking space, open since 2011. Flexi hours, dedicated desks, space for teams. All-inclusive. No lock-in.</p>
     <div class="hero-btns">
