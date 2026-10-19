@@ -192,6 +192,19 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
   .stay-inner { grid-template-columns: 1fr; gap: 32px; }
   .stay-form iframe { height: 440px; }
 }
+
+/* Shorter hero on this page: content sets the height, photo fills it */
+.hero { min-height: 0; max-height: none; }
+.hero-left { justify-content: center; padding: 64px 56px 72px 40px; }
+
+/* PHOTO REEL (copied from /events) */
+.reel { background: var(--charcoal); padding: 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08); }
+.reel-track { display: flex; gap: 12px; padding: 16px 0; width: max-content; animation: scroll-reel 30s linear infinite; }
+.reel-track img { height: 200px; width: auto; border-radius: 8px; object-fit: cover; flex-shrink: 0; display: block; }
+.reel:hover .reel-track { animation-play-state: paused; }
+@keyframes scroll-reel { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .reel-track { animation: none; } }
+@media (max-width: 768px) { .reel-track img { height: 150px; } .hero-left { padding: 48px 20px 56px; } }
 </style>
 <script src="/js/site-common.js"></script>
 </head>
@@ -238,6 +251,25 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     <div class="hero-tag">Open as usual until Friday, 27 November</div>
   </div>
 </section>
+
+<!-- PHOTO REEL (same photos as /events) -->
+<div class="reel">
+  <div class="reel-track">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
+      <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
+      
+  </div>
+</div>
 
 <section class="means" id="what-this-means">
   <div class="means-inner">
