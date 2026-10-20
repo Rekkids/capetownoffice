@@ -15,12 +15,12 @@
 <meta property="og:url" content="https://capetownoffice.com/closing">
 <meta property="og:title" content="Cape Town Office is closing on 27 November">
 <meta property="og:description" content="Cape Town Office closes at 62 Roeland Street on Friday, 27 November 2026. Open as usual until then for day passes, desks and meeting rooms.">
-<meta property="og:image" content="https://capetownoffice.com/full/reception-brick-sunset.jpg">
+<meta property="og:image" content="https://capetownoffice.com/full/cto-closing-hero.jpg">
 <meta property="og:site_name" content="Cape Town Office">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cape Town Office is closing on 27 November">
 <meta name="twitter:description" content="Cape Town Office closes at 62 Roeland Street on Friday, 27 November 2026. Open as usual until then for day passes, desks and meeting rooms.">
-<meta name="twitter:image" content="https://capetownoffice.com/full/reception-brick-sunset.jpg">
+<meta name="twitter:image" content="https://capetownoffice.com/full/cto-closing-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -247,14 +247,17 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
     </div>
   </div>
   <div class="hero-right">
-    <img src="/full/reception-brick-sunset.jpg" alt="Reception at Cape Town Office, 62 Roeland Street" loading="eager">
+    <img src="/full/cto-closing-hero.jpg" alt="The coworking floor at Cape Town Office, with hanging ferns, brick desk pods and the lounge corner" loading="eager">
     <div class="hero-tag">Open as usual until Friday, 27 November</div>
   </div>
 </section>
 
-<!-- PHOTO REEL: through the years, then the event photos from /events. The set appears twice so the loop is seamless. -->
+<!-- PHOTO REEL
+     One list of photos. On each visit the script below shuffles them and makes
+     the copy needed for a seamless loop. To add a photo, add one <img> line here.
+     To remove one, delete its line. -->
 <div class="reel" aria-label="Fifteen years at Cape Town Office in photos">
-  <div class="reel-track">
+  <div class="reel-track" id="cto-reel">
       <img src="/images/years/cto-2011-empty-floor.jpg" alt="The empty floor at 62 Roeland Street before Cape Town Office opened, January 2011" width="533" height="400" loading="lazy">
       <img src="/images/years/cto-2011-first-desks.jpg" alt="Early Cape Town Office with yellow walls and desk pods, 2011" width="533" height="400" loading="lazy">
       <img src="/images/years/cto-2011-studentology.jpg" alt="Members at work at Cape Town Office, 2011" width="564" height="400" loading="lazy">
@@ -288,41 +291,26 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
       <img src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2011-empty-floor.jpg" alt="The empty floor at 62 Roeland Street before Cape Town Office opened, January 2011" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2011-first-desks.jpg" alt="Early Cape Town Office with yellow walls and desk pods, 2011" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2011-studentology.jpg" alt="Members at work at Cape Town Office, 2011" width="564" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-early-lounge-pose.jpg" alt="A member striking a pose in the early Cape Town Office lounge" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-early-floor.jpg" alt="Looking down the early Cape Town Office floor" width="638" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2013-kitchen-door.jpg" alt="The Cape Town Office kitchen and entrance, 2013" width="407" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-orange-wall-kitchen.jpg" alt="The Cape Town Office kitchen and orange brand wall" width="1234" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2016-members-at-work.jpg" alt="Members at work at Cape Town Office, 2016" width="599" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2016-member-at-desk.jpg" alt="A member at her desk at Cape Town Office, 2016" width="599" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2016-desk-laughs.jpg" alt="Members sharing a laugh at their desks, 2016" width="599" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2017-shared-lunch.jpg" alt="Members sharing a lunch at Cape Town Office, 2017" width="300" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2017-halloween.jpg" alt="Halloween at Cape Town Office, 2017" width="300" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-mural-desks.jpg" alt="Members at work in front of the Table Mountain mural, 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-kitchen-bar.jpg" alt="The kitchen and bar counter at Cape Town Office, 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-floor-tiles.jpg" alt="Laying floor tiles at Cape Town Office, 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-dining-arcade.jpg" alt="The dining area and arcade machine at Cape Town Office, 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-table-mountain.jpg" alt="Table Mountain framed through an opening in the wall during the 2018 build" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-roeland-view.jpg" alt="The view over Roeland Street during the 2018 build" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-site.jpg" alt="Building work under way, September 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-brick-walls.jpg" alt="Brick walls going up during the 2018 build" width="1122" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-timber-windows.jpg" alt="Timber and windows during the 2018 build" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-celebrating.jpg" alt="Two members celebrating at Cape Town Office, 2018" width="400" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-timber-frame.jpg" alt="Timber framing during the 2018 build" width="300" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-window-frames.jpg" alt="Builders fitting steel window frames, November 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-pacman-wall.jpg" alt="The Pac-Man wall next to the arcade machine, 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-2018-build-brickwork.jpg" alt="Finishing the brickwork, November 2018" width="533" height="400" loading="lazy">
-      <img aria-hidden="true" src="/images/years/cto-digital-nomad-masterclass.jpg" alt="A digital nomad masterclass at Cape Town Office" width="598" height="400" loading="lazy">
-      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nfkhXprmwb0U68C1xVKYDj9uSZWto3ydIkO42" alt="CTO community event" loading="lazy">
-      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nn8gMeBvwoqWL73Tacy8QMB9UxrvwfF1hieKZ" alt="CTO community event" loading="lazy">
-      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nMITkO7hRYuSTHgocU5zD2wNkJ8rlBZCVftsE" alt="CTO community event" loading="lazy">
-      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nNiolO5DBWs2bjLgX4n5mewSkaZJ7fHUGy1d0" alt="CTO community event" loading="lazy">
-      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9ntmkHbJVgrO2WlLCv7k5ezXHUI1FMo4btxpq6" alt="CTO community event" loading="lazy">
-      <img aria-hidden="true" src="https://e5bpg0wntz.ufs.sh/f/aX2oKgJjIq9nbMk56JW0sgBDCOfmz9FGnHld6wRZuNQMTIYX" alt="CTO community event" loading="lazy">
   </div>
 </div>
+<script>
+(function () {
+  var track = document.getElementById('cto-reel');
+  if (!track) return;
+  var imgs = Array.prototype.slice.call(track.querySelectorAll('img'));
+  for (var i = imgs.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = imgs[i]; imgs[i] = imgs[j]; imgs[j] = t;
+  }
+  imgs.forEach(function (img) { track.appendChild(img); });
+  imgs.forEach(function (img) {
+    var copy = img.cloneNode(true);
+    copy.setAttribute('aria-hidden', 'true');
+    copy.alt = '';
+    track.appendChild(copy);
+  });
+})();
+</script>
 
 <section class="means" id="what-this-means">
   <div class="means-inner">
