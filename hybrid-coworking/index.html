@@ -846,7 +846,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
       <img src="/images/cto-logo-hero.png" alt="Cape Town Office logo" class="ch-hero-logo">
       <span class="ch-eyebrow">Flexi Coworking · Cape Town</span>
       <h1 class="ch-h1">Work your hours.<br>Not ours.</h1>
-      <p class="ch-hero-sub">A block of hours, valid 60 days. Connect when you're here, disconnect when you're not. The clock only runs when you do. From R2,530 incl. VAT.</p>
+      <p class="ch-hero-sub">A block of hours, valid until Friday, 27 November. Connect when you're here, disconnect when you're not. The clock only runs when you do. From R2,530 incl. VAT.</p>
       <a href="#calculator" class="ch-btn">Find your package</a>
 
       <div class="ch-hero-stats">
@@ -991,7 +991,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
         <div class="ch-step">
           <div class="ch-step-num">3</div>
           <div>
-            <div class="ch-step-title">Use your hours over 60 days</div>
+            <div class="ch-step-title">Use your hours by Friday, 27 November</div>
             <div class="ch-step-body">Three hours today, eight hours Thursday. No daily minimum, no guessing. Your balance shows exactly what's left.</div>
           </div>
         </div>
@@ -1040,11 +1040,11 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
             </div>
             <div class="ch-profile">
               <div class="ch-profile-title"><span class="ch-profile-dot"></span>The work traveller</div>
-              <div class="ch-profile-body">Based in Cape Town, occasionally away for weeks at a time. Hours don't disappear the moment a work trip comes up ,  60 days is a generous window by design.</div>
+              <div class="ch-profile-body">Based in Cape Town, occasionally away for weeks at a time. Use your hours on the days you're in town, any time until Friday, 27 November.</div>
             </div>
           </div>
           <div class="ch-built-note">
-            <strong>A note on the 60-day window.</strong> It exists because real working life is unpredictable. We built it around what we've actually seen over 15 years ,  not around what's easiest to manage on our end.
+            <strong>A note on validity.</strong> Cape Town Office closes on Friday, 27 November, so all Flexi hours are valid until then. <a href="/closing" style="color:inherit;font-weight:700;">What this means for you</a>.
           </div>
         </div>
       </div>
@@ -1070,7 +1070,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           <div class="ch-pkg-price">R2,530</div>
           <div class="ch-pkg-rate">R63.25/hr · incl. VAT</div>
           <ul class="ch-pkg-features">
-            <li>40 hours, valid 60 days</li>
+            <li>40 hours, valid until 27 November</li>
             <li>500Mbps fibre WiFi + Ethernet</li>
             <li>24/7 secure access</li>
             <li>Meeting rooms (fair use)</li>
@@ -1089,7 +1089,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           <div class="ch-pkg-price">R2,875</div>
           <div class="ch-pkg-rate">R57.50/hr · incl. VAT</div>
           <ul class="ch-pkg-features">
-            <li>50 hours, valid 60 days</li>
+            <li>50 hours, valid until 27 November</li>
             <li>500Mbps fibre WiFi + Ethernet</li>
             <li>24/7 secure access</li>
             <li>Meeting rooms (fair use)</li>
@@ -1107,7 +1107,7 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           <div class="ch-pkg-price">R3,795</div>
           <div class="ch-pkg-rate">R50.60/hr · incl. VAT</div>
           <ul class="ch-pkg-features">
-            <li>75 hours, valid 60 days</li>
+            <li>75 hours, valid until 27 November</li>
             <li>500Mbps fibre WiFi + Ethernet</li>
             <li>24/7 secure access</li>
             <li>Meeting rooms (fair use)</li>
@@ -1150,8 +1150,8 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
           <div class="ch-for-body">Working project-to-project means your office needs are lumpy. Paying by usable hours makes more sense than a monthly desk that sits empty between sprints.</div>
         </div>
         <div class="ch-for-card">
-          <div class="ch-for-title">Digital nomad in Cape Town for up to 3 months</div>
-          <div class="ch-for-body">60-day validity and no lock-in make Flexi the practical choice when you're in the city for a few weeks or months, not signing a fixed contract.</div>
+          <div class="ch-for-title">Digital nomad in Cape Town for a few weeks</div>
+          <div class="ch-for-body">Pay-as-you-go hours and no lock-in make Flexi the practical choice for a few weeks in the city, any time until Friday, 27 November.</div>
         </div>
       </div>
     </div>
@@ -1249,10 +1249,10 @@ footer { background: var(--charcoal); padding: 56px 40px 40px; display: grid; gr
 
         <div class="ch-faq">
           <div class="ch-faq-q" onclick="chToggleFaq(this)">
-            What happens if I don't use all my hours within 60 days?
+            What happens if I don't use all my hours by 27 November?
             <span class="ch-faq-toggle">+</span>
           </div>
-          <div class="ch-faq-a">Unused hours expire at the end of the 60-day validity period. The window is designed to be generous for most working patterns ,  a Flexi-40 used at roughly one day a week would typically be used up in five weeks. If something unexpected happens, get in touch.</div>
+          <div class="ch-faq-a">Unused hours expire when we close on Friday, 27 November, so choose a block you'll comfortably use before then. Not sure which size fits? Get in touch and we'll help you pick.</div>
         </div>
 
         <div class="ch-faq">
@@ -1381,7 +1381,7 @@ function chCalc(days) {
   document.getElementById('ch-result-tier').textContent = tier.name;
   document.getElementById('ch-result-sub').textContent = isDed
     ? 'Unlimited hours · your own large desk · 24/7 access'
-    : tier.hrs + ' hours · valid 60 days · R' + tier.rate.toFixed(2) + '/hr · all facilities included';
+    : tier.hrs + ' hours · valid until 27 November · R' + tier.rate.toFixed(2) + '/hr · all facilities included';
   document.getElementById('ch-reasoning').innerHTML = d.reasoning;
   // url handled by chScrollToPackage()
   document.getElementById('ch-result-cta').textContent = isDed ? 'See dedicated desk details' : 'See ' + tier.name + ' details';
